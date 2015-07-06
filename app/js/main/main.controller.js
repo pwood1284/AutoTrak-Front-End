@@ -8,6 +8,7 @@
 
     function ($scope){
 
+      console.log('Hello');
 
     }
 

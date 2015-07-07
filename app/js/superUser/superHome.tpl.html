@@ -1,0 +1,51 @@
+<div id="newTech">
+   <md-toolbar>
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Settings">
+          <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+        </md-button>
+        <h2>
+          <span>Create a New Technician</span>
+        </h2>
+        <span flex></span>
+      </div>
+    </md-toolbar>
+    <div class="md-whiteframe-z1" layout="row">
+      <md-input-container style="width:40%">
+        <label>Technician Name</label>
+        <input type="text"/>
+      </md-input-container>
+      <md-input-container style="width:40%">
+        <label>Technician email</label>
+        <input type="text"/>
+      </md-input-container>
+      <md-input-container>
+        <label> Create Pin</label>
+        <input type="text"/>
+      </md-input-container>
+      <md-button ng-click="newTech()">
+        Add
+      </md-button>
+    </div>
+    <div id="techList">
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <md-button class="md-icon-button" aria-label="Settings">
+            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+          </md-button>
+          <h2>
+            <span>Technicians</span>
+          </h2>
+          <span flex></span>
+        </div>
+      </md-toolbar>
+      <div class="md-whiteframe-z1" layout="row">
+        <md-input-container>
+          <ul>
+            <li>Placeholder</li>
+            <md-button ng-click="editUser(tech)">Edit</md-button>
+          </ul>
+        </md-input-container>
+      </div>
+    </div>
+  </div>

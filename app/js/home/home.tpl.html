@@ -1,15 +1,25 @@
-<div ng-controller="HomeCtrl" layout="column">
-  <section layout="row" flex>
-    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
-      <md-toolbar class="md-theme-default">
-        <h1 class="md-toolbar-tools">Home</h1>
-      <md-toolbar>
-      <md-content layout-padding>
-        <md-button ng-click="close()" class="md-accent" hide-gt-md>
-          Close Sidebar
-        </md-button>
-  </section>
-</div>
+<section layout="row" flex>
+  <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+
+    <md-content layout-padding>
+
+      <a href="#/create/account"><md-button class="md-accent">
+        Create an Account
+      </md-button></a>
+
+      <md-button ng-click="adminLogin()" class="md-accent">
+        Login in as Administration
+      </md-button>
+
+      <a href="#/user/login"><md-button ng-click="userLogin()" class="md-accent">
+        Login in as a Technician
+      </md-button></a>
+
+      <!-- <md-button ng-click="close()" class="md-accent">
+        Close Sidebar
+      </md-button> -->
+
+</section>
 
 <div>
   <img id="landing-img" src="../assets/engine_diagram.jpg" alt="engine diagram">

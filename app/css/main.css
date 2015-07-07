@@ -2,3 +2,20 @@
   width: 60%;
   float: right;
   margin-right: 10%; }
+
+#create-super {
+  width: 75%;
+  margin: 0 auto; }
+
+#newTech {
+  width: 75%;
+  margin: 50px auto; }
+
+#techList {
+  margin-top: 50px; }
+
+.numPadWrapper {
+  width: 100%; }
+  .numPadWrapper .userNumPad {
+    width: 75%;
+    margin: 0 auto; }

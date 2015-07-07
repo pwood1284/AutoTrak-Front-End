@@ -1,17 +1,15 @@
-<div ng-controller="HomeCtrl">
-
-  <md-content>
-    <md-toolbar>
-      <div class="md-toolbar-tools">
-        <md-button class="md-icon-button" aria-label="Settings">
-          <md-icon md-svg-icon="img/icons.menu.svg"></md-icon>
+<div ng-controller="HomeCtrl" layout="column">
+  <section layout="row" flex>
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+      <md-toolbar class="md-theme-default">
+        <h1 class="md-toolbar-tools">Home</h1>
+      <md-toolbar>
+      <md-content layout-padding>
+        <md-button ng-click="close()" class="md-accent" hide-gt-md>
+          Close Sidebar
         </md-button>
-        <h2>
-          <span>Welcome to AutoTrak</span>
-        </h2>
-      </div>
-    </md-toolbar>
-  </md-content>
 
+
+  </section>
 </div>
 

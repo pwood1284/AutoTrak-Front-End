@@ -9,8 +9,22 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body ng-app="AutoTrak">
+  <header>
+    <md-content>
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <md-button class="md-icon-button" aria-label="Settings">
+            <md-icon md-svg-icon="img/icons.menu.svg"></md-icon>
+          </md-button>
+          <h2>
+            <span>Welcome to AutoTrak</span>
+          </h2>
+        </div>
+      </md-toolbar>
+    </md-content>
+  </header>
 
-  <div class="container" ng-controller="HomeCtrl">
+  <div class="container" ui-view>
 
   </div>
 

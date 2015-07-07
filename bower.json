@@ -22,7 +22,8 @@
     "angular": "~1.4.1",
     "ui-router": "~0.2.15",
     "foundation": "~5.5.2",
-    "angular-material": "~0.10.0"
+    "angular-material": "~0.10.0",
+    "material-design-icons": "~2.0.0"
   },
   "devDependencies": {
     "mocha": "~2.2.5",

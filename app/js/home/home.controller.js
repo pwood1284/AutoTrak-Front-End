@@ -4,7 +4,7 @@
 
   angular.module('AutoTrak')
 
-  .controller('Main', [ '$scope',
+  .controller('HomeCtrl', [ '$scope',
 
     function ($scope){
 

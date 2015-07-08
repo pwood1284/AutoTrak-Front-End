@@ -18,11 +18,25 @@
   margin-top: 50px;
 }
 
-.numPadWrapper {
-  width: 100%;
+/* Number Pad
+=============*/
+.userNumPad{
+  border: 1px solid rgba(0,0,0, 0.3);
+  width: 479px;
+  height: 390px;
+  margin: 10% auto;
 
-  .userNumPad {
-    width: 75%;
-    margin: 0 auto;
+  .md-button {
+    box-shadow: 2px 2px 2px rgba(0,0,0, 0.35);
+    // background-color: #4C9EF0;
+    // color: white;
+    height: 85px;
+    width: 140px;
   }
+
+  .md-button:hover {
+    background-color: #1C5792;
+    color: white;
+  }
+
 }

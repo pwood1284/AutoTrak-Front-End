@@ -1,60 +1,63 @@
 <div id="create-super" class="md-whiteframe-z1">
-  <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
-    <md-input-container>
-      <label>Title</label>
-      <input ng-model="user.title">
-    </md-input-container>
-    <md-input-container>
-      <label>Email</label>
-      <input ng-model="user.email" type="email">
-    </md-input-container>
-  </md-content>
-  <md-content layout-padding>
-    <form name="userForm">
-      <div layout layout-sm="column">
-        <md-input-container style="width:80%">
-            <label>Company</label>
-            <input ng-model="user.company">
+  <form>
+    <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
+      <md-input-container>
+        <label>Title</label>
+        <input ng-model="user.title">
+      </md-input-container>
+      <md-input-container>
+        <label>Email</label>
+        <input ng-model="user.business_user_email" type="email">
+      </md-input-container>
+    </md-content>
+    <md-content layout-padding>
+      <form name="userForm">
+        <div layout layout-sm="column">
+          <md-input-container style="width:80%">
+              <label>Company</label>
+              <input ng-model="user.business_name">
+            </md-input-container>
+          <md-input-container flex>
+            <label>Submission Date</label>
+            <input type="date" ng-model="user.submissionDate">
           </md-input-container>
+        </div>
+        <div layout layout-sm="column">
+          <md-input-container flex>
+            <label>First name</label>
+            <input ng-model="user.firstName">
+          </md-input-container>
+          <md-input-container flex>
+            <label>Last Name</label>
+            <input ng-model="theMax">
+          </md-input-container>
+        </div>
         <md-input-container flex>
-          <label>Submission Date</label>
-          <input type="date" ng-model="user.submissionDate">
+          <label>Address</label>
+          <input ng-model="user.business_user_street">
         </md-input-container>
-      </div>
-      <div layout layout-sm="column">
-        <md-input-container flex>
-          <label>First name</label>
-          <input ng-model="user.firstName">
+        <md-input-container md-no-float>
+          <input ng-model="user.address2" placeholder="Address 2">
         </md-input-container>
-        <md-input-container flex>
-          <label>Last Name</label>
-          <input ng-model="theMax">
-        </md-input-container>
-      </div>
-      <md-input-container flex>
-        <label>Address</label>
-        <input ng-model="user.address">
-      </md-input-container>
-      <md-input-container md-no-float>
-        <input ng-model="user.address2" placeholder="Address 2">
-      </md-input-container>
-      <div layout layout-sm="column">
-        <md-input-container flex>
-          <label>City</label>
-          <input ng-model="user.city">
-        </md-input-container>
-        <md-input-container flex>
-          <label>State</label>
-          <input ng-model="user.state">
-        </md-input-container>
-        <md-input-container flex>
-          <label>Postal Code</label>
-          <input ng-model="user.postalCode">
-        </md-input-container>
-      </div>
-      <a href="#/super/home"><md-button ng-click="superLogin()" class="md-primary">
-        Add
-      </md-button></a>
-    </form>
-  </md-content>
+        <div layout layout-sm="column">
+          <md-input-container flex>
+            <label>City</label>
+            <input ng-model="user.business_user_city">
+          </md-input-container>
+          <md-input-container flex>
+            <label>State</label>
+            <input ng-model="user.business_user_state">
+          </md-input-container>
+          <md-input-container flex>
+            <label>Postal Code</label>
+            <input ng-model="user.business_user_zipcode">
+          </md-input-container>
+        </div>
+        <md-button ng-submit="superCreate(user)" class="md-primary">
+          Add
+        </md-button>
+      </form>
+    </md-content>
+  </form>
 </div>
+

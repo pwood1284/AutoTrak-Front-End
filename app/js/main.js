@@ -3,11 +3,23 @@
   'use strict';
 
   angular.module('AutoTrak', ['ui.router', 'ngMaterial'])
+
+    .constant ('HEROKU', {
+      URL: 'https://rocky-hollows-1826.herokuapp.com',
+      CONFIG: {
+        headers: {
+          'Access-Token' : ''
+        }
+      }
+
+    })
+
     .config(['$stateProvider', '$urlRouterProvider', '$mdThemingProvider',
       function ($stateProvider, $urlRouterProvider, $mdThemingProvider){
         $mdThemingProvider.theme('default')
         .primaryPalette('blue-grey')
         .accentPalette('blue');
+
 
      $urlRouterProvider.otherwise('/');
 

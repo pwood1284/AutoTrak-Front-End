@@ -6,6 +6,12 @@
 #create-super {
   width: 75%;
   margin: 50px auto; }
+  #create-super .md-button {
+    background-color: #607D8B;
+    color: rgba(0, 0, 0, 0.8); }
+  #create-super .md-button:hover {
+    background-color: #455A64;
+    color: rgba(255, 255, 255, 0.8); }
 
 #newTech {
   width: 75%;
@@ -23,8 +29,10 @@
   margin: 10% auto; }
   .userNumPad .md-button {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
+    background-color: #607D8B;
+    color: white;
     height: 85px;
     width: 140px; }
   .userNumPad .md-button:hover {
-    background-color: #1C5792;
-    color: white; }
+    background-color: #455A64;
+    color: black; }

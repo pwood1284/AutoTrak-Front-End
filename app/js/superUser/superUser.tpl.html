@@ -1,56 +1,56 @@
 <div id="create-super" class="md-whiteframe-z1">
-  <form ng-submit="superCreate(user)">
+  <form ng-submit="superCreate()">
     <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
       <md-input-container style="width:45%">
         <label>Email</label>
-        <input ng-model="user.email" type="email">
+        <input ng-model="email" type="email">
       </md-input-container>
       <md-input-container style="width:45%">
         <label>Password</label>
-        <input ng-model="user.password" type="password">
+        <input ng-model="password" type="password">
       </md-input-container>
     </md-content>
     <md-content layout-padding>
-      <!-- <form name="userForm"> -->
+      <!-- <form name="orm"> -->
         <div layout layout-sm="column">
           <md-input-container style="width:80%">
               <label>Company</label>
-              <input ng-model="user.business">
+              <input ng-model="business">
             </md-input-container>
           <md-input-container flex>
             <label>Submission Date</label>
-            <input type="date" ng-model="user.submissionDate">
+            <input type="date" ng-model="submissionDate">
           </md-input-container>
         </div>
         <div layout layout-sm="column">
           <md-input-container flex>
             <label>First name</label>
-            <input ng-model="user.firstName">
+            <input ng-model="firstName">
           </md-input-container>
           <md-input-container flex>
             <label>Last Name</label>
-            <input ng-model="user.lastName">
+            <input ng-model="lastName">
           </md-input-container>
         </div>
         <md-input-container flex>
           <label>Address</label>
-          <input ng-model="user.street">
+          <input ng-model="street">
         </md-input-container>
         <div layout layout-sm="column">
           <md-input-container flex>
             <label>City</label>
-            <input ng-model="user.city">
+            <input ng-model="city">
           </md-input-container>
           <md-input-container flex>
             <label>State</label>
-            <input ng-model="user.state">
+            <input ng-model="state">
           </md-input-container>
           <md-input-container flex>
             <label>Postal Code</label>
-            <input ng-model="user.zipcode">
+            <input ng-model="zipcode">
           </md-input-container>
         </div>
-        <md-button type="submit" class="md-primary">
+        <md-button ng-click="superCreate()" class="md-primary">
           Add
         </md-button>
       <!-- </form> -->

@@ -9,9 +9,13 @@
         console.log('Hi from SuperUser');
 
         $scope.superCreate = function (user) {
+          console.log(user);
           SuperService.createAccount(user);
         };
 
+        $scope.masterCreate = function (user) {
+          SuperService.createMaster(user);
+        };
 
     }
 

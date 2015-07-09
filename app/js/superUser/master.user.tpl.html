@@ -1,0 +1,46 @@
+<div id="create-super" class="md-whiteframe-z1">
+  <form>
+    <div layout layout-sm="column">
+      <md-input-container flex>
+        <label>First name</label>
+        <input ng-model="user._employee_first_name">
+      </md-input-container>
+      <md-input-container flex>
+        <label>Last Name</label>
+        <input ng-model="user.employee_last_name">
+      </md-input-container>
+    </div>
+
+    <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
+      <md-input-container style="width:45%">
+        <label>Submit User Email</label>
+        <input ng-model="user.employee_email" type="email">
+      </md-input-container>
+      <md-input-container style="width:45%">
+        <label> Create User Password</label>
+        <input ng-model="user.employee_password" type="password">
+      </md-input-container>
+      </md-content>
+      <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
+        <md-input-container style="width:45%">
+          <label>Pin Numer</label>
+          <input ng-model="user.employee_pin" type="password">
+        </md-input-container>
+
+      </md-content>
+        <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
+          <md-input-container style="width:45%">
+            <label>Employee Access Rights</label>
+            <input ng-model="user.employee_access_rights">
+            </md-input-container>
+        <md-input-container style="width:45%">
+            <label> Employee Number</label>
+            <input ng-model="user.employee_number">
+          </md-input-container>
+        </md-content>
+      <md-button ng-click="masterCreate(user)" class="md-primary">
+        Add
+      </md-button>
+    </md-content>
+  </form>
+</div>

@@ -39,6 +39,11 @@
           templateUrl: '/js/superUser/superHome.tpl.html',
           controller: 'SuperUser'
         })
+        .state ('master/create', {
+          url: '/master/create',
+          templateUrl: 'js/superUser/master.user.tpl.html',
+          controller: 'SuperUser'
+        })
         .state ('userLog', {
           url: '/user/login',
           templateUrl: 'js/user/user.tpl.html',

@@ -2,20 +2,21 @@
 
   'use strict';
 
-  angular.module('AutoTrak', ['ui.router', 'ngMaterial'])
+  angular.module('AutoTrak', ['ui.router', 'ngMaterial', 'ngCookies'])
 
     .constant ('HEROKU', {
       URL: 'https://rocky-hollows-1826.herokuapp.com',
       CONFIG: {
         headers: {
-          'Access-Token' : ''
+          'Access-Token' : '8251875752e5cbcd04ef7555a2e189b7'
         }
       }
 
     })
 
-    .config(['$stateProvider', '$urlRouterProvider', '$mdThemingProvider',
-      function ($stateProvider, $urlRouterProvider, $mdThemingProvider){
+    .config(['$stateProvider', '$urlRouterProvider', '$mdThemingProvider', '$httpProvider',
+      function ($stateProvider, $urlRouterProvider, $mdThemingProvider, $httpProvider){
+        $httpProvider.defaults.withCredentials = true;
         $mdThemingProvider.theme('default')
         .primaryPalette('blue-grey')
         .accentPalette('blue');

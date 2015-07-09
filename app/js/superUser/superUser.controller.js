@@ -3,17 +3,18 @@
   'use strict';
 
   angular.module('AutoTrak')
-    .controller('SuperUser', ['$scope', 'SuperService',
-      function ($scope, SuperService) {
+    .controller('SuperUser', ['$scope', 'SuperService', 'TokenService',
+      function ($scope, SuperService, TokenService) {
 
-        console.log('Hi from SuperUser');
+      TokenService.tokenizeHeader();
 
         $scope.superCreate = function (user) {
-          console.log(user);
+          // console.log(user);
           SuperService.createAccount(user);
         };
 
         $scope.masterCreate = function (user) {
+          // console.log(user);
           SuperService.createMaster(user);
         };
 

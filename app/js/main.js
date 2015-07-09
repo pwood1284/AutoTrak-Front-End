@@ -14,9 +14,8 @@
 
     })
 
-    .config(['$stateProvider', '$urlRouterProvider', '$mdThemingProvider', '$httpProvider',
-      function ($stateProvider, $urlRouterProvider, $mdThemingProvider, $httpProvider){
-        $httpProvider.defaults.withCredentials = true;
+    .config(['$stateProvider', '$urlRouterProvider', '$mdThemingProvider',
+      function ($stateProvider, $urlRouterProvider, $mdThemingProvider){
         $mdThemingProvider.theme('default')
         .primaryPalette('blue-grey')
         .accentPalette('blue');

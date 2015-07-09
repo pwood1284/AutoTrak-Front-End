@@ -18,7 +18,7 @@
 
           console.log(data);
 
-          $cookies.put('authtoken', data.business_user.access_token);
+          Cookies.set('authtoken', data.business_user.access_token);
 
           $location.path('/master/create');
 

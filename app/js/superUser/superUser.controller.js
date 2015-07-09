@@ -8,7 +8,10 @@
 
         console.log('Hi from SuperUser');
 
-        SuperService.superCreate();
+        $scope.superCreate = function (user) {
+          SuperService.superCreate(user);
+        };
+
 
     }
 

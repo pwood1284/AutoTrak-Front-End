@@ -1,60 +1,113 @@
 <div id="create-super" class="md-whiteframe-z1">
-  <form ng-submit="superCreate()">
-    <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
-      <md-input-container style="width:45%">
-        <label>Email</label>
-        <input ng-model="email" type="email">
-      </md-input-container>
-      <md-input-container style="width:45%">
-        <label>Password</label>
-        <input ng-model="password" type="password">
-      </md-input-container>
-    </md-content>
+  <form ng-submit="superCreate(user)">
+
     <md-content layout-padding>
-      <!-- <form name="orm"> -->
         <div layout layout-sm="column">
           <md-input-container style="width:80%">
               <label>Company</label>
-              <input ng-model="business">
+              <input ng-model="user.business_user_name">
             </md-input-container>
-          <md-input-container flex>
-            <label>Submission Date</label>
-            <input type="date" ng-model="submissionDate">
-          </md-input-container>
         </div>
-        <div layout layout-sm="column">
-          <md-input-container flex>
-            <label>First name</label>
-            <input ng-model="firstName">
+
+         <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
+          <md-input-container style="width:30%">
+              <label>Master Email</label>
+          <input ng-model="user.business_user_email" type="email">
+            </md-input-container>
+               <md-input-container style="width:30%">
+              <label> Create Master Password</label>
+              <input ng-model="user.business_user_password" type="password">
+            </md-input-container>
+          <md-input-container style="width:30%">
+            <label># of Employees</label>
+            <input ng-model="user.business_user_cap">
           </md-input-container>
-          <md-input-container flex>
-            <label>Last Name</label>
-            <input ng-model="lastName">
-          </md-input-container>
-        </div>
+          </md-content>
+
         <md-input-container flex>
           <label>Address</label>
-          <input ng-model="street">
+          <input ng-model="user.business_user_street">
         </md-input-container>
         <div layout layout-sm="column">
           <md-input-container flex>
             <label>City</label>
-            <input ng-model="city">
+            <input ng-model="user.business_user_city">
           </md-input-container>
           <md-input-container flex>
             <label>State</label>
-            <input ng-model="state">
+            <input ng-model="user.business_user_state">
           </md-input-container>
           <md-input-container flex>
             <label>Postal Code</label>
-            <input ng-model="zipcode">
+            <input ng-model="user.business_user_zipcode">
           </md-input-container>
         </div>
+
+        <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
+          <md-input-container style="width:40%">
+            <label>Business Logo URL</label>
+            <input ng-model="user.business_logo">
+          </md-input-container>
+        </md-content>
+
+        <div layout layout-sm="column">
+          <md-input-container flex>
+            <label>First name</label>
+            <input ng-model="user._employee_first_name">
+          </md-input-container>
+          <md-input-container flex>
+            <label>Last Name</label>
+            <input ng-model="user.employee_last_name">
+          </md-input-container>
+        </div>
+
+        <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
+          <md-input-container style="width:45%">
+              <label>Submit User Email</label>
+          <input ng-model="user.employee_email" type="email">
+            </md-input-container>
+               <md-input-container style="width:45%">
+              <label> Create User Password</label>
+              <input ng-model="user.employee_password" type="password">
+            </md-input-container>
+        </md-content>
+        <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
+          <md-input-container style="width:45%">
+              <label>Pin Numer</label>
+          <input ng-model="user.employee_pin" type="password">
+          </md-input-container>
+
+        </md-content>
+        <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
+          <md-input-container style="width:45%">
+              <label>Employee Access Rights</label>
+          <input ng-model="user.employee_access_rights">
+            </md-input-container>
+               <md-input-container style="width:45%">
+              <label> Employee Number</label>
+              <input ng-model="user.employee_number">
+            </md-input-container>
+        </md-content>
+
+
+
+
+
         <md-button ng-click="superCreate()" class="md-primary">
           Add
         </md-button>
-      <!-- </form> -->
     </md-content>
   </form>
 </div>
+
+        <!-- <div layout layout-sm="column">
+          <md-input-container flex>
+            <label>First name</label>
+            <input ng-model="user.firstName">
+          </md-input-container>
+          <md-input-container flex>
+            <label>Last Name</label>
+            <input ng-model="user.lastName">
+          </md-input-container>
+        </div> -->
 

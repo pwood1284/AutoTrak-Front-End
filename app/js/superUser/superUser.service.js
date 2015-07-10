@@ -27,7 +27,7 @@
         };
 
       this.createMaster = function (user) {
-        $http.post(master, user)
+        $http.post(master, user, HEROKU.CONFIG)
           .success( function (data) {
           console.log(data);
           $location.path('/');

@@ -8,7 +8,7 @@
       URL: 'https://rocky-hollows-1826.herokuapp.com',
       CONFIG: {
         headers: {
-          'Access-Token' : '8251875752e5cbcd04ef7555a2e189b7'
+          'Access-Token' : ''
         }
       }
 

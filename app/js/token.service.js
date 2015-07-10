@@ -9,7 +9,7 @@
 
       this.tokenizeHeader = function (){
 
-        var token = Cookies.get('authtoken');
+        var token = Cookies.get('access_token');
 
         if (token) {
           HEROKU.CONFIG.headers['Access-Token'] = token;

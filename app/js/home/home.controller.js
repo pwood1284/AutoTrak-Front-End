@@ -4,11 +4,15 @@
 
   angular.module('AutoTrak')
 
-  .controller('HomeCtrl', [ '$scope',
+  .controller('HomeCtrl', [ '$scope', 'TokenService', 'LoginService',
 
-    function ($scope){
+    function ($scope, TokenService, LoginService){
 
-      console.log('Hello');
+       TokenService.tokenizeHeader();
+
+       $scope.loginAdmin = function (user){
+        LoginService.adminLogin(user);
+       };
 
     }
 

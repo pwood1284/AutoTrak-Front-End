@@ -29,6 +29,11 @@
           templateUrl: 'js/home/home.tpl.html',
           controller: 'HomeCtrl'
         })
+        .state ('adminDashboard', {
+          url: '/admin/dashboard',
+          templateUrl: 'js/home/admin.dashboard.tpl.html',
+          controller: 'HomeCtrl'
+        })
         .state ('super', {
           url: '/create/account',
           templateUrl: '/js/superUser/superUser.tpl.html',

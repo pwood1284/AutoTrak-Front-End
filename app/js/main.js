@@ -29,6 +29,16 @@
           templateUrl: 'js/home/home.tpl.html',
           controller: 'HomeCtrl'
         })
+        .state ('companyLogin', {
+          url: '/company/login',
+          templateUrl: 'js/home/main.login.tpl.html',
+          controller: 'HomeCtrl'
+        })
+        .state ('keypad', {
+          url: '/main',
+          templateUrl: 'js/user/user.tpl.html',
+          controller: 'UserCtrl'
+        })
         .state ('adminLogin', {
           url: '/admin/login',
           templateUrl: 'js/home/admin.login.tpl.html',

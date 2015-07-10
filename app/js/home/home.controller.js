@@ -10,10 +10,13 @@
 
        TokenService.tokenizeHeader();
 
-       $scope.loginAdmin = function (user){
-        LoginService.adminLogin(user);
+       $scope.loginMain = function (user) {
+        LoginService.mainLogin(user);
        };
 
+       $scope.loginAdmin = function (user) {
+        LoginService.adminLogin(user);
+       };
     }
 
   ]);

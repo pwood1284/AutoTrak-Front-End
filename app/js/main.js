@@ -25,6 +25,8 @@
      $urlRouterProvider.otherwise('/');
 
       $stateProvider
+        // Home State and Login Controls
+        //==============================                            *************
         .state ('home', {
           url: '/',
           templateUrl: 'js/home/home.tpl.html',
@@ -45,7 +47,10 @@
           templateUrl: 'js/home/admin.login.tpl.html',
           controller: 'HomeCtrl'
         })
+
         //Admin Dashboard Routes
+        //======================                                    *************
+
         .state ('admin', {
           url: '/admin/dashboard',
           templateUrl: 'js/admin/admin.dashboard.tpl.html',
@@ -66,7 +71,14 @@
           templateUrl: 'js/admin/customer.tpl.html',
           controller: 'AdminCtrl'
         })
+        .state ('admin.reports', {
+          url: 'admin/dashboard/reports',
+          templateUrl: 'js/admin/reports.tpl.html',
+          controller: 'AdminCtrl'
+        })
+
         // Main Account Registration and Control
+        // ======================================                   *************
         .state ('super', {
           url: '/create/account',
           templateUrl: '/js/superUser/superUser.tpl.html',
@@ -82,6 +94,9 @@
           templateUrl: 'js/superUser/master.user.tpl.html',
           controller: 'SuperUser'
         })
+
+        // User States
+        // ===========                                            **************
         .state ('userLog', {
           url: '/user/login',
           templateUrl: 'js/user/user.tpl.html',

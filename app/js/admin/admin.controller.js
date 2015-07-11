@@ -8,9 +8,12 @@
     function ($state) {
 
       console.log('Hello from AdminCtrl');
+
+
     }
 
-
   ]);
+
+
 
 }());

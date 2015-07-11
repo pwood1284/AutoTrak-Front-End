@@ -30,6 +30,9 @@
         $http.post(master, user, HEROKU.CONFIG)
           .success( function (data) {
           console.log(data);
+
+          $cookies.put('access_token2', data.employee_user.access_token2);
+
           $location.path('/admin/dashboard');
         });
 

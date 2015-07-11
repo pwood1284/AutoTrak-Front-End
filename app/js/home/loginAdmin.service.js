@@ -12,6 +12,7 @@
       var adminLoginEndpoint = HEROKU.URL + '/employee_user/login';
 
       this.mainLogin = function (user){
+
         $http.post(mainLoginEndpoint, user)
 
         .success ( function (data){
@@ -33,7 +34,7 @@
         .success ( function (data) {
           console.log(data);
 
-          // $cookies.put('access_token2')
+          $cookies.put('access_token2', data.employee_user.access_token2);
           $location.path('/admin/dashboard');
         });
 

@@ -62,17 +62,17 @@
           controller: 'AdminCtrl'
         })
         .state ('admin.inventory', {
-          url: 'admin/dashboard/inventory',
+          url: '/admin/dashboard/inventory',
           templateUrl: 'js/admin/inventory.tpl.html',
           controller: 'AdminCtrl'
         })
         .state ('admin.customer', {
-          url: 'admin/dashboard/customer',
+          url: '/admin/dashboard/customer',
           templateUrl: 'js/admin/customer.tpl.html',
           controller: 'AdminCtrl'
         })
         .state ('admin.reports', {
-          url: 'admin/dashboard/reports',
+          url: '/admin/dashboard/reports',
           templateUrl: 'js/admin/reports.tpl.html',
           controller: 'AdminCtrl'
         })

@@ -32,7 +32,7 @@
         })
         .state ('companyLogin', {
           url: '/company/login',
-          templateUrl: 'js/home/main.login.tpl.html',
+          templateUrl: 'js/home/company.login.tpl.html',
           controller: 'HomeCtrl'
         })
         .state ('keypad', {
@@ -45,11 +45,28 @@
           templateUrl: 'js/home/admin.login.tpl.html',
           controller: 'HomeCtrl'
         })
-        .state ('adminDashboard', {
+        //Admin Dashboard Routes
+        .state ('admin', {
           url: '/admin/dashboard',
-          templateUrl: 'js/home/admin.dashboard.tpl.html',
-          controller: 'HomeCtrl'
+          templateUrl: 'js/admin/admin.dashboard.tpl.html',
+          controller: 'AdminCtrl'
         })
+        .state ('admin.employee', {
+          url: '/admin/dashboard/employee',
+          templateUrl: 'js/admin/employee.tpl.html',
+          controller: 'AdminCtrl'
+        })
+        .state ('admin.inventory', {
+          url: 'admin/dashboard/inventory',
+          templateUrl: 'js/admin/inventory.tpl.html',
+          controller: 'AdminCtrl'
+        })
+        .state ('admin.customer', {
+          url: 'admin/dashboard/customer',
+          templateUrl: 'js/admin/customer.tpl.html',
+          controller: 'AdminCtrl'
+        })
+        // Main Account Registration and Control
         .state ('super', {
           url: '/create/account',
           templateUrl: '/js/superUser/superUser.tpl.html',

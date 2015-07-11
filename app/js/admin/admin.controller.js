@@ -4,8 +4,8 @@
 
   angular.module('AutoTrak')
 
-  .controller('AdminCtrl', ['$state',
-    function ($state) {
+  .controller('AdminCtrl', ['$scope', '$location',
+    function ($scope, $location) {
 
       console.log('Hello from AdminCtrl');
 

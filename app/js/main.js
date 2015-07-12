@@ -62,6 +62,11 @@
           templateUrl: 'js/admin/employee.tpl.html',
           controller: 'AdminCtrl'
         })
+        .state ('admin.employee.new', {
+          url: '/new',
+          templateUrl: 'js/admin/new.employee.tpl.html',
+          controller: 'AdminCtrl'
+        })
         .state ('admin.inventory', {
           url: '/inventory',
           templateUrl: 'js/admin/inventory.tpl.html',

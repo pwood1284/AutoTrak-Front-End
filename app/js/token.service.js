@@ -14,7 +14,6 @@
 
         if (token) {
           HEROKU.CONFIG.headers['Access-Token'] = token;
-          console.log(token);
         } else {
         // $location.path('/');
         console.log('No token');

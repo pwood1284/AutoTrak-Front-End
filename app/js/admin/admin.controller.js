@@ -4,11 +4,15 @@
 
   angular.module('AutoTrak')
 
-  .controller('AdminCtrl', ['$scope', '$location',
-    function ($scope, $location) {
+  .controller('AdminCtrl', ['$scope', '$location', 'AdminService', 'TokenService',
 
-      console.log('Hello from AdminCtrl');
+    function ($scope, $location, AdminService, TokenService) {
 
+      TokenService.tokenizeHeader();
+
+      $scope.employeeCreate = function (user) {
+        AdminService.createEmployee(user);
+      };
 
     }
 

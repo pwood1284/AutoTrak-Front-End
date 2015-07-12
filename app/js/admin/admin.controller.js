@@ -14,6 +14,10 @@
         AdminService.createEmployee(user);
       };
 
+      AdminService.employeeList().success( function (data) {
+        $scope.employees = data.employee_user;
+        console.log(data);
+      });
 
     }
 

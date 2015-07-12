@@ -1,14 +1,10 @@
-<div>
-  <h2>Employees</h2>
-  <md-button class="md-raised md-primary" ui-sref="admin.employee.new">Add a new employee</md-button>
-  <div ui-view></div>
-    <div class="employee-list">
+<div class="employee-list">
       <ul>
         <li ng-repeat="e in employees">
-          <p>{{ e.id }}: {{ e.employee_first_name }} {{ e.employee_last_name }}</p>
+          <p>{{ e.id }}{{ e.employee_first_name }} {{ e.employee_last_name }}</p>
         </li>
       </ul>
-  <div ng-controller="AdminCtrl">
+<!--     <div ng-controller="AdminCtrl">
     <md-content>
       <md-list>
         <md-subheader class="md-no-sticky">3 line item</md-subheader>
@@ -50,6 +46,4 @@
       </md-list>
     </md-content>
   </div>
-  </div>
-
-</div>
+  </div> -->

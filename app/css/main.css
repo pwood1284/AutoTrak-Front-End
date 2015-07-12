@@ -46,3 +46,6 @@ header span {
 ============================ */
 .dashboard-admin {
   padding: 15px; }
+
+.md-sidenav-left {
+  height: 100vh; }

@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('AutoTrak', ['ui.router', 'ngMaterial', 'ngCookies'])
+  angular.module('AutoTrak', ['ui.router', 'ngMaterial', 'ngCookies', 'ngAria'])
 
     .constant ('HEROKU', {
       URL: 'https://rocky-hollows-1826.herokuapp.com',
@@ -17,6 +17,7 @@
 
     .config(['$stateProvider', '$urlRouterProvider', '$mdThemingProvider',
       function ($stateProvider, $urlRouterProvider, $mdThemingProvider){
+
         $mdThemingProvider.theme('default')
         .primaryPalette('blue-grey')
         .accentPalette('blue');
@@ -57,22 +58,22 @@
           controller: 'AdminCtrl'
         })
         .state ('admin.employee', {
-          url: '/admin/dashboard/employee',
+          url: '/employee',
           templateUrl: 'js/admin/employee.tpl.html',
           controller: 'AdminCtrl'
         })
         .state ('admin.inventory', {
-          url: '/admin/dashboard/inventory',
+          url: '/inventory',
           templateUrl: 'js/admin/inventory.tpl.html',
           controller: 'AdminCtrl'
         })
         .state ('admin.customer', {
-          url: '/admin/dashboard/customer',
+          url: '/customer',
           templateUrl: 'js/admin/customer.tpl.html',
           controller: 'AdminCtrl'
         })
         .state ('admin.reports', {
-          url: '/admin/dashboard/reports',
+          url: '/reports',
           templateUrl: 'js/admin/reports.tpl.html',
           controller: 'AdminCtrl'
         })

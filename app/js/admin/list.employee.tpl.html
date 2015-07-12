@@ -1,7 +1,9 @@
 <div class="employee-list">
       <ul>
         <li ng-repeat="e in employees">
-          <p>{{ e.id }}{{ e.employee_first_name }} {{ e.employee_last_name }}</p>
+          <p>Name:{{ e.employee_first_name }} {{ e.employee_last_name }},
+          <br>Employee #: {{ e.employee_number }}
+          <br>Email: {{ e.employee_email }}</p>
         </li>
       </ul>
 <!--     <div ng-controller="AdminCtrl">

@@ -1,6 +1,6 @@
-<!-- <div ui-view> -->
-  <div ng-controller="AppCtrl" layout="column" style="height:500px;">
+<div ng-controller="AppCtrl" layout="column" style="height:500px;">
   <section layout="row" flex>
+  <!-- Left Side Nav -->
     <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
 
       <md-content layout-padding ng-controller="LeftCtrl">
@@ -27,11 +27,16 @@
           </li>
         </ul>
       </md-content>
+
     </md-sidenav>
+
     <md-content flex layout-padding>
+
       <div layout="column" layout-fill layout-align="top center">
 
+        <!-- Dashboard Main View -->
         <div ui-view class="dashboard-admin"></div>
+
       <div>
 
           <md-button ng-click="toggleLeft()"
@@ -46,7 +51,9 @@
           </md-button>
         </div>
       </div>
+
       <div flex></div>
+
     </md-content>
     <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
       <md-toolbar class="md-theme-light">
@@ -67,4 +74,3 @@
     </md-sidenav>
   </section>
 </div>
-<!-- </div> -->

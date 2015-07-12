@@ -49,3 +49,12 @@ header span {
 
 .md-sidenav-left {
   height: 100vh; }
+
+.employee-list ul {
+  width: 70%;
+  padding-left: 0; }
+  .employee-list ul li {
+    list-style-type: none;
+    width: 85%;
+    padding: 5px;
+    margin: 10px auto; }

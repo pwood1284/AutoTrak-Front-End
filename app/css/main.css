@@ -1,7 +1,12 @@
-#landing-img {
-  width: 60%;
-  float: right;
-  margin-right: 10%; }
+header span {
+  margin-left: 20px; }
+
+.landing {
+  width: 100%; }
+  .landing #landing-img {
+    width: 65%;
+    margin: 50px;
+    margin-left: 17%; }
 
 #create-super {
   width: 75%;
@@ -36,3 +41,8 @@
   .userNumPad .md-button:hover {
     background-color: #455A64;
     color: black; }
+
+/* Admin Dashboard Main View
+============================ */
+.dashboard-admin {
+  padding: 15px; }

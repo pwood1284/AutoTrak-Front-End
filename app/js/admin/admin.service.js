@@ -8,7 +8,7 @@
     function ($http, $state, HEROKU) {
 
       var postEmployee = HEROKU.URL + '/employee_user/register';
-      var getEmployee = HEROKU.URL + '/employee_user/index';
+      var getEmployee = HEROKU.URL + '/employee_user/business_index';
 
       this.createEmployee = function (user){
 

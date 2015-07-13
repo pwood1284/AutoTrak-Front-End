@@ -31,19 +31,19 @@
       <div layout="column" layout-fill layout-align="top center">
 
         <!-- Dashboard Main View -->
-        <div ui-view class="dashboard-admin"></div>
+        <div ui-view="content" class="dashboard-admin"></div>
 
       <div>
 
           <md-button ng-click="toggleLeft()"
             class="md-primary" hide-gt-md>
-            Toggle left
+            Options
           </md-button>
         </div>
         <div>
           <md-button ng-click="toggleRight()"
-            class="md-raised md-accent">
-            Toggle right
+            class="md-raised md-primary">
+            Add New Employee
           </md-button>
         </div>
       </div>
@@ -53,15 +53,16 @@
     </md-content>
     <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
       <md-toolbar class="md-theme-light">
-        <h2 class="md-toolbar-tools">Sidenav Right</h2>
+        <h2 class="md-toolbar-tools">md-sidenav Right</h2>
       </md-toolbar>
-      <md-content ng-controller="RightCtrl" layout-padding>
+      <md-content ng-controller="AdminCtrl" layout-padding>
         <form>
+        <div ui-view="rightNav"></div>
           <md-input-container>
-            <label for="testInput">Test input</label>
+            <!-- <label for="testInput">Test input</label>
             <input type="text" id="testInput"
                    ng-model="data" md-sidenav-focus>
-          </md-input-container>
+          </md-input-container> -->
         </form>
         <md-button ng-click="close()" class="md-primary">
           Close Sidenav Right

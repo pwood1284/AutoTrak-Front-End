@@ -59,28 +59,50 @@
         })
         .state ('admin.employee', {
           url: '/employee',
-          templateUrl: 'js/admin/employee.tpl.html',
-          controller: 'AdminCtrl'
-        })
-        .state ('admin.employee.new', {
-          url: '/new',
-          templateUrl: 'js/admin/new.employee.tpl.html',
-          controller: 'AdminCtrl'
+          views: {
+            'content': {
+              templateUrl: 'js/admin/employee/employee.tpl.html',
+              controller: 'AdminCtrl'
+            },
+            'rightNav': {
+              templateUrl: 'js/admin/employee/new.employee.tpl.html',
+              controller: 'AdminCtrl'
+            }
+          }
         })
         .state ('admin.inventory', {
           url: '/inventory',
-          templateUrl: 'js/admin/inventory.tpl.html',
-          controller: 'AdminCtrl'
+          views: {
+            'content': {
+              templateUrl: 'js/admin/inventory/inventory.tpl.html',
+              controller: 'AdminCtrl'
+            },
+            'rightNav': {
+              templateUrl: 'js/admin/inventory/add.inventory.tpl.html'
+            }
+          }
         })
         .state ('admin.customer', {
           url: '/customer',
-          templateUrl: 'js/admin/customer.tpl.html',
-          controller: 'AdminCtrl'
+          views: {
+            'content': {
+              templateUrl: 'js/admin/customer/customer.tpl.html',
+              controller: 'AdminCtrl'
+            },
+            'rightNav': {
+              templateUrl: 'js/admin/customer/add.customer.tpl.html',
+              controller: 'AdminCtrl'
+            }
+          }
         })
         .state ('admin.reports', {
           url: '/reports',
-          templateUrl: 'js/admin/reports.tpl.html',
-          controller: 'AdminCtrl'
+          views: {
+            'content': {
+              templateUrl: 'js/admin/reports.tpl.html',
+              controller: 'AdminCtrl'
+            }
+          }
         })
 
         // Main Account Registration and Control

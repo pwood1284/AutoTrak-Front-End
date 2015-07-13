@@ -99,7 +99,7 @@
           url: '/reports',
           views: {
             'content': {
-              templateUrl: 'js/admin/reports.tpl.html',
+              templateUrl: 'js/admin/reports/reports.tpl.html',
               controller: 'AdminCtrl'
             }
           }

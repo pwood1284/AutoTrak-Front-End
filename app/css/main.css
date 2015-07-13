@@ -58,3 +58,11 @@ header span {
     width: 85%;
     padding: 5px 5px 5px 20px;
     margin: 10px auto; }
+
+.md-sidenav-right {
+  width: 1100px;
+  min-width: 1100px;
+  max-width: 1100px; }
+
+.dash-main {
+  height: 100vh; }

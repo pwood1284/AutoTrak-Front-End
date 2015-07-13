@@ -10,12 +10,12 @@
           <md-fab-toolbar md-open="demo.isOpen" count="demo.count" ng-class="demo.selectedAlignment">
             <md-fab-trigger class="align-with-text">
               <md-button aria-label="menu" class="md-fab md-primary">
-                <md-icon md-svg-src="../assets/ic_list_white_24px.svg" ng-click="editEmployee()"></md-icon>
+                <md-icon md-svg-src="../assets/ic_list_white_24px.svg"></md-icon>
               </md-button>
             </md-fab-trigger>
             <md-toolbar>
               <md-fab-actions class="md-toolbar-tools">
-                <md-button aria-label="edit" class="md-icon-button">
+                <md-button aria-label="edit" class="md-icon-button" ng-click="employeeEdit(id)">
                   <md-icon md-svg-src="../assets/ic_mode_edit_white_24px.svg"></md-icon>
                 </md-button>
                 <md-button aria-label="delete" class="md-icon-button">

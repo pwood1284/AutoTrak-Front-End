@@ -19,6 +19,10 @@
         console.log(data);
       });
 
+      $scope.employeeEdit = function (id) {
+        AdminService.editEmployee(id);
+      };
+
     }
 
   ]);

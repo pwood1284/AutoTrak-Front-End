@@ -16,7 +16,7 @@
 
         .success ( function (data){
           console.log(data);
-          $state.go('admin.employee');
+          $state.reload('admin.employee');
         });
 
       };

@@ -4,8 +4,10 @@
 
   angular.module('AutoTrak')
 
-  .service('AdminService', ['$http', '$state', 'HEROKU',
-    function ($http, $state, HEROKU) {
+  .service('AdminService', ['$http', '$state', 'HEROKU', '$stateParams',
+    function ($http, $state, HEROKU, $stateParams) {
+
+    this.id = $stateParams.id;
 
       var postEmployee = HEROKU.URL + '/employee_user/register';
       var getEmployee = HEROKU.URL + '/employee_user/business_index';
@@ -28,7 +30,6 @@
 
       this.editEmployee = function () {
         $http.get(getEmployeeId, HEROKU.CONFIG)
-
         .success ( function (data) {
            console.log(data);
         });

@@ -4,7 +4,7 @@
     <div class="employee-list">
       <ul class="md-whiteframe-z1">
         <li ng-repeat="e in employees" class="md-whiteframe-z2">
-          <p>Name:{{ e.employee_first_name }} {{ e.employee_last_name }}
+          <p id="{{e.id}}">Name:{{ e.employee_first_name }} {{ e.employee_last_name }}
           <br>Employee #: {{ e.employee_number }}
           <br>Email: {{ e.employee_email }} </p>
           <md-fab-toolbar md-open="demo.isOpen" count="demo.count" ng-class="demo.selectedAlignment">

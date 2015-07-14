@@ -10,6 +10,8 @@
 
       TokenService.tokenizeHeader();
 
+      console.log('here');
+
       $scope.employeeCreate = function (user) {
         AdminService.createEmployee(user);
       };
@@ -19,8 +21,9 @@
         console.log(data);
       });
 
-      $scope.employeeEdit = function (id) {
-        AdminService.editEmployee(id);
+      $scope.employeeEdit = function (user) {
+        AdminService.editEmployee(user);
+        console.log(user);
       };
 
     }

@@ -7,11 +7,10 @@
   .service('AdminService', ['$http', '$state', 'HEROKU', '$stateParams',
     function ($http, $state, HEROKU, $stateParams) {
 
-    this.id = $stateParams.id;
 
       var postEmployee = HEROKU.URL + '/employee_user/register';
       var getEmployee = HEROKU.URL + '/employee_user/business_index';
-      var getEmployeeId = HEROKU.URL + '/employee_user/show/:id';
+      var getEmployeeId = HEROKU.URL + '/employee_user/show/';
 
       this.createEmployee = function (user){
 
@@ -29,11 +28,8 @@
       };
 
       this.editEmployee = function () {
-        $http.get(getEmployeeId, HEROKU.CONFIG)
-        .success ( function (data) {
-           console.log(data);
-        });
-
+        var id = Number($stateParams.id);
+        return $http.get(getEmployeeId + id, HEROKU.CONFIG);
       };
 
     }
@@ -41,3 +37,8 @@
   ]);
 
 }());
+
+// SearchService.goSearch().success( function (data) {
+//       var singleID = Number($stateParams.id);
+//       $scope.result = _.findWhere(data.questions, {profile_id: singleID});
+//     });

@@ -2,10 +2,10 @@
   <h2>Employees</h2>
     <div class="employee-list">
       <ul class="md-whiteframe-z1">
-        <li ng-repeat="e in employees" class="md-whiteframe-z2">
-          <p><a href="/#/admin/dashboard/employee/{{ e.id }}">Name: {{ e.employee_first_name }} {{ e.employee_last_name }}</a>
-          <br>Employee #: {{ e.employee_number }}
-          <br>Email: {{ e.employee_email }} </p>
+        <li class="md-whiteframe-z2">
+          <p>Name:{{ employee_first_name }} {{ employee_last_name }}
+          <br>Employee #: {{ employee_number }}
+          <br>Email: {{ employee_email }} </p>
           <md-fab-toolbar md-open="demo.isOpen" count="demo.count" ng-class="demo.selectedAlignment">
             <md-fab-trigger class="align-with-text">
               <md-button aria-label="menu" class="md-fab md-primary">

@@ -23,7 +23,7 @@
         .accentPalette('blue');
 
 
-     $urlRouterProvider.otherwise('/');
+     // $urlRouterProvider.otherwise('/');
 
       $stateProvider
         // Home State and Login Controls
@@ -67,6 +67,15 @@
             'rightNav': {
               templateUrl: 'js/admin/employee/new.employee.tpl.html',
               controller: 'AdminCtrl'
+            }
+          }
+        })
+        .state ('admin.editEmployee', {
+          url: '/employee/:id',
+          views: {
+            'content': {
+              templateUrl: 'js/admin/employee/edit.employee.tpl.html',
+              conteroller: 'AdminCtrl'
             }
           }
         })

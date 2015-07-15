@@ -23,7 +23,7 @@
         .accentPalette('blue');
 
 
-     // $urlRouterProvider.otherwise('/');
+     $urlRouterProvider.otherwise('/');
 
       $stateProvider
         // Home State and Login Controls

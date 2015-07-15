@@ -14,7 +14,9 @@
 
       this.createEmployee = function (user){
 
-        $http.post(postEmployee, user, HEROKU.CONFIG)
+      var id = Number($stateParams.id);
+
+      $http.post(postEmployee, user, HEROKU.CONFIG)
 
         .success ( function (data){
           console.log(data);
@@ -28,7 +30,6 @@
       };
 
       this.editEmployee = function () {
-        var id = Number($stateParams.id);
         return $http.get(getEmployeeId + id, HEROKU.CONFIG);
       };
 

@@ -16,7 +16,6 @@
 
       AdminService.employeeList().success( function (data) {
         $scope.employees = data.employee_user;
-        console.log(data);
       });
 
       $scope.inventoryAdd = function (item) {
@@ -29,6 +28,10 @@
 
       AdminService.customerList().success( function (data) {
         $scope.customers = data.client;
+      });
+
+      AdminService.inventoryList().success( function (data) {
+        $scope.inventory = data.inv_item;
         console.log(data);
       });
 

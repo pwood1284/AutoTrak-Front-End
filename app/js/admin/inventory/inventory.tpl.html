@@ -1,13 +1,12 @@
 <h2>Inventory</h2>
 <div class="data-list">
     <ul class="md-whiteframe-z1">
-      <li ng-repeat="c in customers" class="md-whiteframe-z2">
-        <p><a href="/#/admin/dashboard/employee/{{ c.id }}">Name: {{ c.client_first_name }} {{ c.client_last_name }}</a>
-          <br>Street: {{ c.client_street_address }}
-          <br>City: {{ c.client_city }} State: {{ c.client_state }}, Zipcode: {{ c.client_zipcode }}
-          <br>Primary Phone: {{ c.client_primary_phone }}
-          <br>Secondary Phone: {{ c.client_secondary_phone }}
-          <br>Email: {{ c.client_email }}
+      <li ng-repeat="i in inventory" class="md-whiteframe-z2">
+        <p><a href="/#/admin/dashboard/employee/{{ c.id }}">Part Name: {{ i.part_name }} Part #: {{ i.part_number }}</a>
+          <br>Stock #: {{ i.business_part_number }}
+          <br>Category: {{ i.category }} Item Location: {{ i.inventory_item_location }}, Supplier: {{ i.inventory_item_supplier }}
+          <br>Reorder Alert: {{ i.reorder_alert }}, Order to Quantity: {{ i.order_to_quantity }}, Inventory Count: {{ i.inventory_count }}
+          <br>Billable: {{ i.inventory_item_billable }}, Taxable: {{ i.inventory_item_taxable }}, Cost: {{ i.inventory_item_cost }}, Markup: {{ i.inventory_item_markup }}
         </p>
       <md-fab-toolbar md-open="demo.isOpen" count="demo.count" ng-class="demo.selectedAlignment">
         <md-fab-trigger class="align-with-text">

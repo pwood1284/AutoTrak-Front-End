@@ -14,6 +14,7 @@
       var newInventory = HEROKU.URL + '/inventory_items';
       var newClient = HEROKU.URL + '/clients';
       var getClients = HEROKU.URL + '/clients/business_user';
+      var getInventory = HEROKU.URL + '/inventory_items/business_user';
 
       var id = Number($stateParams.id);
 
@@ -49,7 +50,7 @@
         return $http.get(getClients, HEROKU.CONFIG);
       };
 
-      this.getInventory = function () {
+      this.inventoryList = function () {
         return $http.get(getInventory, HEROKU.CONFIG);
       };
 

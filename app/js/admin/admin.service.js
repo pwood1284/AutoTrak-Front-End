@@ -13,6 +13,7 @@
       var getEmployeeId = HEROKU.URL + '/employee_user/show/';
       var newInventory = HEROKU.URL + '/inventory_items';
       var newClient = HEROKU.URL + '/clients';
+      var getClients = HEROKU.URL + '/clients/business_user';
 
       var id = Number($stateParams.id);
 
@@ -42,6 +43,14 @@
 
       this.employeeList = function () {
         return $http.get(getEmployee, HEROKU.CONFIG);
+      };
+
+      this.customerList = function () {
+        return $http.get(getClients, HEROKU.CONFIG);
+      };
+
+      this.getInventory = function () {
+        return $http.get(getInventory, HEROKU.CONFIG);
       };
 
       // this.editEmployee = function () {

@@ -27,6 +27,11 @@
         AdminService.createCustomer(customer);
       };
 
+      AdminService.customerList().success( function (data) {
+        $scope.customers = data.client;
+        console.log(data);
+      });
+
       // $scope.employeeEdit = function (user) {
       //   AdminService.editEmployee(user);
       //   console.log(user);

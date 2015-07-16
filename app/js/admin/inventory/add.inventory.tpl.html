@@ -2,7 +2,7 @@
 
 <div id="create-super" class="md-whiteframe-z1">
   <form>
-    <div layout layout-sm="column">
+    <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
       <md-input-container flex>
         <label>Part Name</label>
         <input ng-model="item.part_name">
@@ -11,46 +11,39 @@
         <label>Supplier Part Number</label>
         <input ng-model="item.part_number">
       </md-input-container>
-    </div>
+    </md-content>
 
     <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
-      <md-input-container style="width:45%">
+      <md-input-container flex>
         <label>Company Part Number</label>
         <input ng-model="item.business_part_number">
       </md-input-container>
-      <md-input-container style="width:45%">
+      <md-input-container flex>
         <label> Category</label>
         <input ng-model="item.category">
       </md-input-container>
-      </md-content>
-      <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
-        <md-input-container style="width:45%">
-          <label>Item Location</label>
-          <input ng-model="item.inventory_item_location">
-        </md-input-container>
+      <md-input-container flex>
+        <label>Item Location</label>
+        <input ng-model="item.inventory_item_location">
+      </md-input-container>
+    </md-content>
 
-      </md-content>
-        <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
-          <md-input-container style="width:45%">
-            <label>Item Supplier</label>
-            <input ng-model="item.inventory_item_supplier">
-            </md-input-container>
-        <md-input-container style="width:45%">
-            <label> Re-order alert at</label>
-            <input ng-model="item.reorder_alert">
-          </md-input-container>
-        </md-content>
-         <form>
-    <div layout layout-sm="column">
+    <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
       <md-input-container flex>
-        <label>Part Name</label>
-        <input ng-model="item.part_name">
+        <label>Item Supplier</label>
+        <input ng-model="item.inventory_item_supplier">
       </md-input-container>
       <md-input-container flex>
-        <label>Supplier Part Number</label>
-        <input ng-model="item.part_number">
+        <label>Item Count</label>
+        <input ng-model="item.inventory_count">
       </md-input-container>
-    </div>
+      <md-input-container flex>
+        <label>Tool</label>
+        <input ng-model="item.tool">
+      </md-input-container>
+    </md-content>
+
+    <!-- </div> -->
 <!-- =========================================================== -->
     <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
       <md-input-container style="width:45%">
@@ -61,31 +54,28 @@
         <label> Taxable</label>
         <input ng-model="item.inventory_item_taxable">
       </md-input-container>
-      </md-content>
-      <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
-        <md-input-container style="width:45%">
-          <label>Cost</label>
-          <input ng-model="item.inventory_item_cost">
-        </md-input-container>
-
-      </md-content>
-        <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
-          <md-input-container style="width:32%">
-            <label>Mark Up</label>
-            <input ng-model="item.inventory_item_markup">
-            </md-input-container>
-        <md-input-container style="width:32%">
-            <label> Re-order alert at</label>
-            <input ng-model="item.inventory_count">
-          </md-input-container>
-           <md-input-container style="width:32%">
-            <label> Cost</label>
-            <input ng-model="item.cost">
-          </md-input-container>
-        </md-content>
-      <md-button ng-click="inventoryAdd(item)" class="md-primary">
-        Add
-      </md-button>
+      <md-input-container style="width:45%">
+        <label>Cost</label>
+        <input ng-model="item.inventory_item_cost">
+      </md-input-container>
     </md-content>
+
+    <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
+      <md-input-container flex>
+        <label>Mark Up</label>
+        <input ng-model="item.inventory_item_markup">
+      </md-input-container>
+      <md-input-container flex>
+        <label> Re-order alert at</label>
+        <input ng-model="item.reorder_alert">
+      </md-input-container>
+      <md-input-container flex>
+        <label> Order to Quantity</label>
+        <input ng-model="item.order_to_quantity">
+      </md-input-container>
+    </md-content>
+    <md-button ng-click="inventoryAdd(item)" class="md-primary">
+      Add
+    </md-button>
   </form>
 </div>

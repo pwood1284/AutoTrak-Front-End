@@ -26,18 +26,18 @@
           <label>Pin Numer</label>
           <input ng-model="user.employee_pin" type="password">
         </md-input-container>
-
       </md-content>
-        <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
-          <md-input-container style="width:45%">
-            <label>Employee Access Rights</label>
-            <input ng-model="user.role">
-            </md-input-container>
+
+      <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
         <md-input-container style="width:45%">
-            <label> Employee Number</label>
-            <input ng-model="user.employee_number">
+          <label>Employee Access Rights</label>
+          <input ng-model="user.role">
           </md-input-container>
-        </md-content>
+        <md-input-container style="width:45%">
+          <label> Employee Number</label>
+          <input ng-model="user.employee_number">
+        </md-input-container>
+      </md-content>
       <md-button ng-click="employeeCreate(user)" class="md-primary">
         Add
       </md-button>

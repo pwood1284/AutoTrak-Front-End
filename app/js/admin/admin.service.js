@@ -81,7 +81,7 @@
         return $http.get(getClients, HEROKU.CONFIG);
       };
 
-      this.customerGet = function () {
+      this.customerGet = function (id) {
         return $http.get(getClientId + id, HEROKU.CONFIG);
       };
 

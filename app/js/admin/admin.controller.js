@@ -4,11 +4,13 @@
 
   angular.module('AutoTrak')
 
-  .controller('AdminCtrl', ['$scope', '$location', 'AdminService', 'TokenService',
+  .controller('AdminCtrl', ['$scope', '$location', 'AdminService', 'TokenService', '$stateParams',
 
-    function ($scope, $location, AdminService, TokenService) {
+    function ($scope, $location, AdminService, TokenService, $stateParams) {
 
       TokenService.tokenizeHeader();
+
+      var id = Number($stateParams.id);
 
   // employees
   // =========================================                     ****************
@@ -45,9 +47,10 @@
         // console.log(data.business_clients.id);
       });
 
-      $scope.getCustomer = function (customer) {
-        console.log('click');
-        AdminService.customerGet(customer);
+      $scope.getCustomer = function () {
+      AdminService.customerGet().success( function (data){
+        console.log('click', data);
+      });
       };
 
   // vehicles

@@ -1,0 +1,51 @@
+<h2>Add Vehicle</h2>
+<div id="create-super" class="md-whiteframe-z1">
+  <form>
+    <div layout layout-sm="column">
+      <md-input-container flex>
+        <label>Vehicle Make</label>
+        <input ng-model="vehicle.vehicle_type">
+      </md-input-container>
+      <md-input-container flex>
+        <label>Year</label>
+        <input ng-model="vehicle.vehicle_year">
+      </md-input-container>
+    </div>
+
+      <md-input-container flex>
+        <label>Model</label>
+        <input ng-model="vehicle.vehicle_model">
+      </md-input-container>
+      <div layout layout-sm="column">
+        <md-input-container flex>
+          <label>Sub Model (ie LX)</label>
+          <input ng-model="vehicle.vehicle_sub_model">
+        </md-input-container>
+        <md-input-container flex>
+          <label>VIN</label>
+          <input ng-model="vehicle.vehicle_vin_number">
+        </md-input-container>
+        <md-input-container flex>
+          <label>Color</label>
+          <input ng-model="vehicle.vehicle_color">
+        </md-input-container>
+      </div>
+
+      <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
+        <md-input-container flex style="width: 35%">
+          <label>License</label>
+          <input ng-model="vehicle.vehicle_liscense_plate">
+          </md-input-container>
+      </md-content>
+      <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
+        <md-input-container flex>
+          <label>Comment</label>
+          <input ng-model="vehicle.vehicle_comment">
+        </md-input-container>
+      </md-content>
+      <md-button ng-click="vehicleAdd(vehicle)" class="md-primary">
+        Open Repair Order
+      </md-button>
+    </md-content>
+  </form>
+</div>

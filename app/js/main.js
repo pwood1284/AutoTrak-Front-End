@@ -104,6 +104,32 @@
             }
           }
         })
+        .state ('admin.vehicle', {
+          url: '/vehicle',
+          views: {
+            'content': {
+              templateUrl: 'js/admin/vehicles/add.vehicle.tpl.html',
+              controller: 'AdminCtrl'
+            },
+            'rightNav': {
+              templateUrl: 'js/admin/vehicles/edit.vehicle.tpl.html',
+              controller: 'AdminCtrl'
+            }
+          }
+        })
+        .state ('admin.repairOpen', {
+          url: '/repair',
+          views: {
+            'content': {
+              templateUrl: 'js/admin/repair_orders/create.ro.tpl.html',
+              controller: 'AdminCtrl'
+            },
+            'rightNav': {
+              templateUrl: 'js/admin/repair_orders/edit.ro.tpl.html',
+              controller: 'AdminCtrl'
+            }
+          }
+        })
         .state ('admin.reports', {
           url: '/reports',
           views: {

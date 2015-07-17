@@ -9,7 +9,8 @@
           <br>Secondary Phone: {{ c.client_secondary_phone }}
           <br>Email: {{ c.client_email }}
         </p>
-      <md-fab-toolbar md-open="demo.isOpen" count="demo.count" ng-class="demo.selectedAlignment">
+        <md-button class="md-primary" ng-click="getCustomer(c.id)">Add Vehicle</md-button>
+    <!--   <md-fab-toolbar md-open="demo.isOpen" count="demo.count" ng-class="demo.selectedAlignment">
         <md-fab-trigger class="align-with-text">
         <md-button aria-label="menu" class="md-fab md-primary">
           <md-icon md-svg-src="../assets/ic_list_white_24px.svg"></md-icon>
@@ -17,7 +18,7 @@
         </md-fab-trigger>
         <md-toolbar>
           <md-fab-actions class="md-toolbar-tools">
-            <md-button aria-label="edit" class="md-icon-button" ng-click="employeeEdit(id)">
+            <md-button aria-label="edit" class="md-icon-button" ng-click="employeeEdit(c.id)">
               <md-icon md-svg-src="../assets/ic_mode_edit_white_24px.svg"></md-icon>
             </md-button>
             <md-button aria-label="delete" class="md-icon-button">
@@ -25,7 +26,7 @@
             </md-button>
           </md-fab-actions>
         </md-toolbar>
-      </md-fab-toolbar>
+      </md-fab-toolbar> -->
       </li>
     </ul>
   </div>

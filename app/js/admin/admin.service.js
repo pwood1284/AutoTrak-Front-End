@@ -15,6 +15,7 @@
       var newInventory = HEROKU.URL + '/inventory_items';
       var newClient = HEROKU.URL + '/clients';
       var getClients = HEROKU.URL + '/clients/business_user';
+      var getClientId = HEROKU.URL + '/client/';
       var getInventory = HEROKU.URL + '/inventory_items/business_user';
       var createVehicle = HEROKU.URL + '/vehicles';
       var createRepair = HEROKU.URL + 'repair_order';
@@ -80,20 +81,27 @@
         return $http.get(getClients, HEROKU.CONFIG);
       };
 
+      this.customerGet = function () {
+        return $http.get(getClientId + id, HEROKU.CONFIG);
+      };
+
       this.inventoryList = function () {
         return $http.get(getInventory, HEROKU.CONFIG);
       };
 
       // this.editEmployee = function () {
+      //   var id = Number($stateParams.id);
+      //   console.log(id);
       //   return $http.get(getEmployeeId + id, HEROKU.CONFIG);
       // };
+
       this.vehicleList = function () {
         return $http.get(getVehicles, HEROKU.CONFIG);
       };
 
-      this.repairOrders = function () {
-        return $http.get(getRepairs, HEROKU.CONFIG);
-      };
+      // this.repairOrders = function () {
+      //   return $http.get(getRepairs, HEROKU.CONFIG);
+      // };
 
     }
 

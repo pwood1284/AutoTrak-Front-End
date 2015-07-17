@@ -21,11 +21,6 @@
         $scope.employees = data.employee_user;
       });
 
-        // $scope.employeeEdit = function (user) {
-      //   AdminService.editEmployee(user);
-      //   console.log(user);
-      // };
-
   // inventory
   // ==========================================                    ****************
 
@@ -35,7 +30,7 @@
 
       AdminService.inventoryList().success( function (data) {
         $scope.inventory = data.inv_item;
-        console.log(data);
+        // console.log(data);
       });
 
   // customers
@@ -46,8 +41,14 @@
       };
 
       AdminService.customerList().success( function (data) {
-        $scope.customers = data.client;
+        $scope.customers = data.business_clients;
+        // console.log(data.business_clients.id);
       });
+
+      $scope.getCustomer = function (customer) {
+        console.log('click');
+        AdminService.customerGet(customer);
+      };
 
   // vehicles
   // ============================================                  *****************
@@ -56,9 +57,9 @@
         AdminService.addVehicle(vehicle);
       };
 
-      AdminService.vehicleList().success (function (data) {
-        $scope.vehicles = data.vehicle;
-      });
+      // AdminService.vehicleList().success (function (data) {
+      //   $scope.vehicles = data.vehicle;
+      // });
 
   // Repair Orders
   // ============================================                  *****************
@@ -67,9 +68,9 @@
       AdminService.openRepair(ro);
      };
 
-     AdminService.repairOrders().success (function (data){
-      $scope.repairOs = data.repair_orders;
-     });
+     // AdminService.repairOrders().success (function (data){
+     //  $scope.repairOs = data.repair_orders;
+     // });
 
 
 

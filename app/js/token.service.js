@@ -11,6 +11,8 @@
 
         var token = $cookies.get('access_token');
         var token2 = $cookies.get('access_token2');
+        var token3 = $cookies.get('access_token3');
+        var token4 = $cookies.get('access_token4');
 
         if (token) {
           HEROKU.CONFIG.headers['Access-Token'] = token;
@@ -20,6 +22,10 @@
         }
 
         HEROKU.CONFIG.headers['Access-Token2'] = token2;
+
+        HEROKU.CONFIG.headers['Access-Token3'] = token3;
+
+        HEROKU.CONFIG.headers['Access-Token4'] = token4;
       };
 
 

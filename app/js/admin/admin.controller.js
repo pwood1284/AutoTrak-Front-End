@@ -4,9 +4,9 @@
 
   angular.module('AutoTrak')
 
-  .controller('AdminCtrl', ['$scope', '$location', 'AdminService', 'TokenService', '$stateParams', '$state',
+  .controller('AdminCtrl', ['$scope', '$location', 'AdminService', 'TokenService', '$stateParams', '$state', '$cookies',
 
-    function ($scope, $location, AdminService, TokenService, $stateParams, $state) {
+    function ($scope, $location, AdminService, TokenService, $stateParams, $state, $cookies) {
 
       TokenService.tokenizeHeader();
 
@@ -61,11 +61,13 @@
 
       $scope.vehicleAdd = function (vehicle) {
         AdminService.addVehicle(vehicle);
+
       };
 
-      // AdminService.vehicleList().success (function (data) {
-      //   $scope.vehicles = data.vehicle;
-      // });
+      AdminService.vehicleList().success (function (data) {
+        $scope.vehicles = data.vehicle;
+        console.log(data);
+      });
 
   // Repair Orders
   // ============================================                  *****************
@@ -73,6 +75,11 @@
      $scope.repairOpen = function (ro) {
       AdminService.openRepair(ro);
      };
+
+     AdminService.repairOrdersBusiness().success (function (data){
+      $scope.openRo = data.business_repair_orders;
+      console.log(data.business_repair_orders);
+     });
 
      // AdminService.repairOrders().success (function (data){
      //  $scope.repairOs = data.repair_orders;

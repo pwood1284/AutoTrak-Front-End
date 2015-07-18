@@ -4,8 +4,8 @@
 
   angular.module('AutoTrak')
 
-  .service('AdminService', ['$http', '$state', 'HEROKU', '$stateParams',
-    function ($http, $state, HEROKU, $stateParams) {
+  .service('AdminService', ['$http', '$state', 'HEROKU', '$stateParams', '$cookies',
+    function ($http, $state, HEROKU, $stateParams, $cookies) {
 
   // ENDPOINTS
   // ==================================================              ***************
@@ -18,8 +18,10 @@
       var getClientId = HEROKU.URL + '/client/';
       var getInventory = HEROKU.URL + '/inventory_items/business_user';
       var createVehicle = HEROKU.URL + '/vehicles';
-      var createRepair = HEROKU.URL + 'repair_order';
-      var roEmployee = HEROKU.URL + 'repair_order/attach_employee';
+      var getVehicles = HEROKU.URL + '/vehicles/business_user';
+      var createRepair = HEROKU.URL + '/repair_order';
+      var getRoBusiness = HEROKU.URL + '/repair_orders/business_user';
+      var roEmployee = HEROKU.URL + '/repair_order/attach_employee';
 
 
     // stateParams
@@ -50,6 +52,9 @@
         $http.post(newClient, customer, HEROKU.CONFIG)
           .success ( function (data){
             console.log(data);
+
+            $cookies.put('access_token3', data.client.access_token3);
+
             $state.go('admin.vehicle');
           });
       };
@@ -58,6 +63,7 @@
         $http.post(createVehicle, vehicle, HEROKU.CONFIG)
           .success ( function (data){
             console.log(data);
+            $cookies.put('access_token4', data.vehicle.access_token4);
             $state.go('admin.repairOpen');
           });
       };
@@ -98,9 +104,11 @@
         return $http.get(getVehicles, HEROKU.CONFIG);
       };
 
-      // this.repairOrders = function () {
-      //   return $http.get(getRepairs, HEROKU.CONFIG);
-      // };
+      // gets all Repair Orders by business
+      // ===================================
+      this.repairOrdersBusiness = function () {
+        return $http.get(getRoBusiness, HEROKU.CONFIG);
+      };
 
     }
 

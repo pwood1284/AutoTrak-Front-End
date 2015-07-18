@@ -9,7 +9,9 @@
       CONFIG: {
         headers: {
           'Access-Token' : '',
-          'Access-Token2' : ''
+          'Access-Token2' : '',
+          'Access-Token3' : '',
+          'Access-Token4' : ''
         }
       }
 
@@ -130,11 +132,11 @@
             }
           }
         })
-        .state ('admin.reports', {
-          url: '/reports',
+        .state ('admin.reportRo', {
+          url: '/report/open',
           views: {
             'content': {
-              templateUrl: 'js/admin/reports/reports.tpl.html',
+              templateUrl: 'js/admin/repair_orders/list.open.ro.tpl.html',
               controller: 'AdminCtrl'
             }
           }

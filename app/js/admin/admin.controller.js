@@ -44,7 +44,6 @@
 
       AdminService.customerList().success( function (data) {
         $scope.customers = data.business_clients;
-        console.log(data.business_clients[0].id);
       });
 
       $scope.getCustomer = function (id) {

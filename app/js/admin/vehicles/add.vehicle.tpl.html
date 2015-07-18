@@ -1,7 +1,9 @@
 <h2>Add Vehicle</h2>
 <div id="create-super" class="md-whiteframe-z1">
   <form>
-    <p ng-repeat="c in customer" data-id="{{c.id}}">Customer: {{ c.client_first_name }} {{ c.client_last_name }}</p>
+    <div ng-bind-html>
+    <p data-id="{{id}}">Customer: {{ client_first_name }} {{ client_last_name }}</p>
+    </div>
     <div layout layout-sm="column">
       <md-input-container flex>
         <label>Vehicle Make</label>

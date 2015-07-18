@@ -23,6 +23,7 @@
         $scope.employees = data.employee_user;
       });
 
+
   // inventory
   // ==========================================                    ****************
 
@@ -48,10 +49,11 @@
 
       $scope.getCustomer = function (id) {
       AdminService.customerGet(id).success( function (data){
-        $state.go('admin.vehicle');
         $scope.customer = data.client;
+        $state.go('admin.vehicle');
         console.log(data.client);
       });
+
       };
 
   // vehicles

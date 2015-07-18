@@ -89,8 +89,7 @@
         return $http.get(getInventory, HEROKU.CONFIG);
       };
 
-      // this.editEmployee = function () {
-      //   var id = Number($stateParams.id);
+      // this.editEmployee = function (id) {
       //   console.log(id);
       //   return $http.get(getEmployeeId + id, HEROKU.CONFIG);
       // };

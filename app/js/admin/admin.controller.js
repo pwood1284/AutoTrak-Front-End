@@ -4,9 +4,9 @@
 
   angular.module('AutoTrak')
 
-  .controller('AdminCtrl', ['$scope', '$location', 'AdminService', 'TokenService', '$stateParams',
+  .controller('AdminCtrl', ['$scope', '$location', 'AdminService', 'TokenService', '$stateParams', '$state',
 
-    function ($scope, $location, AdminService, TokenService, $stateParams) {
+    function ($scope, $location, AdminService, TokenService, $stateParams, $state) {
 
       TokenService.tokenizeHeader();
 
@@ -44,12 +44,14 @@
 
       AdminService.customerList().success( function (data) {
         $scope.customers = data.business_clients;
-        // console.log(data.business_clients.id);
+        console.log(data.business_clients[0].id);
       });
 
-      $scope.getCustomer = function () {
-      AdminService.customerGet().success( function (data){
-        console.log('click', data);
+      $scope.getCustomer = function (id) {
+      AdminService.customerGet(id).success( function (data){
+        $state.go('admin.vehicle');
+        $scope.customer = data.client;
+        console.log(data.client);
       });
       };
 

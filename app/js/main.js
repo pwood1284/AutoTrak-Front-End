@@ -50,11 +50,11 @@
           templateUrl: 'js/home/admin.login.tpl.html',
           controller: 'HomeCtrl'
         })
-        .state ('test', {
-          url: '/test',
-          templateUrl: 'js/user/test.keypad.tpl.html',
-          controller: 'Keypad'
-        })
+        // .state ('test', {
+        //   url: '/test',
+        //   templateUrl: 'js/user/test.keypad.tpl.html',
+        //   controller: 'Keypad'
+        // })
 
         //Admin Dashboard Routes
         //======================                                    *************
@@ -179,6 +179,11 @@
         .state ('userLog', {
           url: '/user/login',
           templateUrl: 'js/user/user.tpl.html',
+          controller: 'UserCtrl'
+        })
+        .state ('userDash', {
+          url: '/technician/dashboard',
+          templateUrl: 'js/user/user.dashboard.tpl.html',
           controller: 'UserCtrl'
         });
 

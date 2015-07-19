@@ -23,7 +23,6 @@
 
       $scope.keypadEnt = function (valor){
         console.log(valor);
-
       };
 
     }

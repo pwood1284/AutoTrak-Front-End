@@ -28,7 +28,9 @@
             }
         }
 
+
       $scope.keypadEnt = function (valor){
+        valor = valor.toString();
         UserService.loginTech(valor);
       };
 

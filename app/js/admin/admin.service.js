@@ -101,10 +101,9 @@
         return $http.get(editRepOr + id, HEROKU.CONFIG);
       };
 
-      // this.editEmployee = function (id) {
-      //   console.log(id);
-      //   return $http.get(getEmployeeId + id, HEROKU.CONFIG);
-      // };
+      this.editEmployee = function (id) {
+        return $http.get(getEmployeeId + id, HEROKU.CONFIG);
+      };
 
       this.vehicleList = function () {
         return $http.get(getVehicles, HEROKU.CONFIG);

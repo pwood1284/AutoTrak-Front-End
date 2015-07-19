@@ -77,7 +77,7 @@
           views: {
             'content': {
               templateUrl: 'js/admin/employee/edit.employee.tpl.html',
-              conteroller: 'AdminCtrl'
+              controller: 'AdminCtrl'
             }
           }
         })
@@ -137,6 +137,15 @@
           views: {
             'content': {
               templateUrl: 'js/admin/repair_orders/list.open.ro.tpl.html',
+              controller: 'AdminCtrl'
+            }
+          }
+        })
+        .state ('admin.addEmpRo', {
+          url: '/add/employee',
+          views: {
+            'content': {
+              templateUrl: 'js/admin/repair_orders/add.employee.ro.tpl.html',
               controller: 'AdminCtrl'
             }
           }

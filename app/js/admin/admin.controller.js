@@ -23,6 +23,20 @@
         $scope.employees = data.employee_user;
       });
 
+      // AdminService.editEmployee().success( function (data) {
+      //   var empID = Number($stateParams.id);
+      //   $scope.result = _.findWhere(data.employee_user, {id: empID});
+      //   console.log(empID);
+      // });
+
+      $scope.employeeEdit = function (id){
+        AdminService.editEmployee(id).success( function (data){
+        $scope.editEmp = data.employee_user;
+        $state.go('admin.editEmployee');
+        console.log(data.employee_user);
+      });
+
+      };
 
   // inventory
   // ==========================================                    ****************

@@ -141,6 +141,15 @@
             }
           }
         })
+        .state ('admin.editRo', {
+          url: '/edit/repair',
+          views: {
+            'content': {
+              templateUrl: 'js/admin/repair_orders/edit.ro.tpl.html',
+              controller: 'AdminCtrl'
+            }
+          }
+        })
 
         // Main Account Registration and Control
         // ======================================                   *************

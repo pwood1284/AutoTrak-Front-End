@@ -66,7 +66,7 @@
 
       AdminService.vehicleList().success (function (data) {
         $scope.vehicles = data.vehicle;
-        console.log(data);
+        // console.log(data);
       });
 
   // Repair Orders
@@ -78,13 +78,19 @@
 
      AdminService.repairOrdersBusiness().success (function (data){
       $scope.openRo = data.business_repair_orders;
-      console.log(data.business_repair_orders);
+      // console.log(data.business_repair_orders);
      });
+
+     $scope.editRo = function (id) {
+      AdminService.editRepair(id).success( function (data){
+        $scope.edit = data;
+        console.log(data);
+      });
+     };
 
      // AdminService.repairOrders().success (function (data){
      //  $scope.repairOs = data.repair_orders;
      // });
-
 
 
 

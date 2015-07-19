@@ -1,0 +1,25 @@
+<div ng-controller='Keypad as vm'>
+  <div class='col-md-6'>
+      <div class='userNumPad'>
+        <input class="keypad-display" ng-model='vm.valor' disabled/>
+        <ng-keypad on-key-pressed='vm.onKeyPressed'>
+          <ng-key ng-repeat='key in vm.keys' ng-key-data='key'>{{key}}</ng-key>
+          <ng-key ng-key-data='"<"'>clear</ng-key>
+          <ng-key ng-key-data='0'>0</ng-key>
+        <md-button ng-click="keypadEnt(vm.valor)">Enter</md-button>
+        </ng-keypad>
+      </div>
+  </div>
+</div>
+
+<!-- <div class='numPadWrapper'>
+  <div class="userNumPad">
+    <input class="keypad-display"  ng-model='vm.valor' disabled/>
+    <ng-keypad on-key-pressed='vm.onKeyPressed'>
+      <md-button ng-repeat='key in vm.keys' ng-data='key'>{{key}}</md-button>
+      <md-button ng-data='"<'>Clear</md-button>
+      <md-button ng-data='0'>0</md-button>
+      <md-button ng-click="keypadEnt(vm.valor)">Enter</md-button>
+    </ng-keypad>
+  </div>
+</div> -->

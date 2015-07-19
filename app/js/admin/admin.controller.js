@@ -83,8 +83,9 @@
 
      $scope.editRo = function (id) {
       AdminService.editRepair(id).success( function (data){
+        var repairId = $stateParams.id;
         $scope.edit = data;
-        console.log(data);
+        console.log($scope.edit);
       });
      };
 

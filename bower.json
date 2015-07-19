@@ -25,7 +25,8 @@
     "angular-material": "~0.10.0",
     "material-design-icons": "~2.0.0",
     "angular-cookies": "~1.4.2",
-    "cookies-js": "~1.2.1"
+    "cookies-js": "~1.2.1",
+    "ngKeypad": "*"
   },
   "devDependencies": {
     "mocha": "~2.2.5",

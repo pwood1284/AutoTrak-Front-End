@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('AutoTrak', ['ui.router', 'ngMaterial', 'ngCookies', 'ngAria'])
+  angular.module('AutoTrak', ['ui.router', 'ngMaterial', 'ngCookies', 'ngAria', 'ngKeypad'])
 
     .constant ('HEROKU', {
       URL: 'https://rocky-hollows-1826.herokuapp.com',
@@ -49,6 +49,11 @@
           url: '/admin/login',
           templateUrl: 'js/home/admin.login.tpl.html',
           controller: 'HomeCtrl'
+        })
+        .state ('test', {
+          url: '/test',
+          templateUrl: 'js/user/test.keypad.tpl.html',
+          controller: 'Keypad'
         })
 
         //Admin Dashboard Routes
@@ -142,7 +147,7 @@
           }
         })
         .state ('admin.editRo', {
-          url: '/edit/repair',
+          url: '/edit/repair/:id',
           views: {
             'content': {
               templateUrl: 'js/admin/repair_orders/edit.ro.tpl.html',

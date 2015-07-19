@@ -50,11 +50,6 @@
           templateUrl: 'js/home/admin.login.tpl.html',
           controller: 'HomeCtrl'
         })
-        // .state ('test', {
-        //   url: '/test',
-        //   templateUrl: 'js/user/test.keypad.tpl.html',
-        //   controller: 'Keypad'
-        // })
 
         //Admin Dashboard Routes
         //======================                                    *************

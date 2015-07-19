@@ -11,7 +11,7 @@
 
 
       this.loginTech = function (passkey) {
-        $http.post(technicianLog, passkey)
+        $http.post(technicianLog, passkey, HEROKU.CONFIG)
         .success( function (data){
 
           console.log('hello');

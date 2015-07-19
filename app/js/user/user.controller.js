@@ -3,9 +3,11 @@
   'use strict';
 
   angular.module('AutoTrak')
-    .controller('UserCtrl', [ 'UserService', '$scope',
+    .controller('UserCtrl', [ 'UserService', '$scope', 'TokenService',
 
-      function (UserService, $scope) {
+      function (UserService, $scope, TokenService) {
+
+        TokenService.tokenizeHeader();
 
         console.log('Hello from UserCtrl');
 

@@ -35,6 +35,10 @@
         UserService.loginTech(employee_pin);
       };
 
+      // UserService.getTechRO().success( function (data){
+      //   console.log(data);
+      // });
+
     }
 
   ]);

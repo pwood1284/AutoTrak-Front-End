@@ -69,3 +69,28 @@ header span {
 
 .dash-main {
   height: 100vh; }
+
+.tech-header {
+  width: 75%;
+  height: 150px;
+  margin: 15px auto 15px auto;
+  border: 1px solid black; }
+
+.tech-left {
+  width: 45%;
+  height: 300px;
+  border: 1px solid black;
+  margin: 0 auto;
+  float: left; }
+
+.tech-right {
+  width: 45%;
+  height: 300px;
+  border: 1px solid black;
+  margin: 0 auto;
+  float: left; }
+
+.tech-footer {
+  clear: left;
+  width: 75%;
+  border: 1px solid black; }

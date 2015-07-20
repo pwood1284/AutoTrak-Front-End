@@ -195,8 +195,8 @@
           url: '/active',
           views: {
            'user-header': {
-             templateUrl: 'js/user/views/user.header.tpl.html',
-             controller: 'UserCtrl'
+             templateUrl: 'js/user/views/header/user.header.tpl.html',
+             controller: 'HeaderCtrl'
            },
            'user-left': {
              templateUrl: 'js/user/views/user.left.tpl.html',

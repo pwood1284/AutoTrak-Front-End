@@ -8,6 +8,7 @@
 
 
       var technicianLog = HEROKU.URL + '/employee_user/pin_login';
+      var technicianRO = HEROKU.URL + '/repair_orders/employee_user';
 
 
       this.loginTech = function (passkey) {
@@ -21,6 +22,11 @@
           $state.go('userDash.active');
         });
       };
+
+      this.getTechRO = function () {
+       return $http.get(technicianRO, HEROKU.CONFIG);
+      };
+
     }
 
   ]);

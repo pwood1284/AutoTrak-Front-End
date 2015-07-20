@@ -18,7 +18,7 @@
 
           $cookies.put('access_token2', data.employee_user_pin.access_token2);
 
-          $state.go('userDash');
+          $state.go('userDash.active');
         });
       };
     }

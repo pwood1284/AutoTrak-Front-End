@@ -11,7 +11,8 @@
           'Access-Token' : '',
           'Access-Token2' : '',
           'Access-Token3' : '',
-          'Access-Token4' : ''
+          'Access-Token4' : '',
+          'Access-Token5' : ''
         }
       }
 
@@ -194,19 +195,19 @@
           url: '/active',
           views: {
            'user-header': {
-             templateUrl: '',
+             templateUrl: 'js/user/views/user.header.tpl.html',
              controller: 'UserCtrl'
            },
            'user-left': {
-             templateUrl: '',
+             templateUrl: 'js/user/views/user.left.tpl.html',
              controller: 'UserCtrl'
            },
            'user-right': {
-             templateUrl: '',
+             templateUrl: 'js/user/views/user.right.tpl.html',
              controller: 'UserCtrl'
            },
            'user-footer': {
-             templateUrl: '',
+             templateUrl: 'js/user/views/user.footer.tpl.html',
              controller: 'UserCtrl'
            }
           }

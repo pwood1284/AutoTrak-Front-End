@@ -73,6 +73,7 @@
         $http.post(createRepair, repair, HEROKU.CONFIG)
           .success ( function (data){
             console.log (data);
+            $cookies.put('access_token5', data.repair_order.access_token5);
             $state.go('admin.addEmpRo');
           });
       };

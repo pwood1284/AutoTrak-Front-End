@@ -5,11 +5,11 @@
       <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
         <md-input-container style="width:45%">
           <label>Employee #</label>
-          <input ng-model="em.employee_user_id">
+          <input ng-model="em.employee_user_id" type="number">
         </md-input-container>
       </div>
       <div>
-        <md-button ng-click="addEmp(em)" class="md-primary">
+        <md-button ng-click="empAddRo(em)" class="md-primary">
         Add Employee to Repair Order
         </md-button>
       </div>

@@ -15,23 +15,24 @@
     // ==============                                                        *****************
 
       var vm = this;
+      // var em = self;
 
-        vm.valor = '';
+        vm.employee_pin = '';
         vm.keys = [1, 2, 3, 4, 5, 6, 7, 8, 9];
         vm.onKeyPressed = onKeyPressed;
 
         function onKeyPressed(data) {
             if (data == '<') {
-                vm.valor = vm.valor.slice(0, vm.valor.length - 1);
+                vm.employee_pin = vm.employee_pin.slice(0, vm.employee_pin.length - 1);
             } else {
-                vm.valor += data;
+                vm.employee_pin += data;
             }
         }
 
 
-      $scope.keypadEnt = function (valor){
-        valor = valor.toString();
-        UserService.loginTech(valor);
+      $scope.keypadEnt = function (employee_pin){
+        console.log(employee_pin);
+        UserService.loginTech(employee_pin);
       };
 
     }

@@ -11,13 +11,14 @@
 
 
       this.loginTech = function (passkey) {
-        // console.log(passkey);
+        console.log(passkey);
         $http.post(technicianLog, passkey, HEROKU.CONFIG)
+
         .success( function (data){
 
-          $cookies.put('access_token2', data.employee_user.access_token2);
+          $cookies.put('access_token2', data.employee_user_pin.access_token2);
 
-          $state.go('/technician/dashboard');
+          $state.go('userDash');
         });
       };
     }
@@ -25,3 +26,4 @@
   ]);
 
 }());
+

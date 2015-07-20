@@ -90,6 +90,10 @@
       AdminService.openRepair(ro);
      };
 
+     $scope.empAddRo = function (em) {
+      AdminService.addEmpRo(em);
+     };
+
      AdminService.repairOrdersBusiness().success (function (data){
       $scope.openRo = data.business_repair_orders;
       // console.log(data.business_repair_orders);

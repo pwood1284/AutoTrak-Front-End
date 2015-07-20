@@ -1,14 +1,14 @@
 <div class="admin-login">
   <a ui-sref="adminLogin">Admin Dashboard Login</a>
 </div>
-<div ng-controller='UserCtrl as vm'>
-  <div class='userNumPad'>
-    <input class="keypad-display" ng-model='vm.valor' disabled/>
+<div ng-controller="UserCtrl as vm">
+  <div class="userNumPad">
+    <input class="keypad-display" type="String" ng-model="vm.employee_pin" disabled/>
     <ng-keypad on-key-pressed='vm.onKeyPressed'>
-      <ng-key ng-repeat='key in vm.keys' ng-key-data='key'>{{key}}</ng-key>
+      <ng-key ng-repeat="key in vm.keys" ng-key-data="key">{{key}}</ng-key>
       <ng-key ng-key-data='"<"'>clear</ng-key>
-      <ng-key ng-key-data='0'>0</ng-key>
-    <md-button ng-click="keypadEnt(vm.valor)">Enter</md-button>
+      <ng-key ng-key-data="0">0</ng-key>
+    <md-button ng-click="keypadEnt(vm)">Enter</md-button>
     </ng-keypad>
   </div>
   <!-- <div class='numPadWrapper'> -->

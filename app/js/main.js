@@ -188,8 +188,30 @@
         .state ('userDash', {
           url: '/technician/dashboard',
           templateUrl: 'js/user/user.dashboard.tpl.html',
-          controller: 'UserCtrl'
+          controller: 'UserCtrl',
+        })
+        .state ('userDash.active', {
+          url: '/active',
+          views: {
+           'user-header': {
+             templateUrl: '',
+             controller: 'UserCtrl'
+           },
+           'user-left': {
+             templateUrl: '',
+             controller: 'UserCtrl'
+           },
+           'user-right': {
+             templateUrl: '',
+             controller: 'UserCtrl'
+           },
+           'user-footer': {
+             templateUrl: '',
+             controller: 'UserCtrl'
+           }
+          }
         });
+
 
     }
 

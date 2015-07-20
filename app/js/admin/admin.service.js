@@ -22,7 +22,7 @@
       var createRepair = HEROKU.URL + '/repair_order';
       var getRoBusiness = HEROKU.URL + '/repair_orders/business_user';
       var editRepOr = HEROKU.URL + '/repair_order/';
-      var roEmployee = HEROKU.URL + '/repair_order/attach_employee';
+      var roEmployee = HEROKU.URL + '/employee_users_repair_order/attach_employee';
 
 
     // stateParams
@@ -73,8 +73,16 @@
         $http.post(createRepair, repair, HEROKU.CONFIG)
           .success ( function (data){
             console.log (data);
-            $state.go('admin.customer');
+            $state.go('admin.addEmpRo');
           });
+      };
+
+      this.addEmpRo = function (em){
+        console.log(em);
+        $http.post(roEmployee, em, HEROKU.CONFIG)
+          .success (function (data){
+            $state.go('admin.customer');
+        });
       };
 
     // get requests

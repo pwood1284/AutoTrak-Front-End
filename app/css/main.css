@@ -115,3 +115,5 @@ header span {
   .tech-left tfoot td {
     width: 100%;
     display: inline-block; }
+  .tech-left td input {
+    width: 75px; }

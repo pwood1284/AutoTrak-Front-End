@@ -6,16 +6,20 @@
         <th st-ratio="20" st-sort="PartNum">Part #</th>
         <th st-ratio="10" st-sort="Supplier">Supplier</th>
         <th st-ratio="30" st-sort="Location">Location</th>
+        <th st-ratio="30" st-sort="OnHand">On Hand</th>
         <th st-ratio="20" st-sort="Quantity">Quantity</th>
       </tr>
     </thead>
     <tbody>
       <tr ng-repeat="p in parts">
+        <!-- <td cs-select="row"></td> -->
         <td st-ratio="20">{{p.part_name}}</td>
         <td st-ratio="20">{{p.business_part_number}}</td>
         <td st-ratio="20">{{p.inventory_item_supplier}}</td>
         <td st-ratio="30">{{p.inventory_item_location}}</td>
+        <td st-ratio="30">{{p.inventory_count}}</td>
         <td st-ratio="20"><input type="Number">{{p.repair_item_quantity}}</input></td>
+        <td st-ratio="20"><button>Add</button></td>
       </tr>
     </tbody>
     <tfoot>

@@ -8,7 +8,8 @@
 
 
       var technicianLog = HEROKU.URL + '/employee_user/pin_login';
-      var technicianRO = HEROKU.URL + '/repair_orders/employee_user';
+      var technicianRO = HEROKU.URL + '/repair_orders/business_user';
+      // var technicianRO = HEROKU.URL + '/repair_orders/employee_user';
       var userInventory = HEROKU.URL + '/inventory_items/business_user';
 
 

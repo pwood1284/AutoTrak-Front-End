@@ -10,6 +10,7 @@
       TokenService.tokenizeHeader();
 
        UserService.getTechRO().success( function (data){
+        $scope.job = data.employee_repair_orders;
         console.log(data);
       });
 

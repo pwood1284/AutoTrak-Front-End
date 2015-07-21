@@ -1,0 +1,30 @@
+<div class="tech-left">
+   <table st-table="displayed" class="table table-striped">
+    <thead>
+      <tr>
+        <th st-ratio="20" st-sort="Part">Part</th>
+        <th st-ratio="20" st-sort="Part #">Part #</th>
+        <th st-ratio="10" st-sort="Supplier">Supplier</th>
+        <th st-ratio="30" st-sort="Location">Location</th>
+        <th st-ratio="20" st-sort="Quantity">Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="p in parts">
+        <td st-ratio="20">{{p.part_name}}</td>
+        <td st-ratio="20">{{p.business_part_number}}</td>
+        <td st-ratio="10">{{p.inventory_item_supplier}}</td>
+        <td st-ratio="30">{{p.inventory_item_location}}</td>
+        <td st-ratio="20">{{p.repair_item_quantity}}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="5" class="text-center">
+          <div  st-items-by-page="20" st-pagination=""></div>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+
+</div>

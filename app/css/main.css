@@ -74,14 +74,15 @@ header span {
   width: 75%;
   height: 150px;
   margin: 15px auto 10px auto;
-  border: 1px solid black; }
+  border: 1px solid black;
+  overflow: scroll; }
 
 .tech-left {
-  width: 64%;
+  width: 80%;
   height: 500px;
   border: 1px solid black;
   margin: 0 auto;
-  float: left; }
+  overflow: scroll; }
   .tech-left table {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -117,15 +118,3 @@ header span {
   .tech-left tfoot td {
     width: 100%;
     display: inline-block; }
-
-.tech-right {
-  width: 35%;
-  height: 500px;
-  border: 1px solid black;
-  margin: 0 auto;
-  float: left; }
-
-.tech-footer {
-  clear: both;
-  width: 75%;
-  border: 1px solid black; }

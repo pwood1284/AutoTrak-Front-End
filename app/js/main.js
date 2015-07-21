@@ -192,22 +192,27 @@
           controller: 'UserCtrl',
         })
         .state ('userDash.active', {
-          url: '/active',
+          url: '/inventory/get',
           views: {
            'user-header': {
              templateUrl: 'js/user/views/header/user.header.tpl.html',
              controller: 'HeaderCtrl'
            },
-           'user-left': {
-             templateUrl: 'js/user/views/user.left.tpl.html',
-             controller: 'UserCtrl'
+           'user-table': {
+             templateUrl: 'js/user/views/content/user.inventoryGet.tpl.html',
+             controller: 'ContentCtrl'
            },
-           'user-right': {
-             templateUrl: 'js/user/views/user.right.tpl.html',
-             controller: 'UserCtrl'
+          }
+        })
+        .state ('UserDash.checkout', {
+          url: '/checkout',
+          views: {
+            'user-header': {
+             templateUrl: 'js/user/views/header/user.header.tpl.html',
+             controller: 'HeaderCtrl'
            },
-           'user-footer': {
-             templateUrl: 'js/user/views/user.footer.tpl.html',
+            'user-table': {
+             templateUrl: 'js/user/views/user.inventoryCheckout.tpl.html',
              controller: 'UserCtrl'
            }
           }

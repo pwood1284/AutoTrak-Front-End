@@ -1,3 +1,30 @@
 <div class="tech-header">
   <a ui-sref="adminLogin">Admin Login</a>
+  <table st-table="displayed" class="table table-striped">
+    <thead>
+      <tr>
+        <th st-ratio="20" st-sort="firstName">Client</th>
+        <th st-ratio="20" st-sort="lastName">Last Name</th>
+        <th st-ratio="10" st-sort="vehicle">Vehicle</th>
+        <th st-ratio="30" st-sort="model">Model</th>
+        <th st-ratio="20" st-sort="repairOrder">Repair Order</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="j in job">
+        <td st-ratio="20">{{j.client.client_first_name}}</td>
+        <td st-ratio="20">{{j.client.client_last_name}}</td>
+        <td st-ratio="10">{{j.vehicle.vehicle_type}}</td>
+        <td st-ratio="30">{{j.vehicle.vehicle_model}}</td>
+        <td st-ratio="20">{{j.repair_order.repair_order_number}}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="5" class="text-center">
+          <div  st-items-by-page="20" st-pagination=""></div>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
 </div>

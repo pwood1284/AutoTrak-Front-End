@@ -9,6 +9,7 @@
 
       var technicianLog = HEROKU.URL + '/employee_user/pin_login';
       var technicianRO = HEROKU.URL + '/repair_orders/employee_user';
+      var userInventory = HEROKU.URL + '/inventory_items/business_user';
 
 
       this.loginTech = function (passkey) {
@@ -25,6 +26,10 @@
 
       this.getTechRO = function () {
        return $http.get(technicianRO, HEROKU.CONFIG);
+      };
+
+      this.getUserInventory = function (){
+        return $http.get(userInventory, HEROKU.CONFIG);
       };
 
     }

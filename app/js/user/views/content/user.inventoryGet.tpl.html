@@ -2,12 +2,14 @@
    <table st-table="displayed" class="table table-striped">
     <thead>
       <tr>
-        <th st-ratio="20" st-sort="Part">Part</th>
-        <th st-ratio="20" st-sort="PartNum">Part #</th>
-        <th st-ratio="10" st-sort="Supplier">Supplier</th>
-        <th st-ratio="30" st-sort="Location">Location</th>
-        <th st-ratio="30" st-sort="OnHand">On Hand</th>
-        <th st-ratio="20" st-sort="Quantity">Quantity</th>
+        <th st-ratio="20" st-sort="part">Part</th>
+        <th st-ratio="20" st-sort="partNum">Part #</th>
+        <th st-ratio="10" st-sort="supplier">Supplier</th>
+        <th st-ratio="30" st-sort="location">Location</th>
+        <th st-ratio="30" st-sort="onHand">On Hand</th>
+        <th st-ratio="20" st-sort="quantity" id="td-quantity">Quantity</th>
+        <th st-ratio="20" st-sort="button" id="th-button"></th>
+        <!-- <th></th> -->
       </tr>
     </thead>
     <tbody>
@@ -19,7 +21,7 @@
         <td st-ratio="30">{{p.inventory_item_location}}</td>
         <td st-ratio="30">{{p.inventory_count}}</td>
         <td st-ratio="20"><input type="Number">{{p.repair_item_quantity}}</input></td>
-        <td st-ratio="20"><button>Add</button></td>
+        <td st-ratio="20"><md-button ng-click="addCheckout(p)">Add</md-button></td>
       </tr>
     </tbody>
     <tfoot>

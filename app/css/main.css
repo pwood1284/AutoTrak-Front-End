@@ -72,13 +72,13 @@ header span {
 
 .tech-header {
   width: 90%;
-  height: 150px;
-  margin: 15px auto 10px auto;
+  height: 500px;
+  margin: 30px auto 10px auto;
   overflow: scroll; }
 
 .tech-left {
   height: 500px;
-  margin: 0 auto;
+  margin: 30px auto 10px auto;
   overflow: scroll; }
   .tech-left table {
     box-sizing: border-box;
@@ -117,3 +117,5 @@ header span {
     display: inline-block; }
   .tech-left td input {
     width: 75px; }
+  .tech-left #td-button {
+    width: 45px; }

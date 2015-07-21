@@ -10,18 +10,18 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="p in parts">
-        <td st-ratio="20">{{p.part_name}}</td>
-        <td st-ratio="20">{{p.business_part_number}}</td>
-        <td st-ratio="10">{{p.inventory_item_supplier}}</td>
-        <td st-ratio="30">{{p.inventory_item_location}}</td>
-        <td st-ratio="20">{{p.repair_item_quantity}}</td>
+      <tr ng-repeat="r in repairCheckout">
+        <td st-ratio="20">{{r.part_name}}</td>
+        <td st-ratio="20">{{r.business_part_number}}</td>
+        <td st-ratio="10">{{r.inventory_item_supplier}}</td>
+        <td st-ratio="30">{{r.inventory_item_location}}</td>
+        <td st-ratio="20">{{r.repair_item_quantity}}</td>
       </tr>
     </tbody>
     <tfoot>
       <tr>
         <td colspan="5" class="text-center">
-          <div  st-items-by-page="20" st-pagination=""></div>
+          <div st-items-by-page="20" st-pagination=""></div>
         </td>
       </tr>
     </tfoot>

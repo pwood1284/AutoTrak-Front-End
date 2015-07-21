@@ -39,6 +39,11 @@
       //   console.log(data);
       // });
 
+      // $scope.addCheckout = function (data){
+      //   UserService.itemAdd(data);
+      //   console.log(data);
+      // };
+
     }
 
   ]);

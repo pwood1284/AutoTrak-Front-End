@@ -191,29 +191,30 @@
           templateUrl: 'js/user/user.dashboard.tpl.html',
           controller: 'UserCtrl',
         })
+        .state ('userDash.list', {
+          url: '/inventory/list',
+          views: {
+           'content': {
+             templateUrl: 'js/user/views/header/user.header.tpl.html',
+             controller: 'HeaderCtrl'
+           }
+         }
+        })
         .state ('userDash.active', {
           url: '/inventory/get',
           views: {
-           'user-header': {
-             templateUrl: 'js/user/views/header/user.header.tpl.html',
-             controller: 'HeaderCtrl'
-           },
-           'user-table': {
+           'content': {
              templateUrl: 'js/user/views/content/user.inventoryGet.tpl.html',
              controller: 'ContentCtrl'
-           },
+           }
           }
         })
         .state ('UserDash.checkout', {
-          url: '/checkout',
+          url: '/inventory/checkout',
           views: {
-            'user-header': {
+            'content': {
              templateUrl: 'js/user/views/header/user.header.tpl.html',
              controller: 'HeaderCtrl'
-           },
-            'user-table': {
-             templateUrl: 'js/user/views/user.inventoryCheckout.tpl.html',
-             controller: 'UserCtrl'
            }
           }
         });

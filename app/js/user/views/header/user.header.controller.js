@@ -10,8 +10,8 @@
       TokenService.tokenizeHeader();
 
        UserService.getTechRO().success( function (data){
-        // $scope.job = data.employee_repair_orders;
-        $scope.job = data.business_repair_orders;
+        // $scope.job = data.employee_repair_orders.repair_order;
+        // $scope.job = data.business_repair_orders;
         console.log(data);
       });
 

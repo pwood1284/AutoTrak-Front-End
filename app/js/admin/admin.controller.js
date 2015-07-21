@@ -1,4 +1,4 @@
-;(function (){
+  ;(function (){
 
   'use strict';
 
@@ -21,6 +21,7 @@
 
       AdminService.employeeList().success( function (data) {
         $scope.employees = data.employee_user;
+        // console.log(data.employee_user);
       });
 
       // AdminService.editEmployee().success( function (data) {
@@ -33,7 +34,6 @@
         AdminService.editEmployee(id).success( function (data){
         $scope.editEmp = data.employee_user;
         $state.go('admin.editEmployee');
-        console.log(data.employee_user);
       });
 
       };
@@ -47,7 +47,6 @@
 
       AdminService.inventoryList().success( function (data) {
         $scope.inventory = data.inv_item;
-        // console.log(data);
       });
 
   // customers
@@ -65,7 +64,6 @@
       AdminService.customerGet(id).success( function (data){
         $scope.customer = data.client;
         $state.go('admin.vehicle');
-        console.log(data.client);
       });
 
       };
@@ -80,7 +78,6 @@
 
       AdminService.vehicleList().success (function (data) {
         $scope.vehicles = data.vehicle;
-        // console.log(data);
       });
 
   // Repair Orders
@@ -96,14 +93,13 @@
 
      AdminService.repairOrdersBusiness().success (function (data){
       $scope.openRo = data.business_repair_orders;
-      // console.log(data.business_repair_orders);
+      console.log(data.business_repair_orders);
      });
 
      $scope.editRo = function (id) {
       AdminService.editRepair(id).success( function (data){
         var repairId = $stateParams.id;
         $scope.edit = data;
-        console.log($scope.edit);
       });
      };
 

@@ -8,6 +8,10 @@
 
       TokenService.tokenizeHeader();
 
+      $scope.addCheckout = function (item){
+        UserService.addCheckout(item);
+      };
+
       UserService.getUserInventory().success( function (data){
         $scope.parts = data.inv_item;
         console.log(data);

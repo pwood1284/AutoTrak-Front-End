@@ -36,7 +36,6 @@
       this.createEmployee = function (user){
         $http.post(postEmployee, user, HEROKU.CONFIG)
           .success ( function (data){
-            // console.log(data);
             $state.reload('admin.employee');
           });
       };
@@ -44,7 +43,6 @@
       this.createInventory = function (item){
         $http.post(newInventory, item, HEROKU.CONFIG)
           .success ( function (data){
-            // console.log(data);
             $state.reload('admin.inventory');
           });
       };
@@ -52,7 +50,6 @@
       this.createCustomer = function (customer){
         $http.post(newClient, customer, HEROKU.CONFIG)
           .success ( function (data){
-            // console.log(data);
 
             $cookies.put('access_token3', data.client.access_token3);
 
@@ -63,7 +60,6 @@
       this.addVehicle = function (vehicle) {
         $http.post(createVehicle, vehicle, HEROKU.CONFIG)
           .success ( function (data){
-            // console.log(data);
             $cookies.put('access_token4', data.vehicle.access_token4);
             $state.go('admin.repairOpen');
           });
@@ -72,7 +68,6 @@
       this.openRepair = function (repair) {
         $http.post(createRepair, repair, HEROKU.CONFIG)
           .success ( function (data){
-            console.log (data);
             $cookies.put('access_token5', data.repair_order.access_token5);
             $state.go('admin.addEmpRo');
           });

@@ -7,6 +7,8 @@
         <th st-ratio="10" st-sort="vehicle">Vehicle</th>
         <th st-ratio="30" st-sort="model">Model</th>
         <th st-ratio="20" st-sort="repairOrder">Repair Order</th>
+        <th st-ratio="20" st-sort="inventoryItem">Inventory Item</th>
+
       </tr>
     </thead>
     <tbody>
@@ -15,13 +17,14 @@
         <td st-ratio="20">{{j.client.client_last_name}}</td>
         <td st-ratio="10">{{j.vehicle.vehicle_type}}</td>
         <td st-ratio="30">{{j.vehicle.vehicle_model}}</td>
-        <td st-ratio="20">{{j.repair_order_number}}</td>
+        <td st-ratio="20">{{j.repair_order.repair_order_number}}</td>
+        <td st-ratio="20"><md-button ng-click="addRepairItems(j)">+</md-button></td>
       </tr>
     </tbody>
     <tfoot>
       <tr>
         <td colspan="5" class="text-center">
-          <div  st-items-by-page="20" st-pagination=""></div>
+          <div st-items-by-page="20" st-pagination=""></div>
         </td>
       </tr>
     </tfoot>

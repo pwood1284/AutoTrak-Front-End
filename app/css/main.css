@@ -73,24 +73,59 @@ header span {
 .tech-header {
   width: 75%;
   height: 150px;
-  margin: 15px auto 15px auto;
+  margin: 15px auto 10px auto;
   border: 1px solid black; }
 
 .tech-left {
-  width: 45%;
-  height: 300px;
+  width: 64%;
+  height: 500px;
   border: 1px solid black;
   margin: 0 auto;
   float: left; }
+  .tech-left table {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 500px;
+    /* this can vary */ }
+  .tech-left table * {
+    box-sizing: inherit;
+    -moz-box-sizing: inherit; }
+  .tech-left thead {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; }
+  .tech-left tbody {
+    overflow-y: scroll;
+    display: inline-block; }
+  .tech-left thead > tr, .tech-left tbody > tr, .tech-left tfoot > tr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; }
+  .tech-left thead, .tech-left tfoot {
+    flex-shrink: 0; }
+  .tech-left th, .tech-left tbody td {
+    width: 20%;
+    /* this can vary */
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    display: inline-block; }
+  .tech-left tfoot {
+    display: inline-block; }
+  .tech-left tfoot td {
+    width: 100%;
+    display: inline-block; }
 
 .tech-right {
-  width: 45%;
-  height: 300px;
+  width: 35%;
+  height: 500px;
   border: 1px solid black;
   margin: 0 auto;
   float: left; }
 
 .tech-footer {
-  clear: left;
+  clear: both;
   width: 75%;
   border: 1px solid black; }

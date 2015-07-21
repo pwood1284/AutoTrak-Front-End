@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('AutoTrak', ['ui.router', 'ngMaterial', 'ngCookies', 'ngAria', 'ngKeypad'])
+  angular.module('AutoTrak', ['ui.router', 'ngMaterial', 'ngCookies', 'ngAria', 'ngKeypad', 'smart-table'])
 
     .constant ('HEROKU', {
       URL: 'https://rocky-hollows-1826.herokuapp.com',

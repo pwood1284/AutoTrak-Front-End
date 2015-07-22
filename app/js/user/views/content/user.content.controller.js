@@ -10,19 +10,21 @@
 
       $scope.addCheckout = function (item){
         UserContentService.repairItemAdd(item);
+        console.log(item);
       };
 
       UserContentService.getUserInventory().success( function (data){
         $scope.parts = data.inv_item;
-        console.log(data);
+        // console.log(data);
       });
 
       UserContentService.getRepairItem().success( function (data){
         $scope.item = data.repair_items;
-        console.log(data);
+        // console.log(data);
       });
 
       $scope.addQuantity = function (item) {
+        console.log(item);
         UserContentService.updateRepairItem(item);
 
       };

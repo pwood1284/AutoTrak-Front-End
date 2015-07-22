@@ -16,7 +16,7 @@
     <tbody>
       <tr ng-repeat="p in parts">
         <!-- <td cs-select="row"></td> -->
-        <td st-ratio="20">{{p.part_name}}</td>
+        <td st-ratio="20"><span data-id="{{p.id}}">{{p.part_name}}</span></td>
         <td st-ratio="20">{{p.business_part_number}}</td>
         <td st-ratio="20">{{p.inventory_item_supplier}}</td>
         <td st-ratio="30">{{p.inventory_item_location}}</td>

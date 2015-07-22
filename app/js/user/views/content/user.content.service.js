@@ -40,7 +40,7 @@
 
       this.updateRepairItem = function (item) {
         $http.patch(updateQuantity, item, HEROKU.CONFIG).
-        success( function (data){
+        success( function (){
           $state.go('userDash.checkout');
         });
       };

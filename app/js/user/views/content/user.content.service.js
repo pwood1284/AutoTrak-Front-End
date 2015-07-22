@@ -8,8 +8,8 @@
 
 
       var userInventory = HEROKU.URL + '/inventory_items/business_user';
-      var addInventoryItems = HEROKU.URL + '/repair_item';
-      var getInventoryItems = HEROKU.URL + '/repair_items';
+      var addRepairItems = HEROKU.URL + '/repair_item';
+      var getRepairItems = HEROKU.URL + '/repair_items';
       var updateQuantity = HEROKU.URL + '/repair_item/update_quantity';
 
       this.getUserInventory = function (){
@@ -17,11 +17,11 @@
       };
 
       this.getRepairItems = function (){
-        return $http.get(getInventoryItems, HEROKU.CONFIG);
+        return $http.get(getRepairItems, HEROKU.CONFIG);
       };
 
       this.checkoutItem = function (item) {
-        $http.post(addInventoryItems, item, HEROKU.CONFIG)
+        $http.post(addRepairItems, item, HEROKU.CONFIG)
         .success( function (data){
           console.log('success');
           $state.go('UserDash.checkout');

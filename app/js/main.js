@@ -209,12 +209,12 @@
            }
           }
         })
-        .state ('UserDash.checkout', {
+        .state ('userDash.checkout', {
           url: '/inventory/checkout',
           views: {
             'content': {
              templateUrl: 'js/user/views/header/user.header.tpl.html',
-             controller: 'HeaderCtrl'
+             controller: 'CheckoutCtrl'
            }
           }
         });

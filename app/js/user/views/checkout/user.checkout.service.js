@@ -6,10 +6,19 @@
   .service('UserCheckoutService', ['HEROKU', '$http', '$state', '$cookies',
     function (HEROKU, $http, $state, $cookies) {
 
-      var getInventoryItems = HEROKU.URL + '/repair_items';
+      var getRepairItems = HEROKU.URL + '/repair_items';
+      var checkoutItems = HEROKU.URL + '/repair_items/checkout';
 
       this.getRepairItems = function (){
-        return $http.get(getInventoryItems, HEROKU.CONFIG);
+        return $http.get(getRepairItems, HEROKU.CONFIG);
+      };
+
+      this.checkoutRepair = function (data){
+        $http.patch(checkoutItems, data, HEROKU.CONFIG)
+        .success( function (x){
+          $cookies.remove('access_token5');
+          $state.go('userDash.list');
+        });
       };
 
     }

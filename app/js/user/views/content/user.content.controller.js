@@ -17,11 +17,6 @@
         console.log(data);
       });
 
-      // $scope.addCheckout = function (data){
-      //   UserService.checkoutItem(data);
-      //   console.log(data);
-      // };
-
     }
 
   ]);

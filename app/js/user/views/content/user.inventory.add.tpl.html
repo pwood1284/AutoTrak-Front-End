@@ -9,20 +9,20 @@
         <th st-ratio="30" st-sort="location">Location</th>
         <th st-ratio="30" st-sort="onHand">On Hand</th>
         <th st-ratio="20" st-sort="quantity" id="td-quantity">Quantity</th>
-        <!-- <th st-ratio="20" st-sort="button" id="th-button"></th> -->
+        <th st-ratio="20" st-sort="button" id="th-button"></th>
         <!-- <th></th> -->
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="p in parts">
+      <tr ng-repeat="item in parts">
         <!-- <td cs-select="row"></td> -->
-        <td st-ratio="20">{{p.part_name}}</td>
-        <td st-ratio="20">{{p.business_part_number}}</td>
-        <td st-ratio="20">{{p.inventory_item_supplier}}</td>
-        <td st-ratio="30">{{p.inventory_item_location}}</td>
-        <td st-ratio="30">{{p.inventory_count}}</td>
-        <!-- <td st-ratio="20"><input type="Number" data-id="{{p.id}}">{{p.repair_item_quantity}}</input></td> -->
-        <td st-ratio="20"><md-button ng-click="addCheckout(p)">Add</md-button></td>
+        <td st-ratio="20">{{item.part_name}}</td>
+        <td st-ratio="20">{{item.business_part_number}}</td>
+        <td st-ratio="20">{{item.inventory_item_supplier}}</td>
+        <td st-ratio="30">{{item.inventory_item_location}}</td>
+        <td st-ratio="30">{{item.inventory_count}}</td>
+        <td st-ratio="20"><input type="Number" data-id="{{item.id}}">{{item.repair_item_quantity}}</input></td>
+        <td st-ratio="20"><md-button ng-click="addQuantity(item)">Add</md-button></td>
       </tr>
     </tbody>
     <tfoot>

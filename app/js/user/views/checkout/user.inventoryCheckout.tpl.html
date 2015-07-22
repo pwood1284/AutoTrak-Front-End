@@ -3,7 +3,7 @@
     <thead>
       <tr>
         <th st-ratio="20" st-sort="Part">Part</th>
-        <th st-ratio="20" st-sort="Part #">Part #</th>
+        <th st-ratio="20" st-sort="PartNum">Part #</th>
         <th st-ratio="10" st-sort="Supplier">Supplier</th>
         <th st-ratio="30" st-sort="Location">Location</th>
         <th st-ratio="20" st-sort="Quantity">Quantity</th>
@@ -18,6 +18,8 @@
         <td st-ratio="20">{{r.repair_item_quantity}}</td>
       </tr>
     </tbody>
+      <md-button ng-click="itemCheckout(r)">Checkout</md-button>
+
     <tfoot>
       <tr>
         <td colspan="5" class="text-center">
@@ -28,4 +30,3 @@
   </table>
 </div>
 
-<md-button ng-click="itemCheckout(r)">Add</md-button>

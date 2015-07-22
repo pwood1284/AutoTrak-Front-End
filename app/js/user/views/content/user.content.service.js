@@ -16,6 +16,10 @@
         return $http.get(userInventory, HEROKU.CONFIG);
       };
 
+      this.getRepairItem = function (){
+        return $http.get(getRepairItems, HEROKU.CONFIG);
+      };
+
       this.getRepairItems = function (){
         return $http.get(getRepairItems, HEROKU.CONFIG);
       };
@@ -23,16 +27,21 @@
       this.checkoutItem = function (item) {
         $http.post(addRepairItems, item, HEROKU.CONFIG)
         .success( function (data){
-          console.log('success');
-          $state.go('UserDash.checkout');
+          $state.go('userDash.checkout');
         });
       };
 
-      this.repairItemUpdate = function (quantity){
-        $http.patch(updateQuantity, quantity, HEROKU.CONFIG)
+      this.repairItemAdd = function (item){
+        $http.post(addRepairItems, item, HEROKU.CONFIG)
         .success( function (data){
-          console.log('done');
-          $state.go('UserDash.checkout');
+          $state.go('userDash.add');
+        });
+      };
+
+      this.updateRepairItem = function (item) {
+        $http.patch(updateQuantity, item, HEROKU.CONFIG).
+        success( function (data){
+          $state.go('userDash.checkout');
         });
       };
     }

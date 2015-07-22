@@ -209,11 +209,20 @@
            }
           }
         })
+        .state ('userDash.add', {
+          url: '/inventory/add',
+          views: {
+           'content': {
+             templateUrl: 'js/user/views/content/user.inventory.add.tpl.html',
+             controller: 'ContentCtrl'
+           }
+          }
+        })
         .state ('userDash.checkout', {
           url: '/inventory/checkout',
           views: {
             'content': {
-             templateUrl: 'js/user/views/header/user.header.tpl.html',
+             templateUrl: 'js/user/views/checkout/user.inventoryCheckout.tpl.html',
              controller: 'CheckoutCtrl'
            }
           }

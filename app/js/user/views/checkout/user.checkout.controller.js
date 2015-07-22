@@ -13,7 +13,7 @@
         console.log(data);
       });
 
-      $state.itemCheckout = function (data){
+      $scope.itemCheckout = function (data){
         UserCheckoutService.checkoutRepair(data);
       };
 

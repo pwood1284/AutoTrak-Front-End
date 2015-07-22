@@ -5,7 +5,7 @@
         <p><b>Repair Order:</b> #{{ o.repair_order_number }}
         <br><b>Customer:</b> {{ o.client.client_first_name }} {{ o.client.client_last_name }}
         <br><b>Vehicle:</b> {{ o.vehicle.vehicle_type }} {{ o.vehicle.vehicle_model }}
-        <br><b>Assigned Technician:</b> {{}}
+       <!--  <br><b>Assigned Technician:</b> {{}} -->
         </p>
         <md-button class="md-primary" ng-click="editRo(o.id)">Edit</md-button>
       </li>

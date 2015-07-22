@@ -31,7 +31,6 @@
 
 
       $scope.keypadEnt = function (employee_pin){
-        console.log(employee_pin);
         UserService.loginTech(employee_pin);
       };
 
@@ -39,10 +38,7 @@
       //   console.log(data);
       // });
 
-      // $scope.addCheckout = function (data){
-      //   UserService.itemAdd(data);
-      //   console.log(data);
-      // };
+
 
     }
 

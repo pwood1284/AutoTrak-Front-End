@@ -26,14 +26,6 @@
         });
       };
 
-      this.addCheckout = function (item) {
-        $http.post(addInventoryItems, item, HEROKU.CONFIG)
-        .success( function (data){
-          console.log('success');
-          $state.go('UserDash.checkout');
-        });
-      };
-
       this.getTechRO = function () {
        return $http.get(technicianRO, HEROKU.CONFIG);
       };

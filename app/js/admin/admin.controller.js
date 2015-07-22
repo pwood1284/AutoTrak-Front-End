@@ -47,6 +47,7 @@
 
       AdminService.inventoryList().success( function (data) {
         $scope.inventory = data.inv_item;
+        console.log(data);
       });
 
   // customers

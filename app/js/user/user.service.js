@@ -12,7 +12,7 @@
       var technicianRO = HEROKU.URL + '/repair_orders/employee_user';
       var userInventory = HEROKU.URL + '/inventory_items/business_user';
       var addInventoryItems = HEROKU.URL + '/repair_item';
-      var getInventoryItems = HEROKU.URL + '/repair_items';
+
 
 
       this.loginTech = function (passkey) {
@@ -34,9 +34,6 @@
         return $http.get(userInventory, HEROKU.CONFIG);
       };
 
-      this.getRepairItems = function (){
-        return $http.get(getInventoryItems, HEROKU.CONFIG);
-      };
     }
 
   ]);

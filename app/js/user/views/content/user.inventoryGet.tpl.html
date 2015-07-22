@@ -21,7 +21,7 @@
         <td st-ratio="20">{{p.inventory_item_supplier}}</td>
         <td st-ratio="30">{{p.inventory_item_location}}</td>
         <td st-ratio="30">{{p.inventory_count}}</td>
-        <td st-ratio="20"><input type="Number">{{p.repair_item_quantity}}</input></td>
+        <td st-ratio="20"><input type="Number" data-id="{{p.id}}">{{p.repair_item_quantity}}</input></td>
         <td st-ratio="20"><md-button ng-click="addCheckout(p)">Add</md-button></td>
       </tr>
     </tbody>

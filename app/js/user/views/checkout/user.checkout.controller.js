@@ -3,13 +3,13 @@
   'use strict';
 
   angular.module('AutoTrak')
-  .controller('CheckoutCtrl', ['$scope', 'UserService', 'TokenService',
-    function ($scope, UserService, TokenService) {
+  .controller('CheckoutCtrl', ['$scope', 'UserCheckoutService', 'TokenService',
+    function ($scope, UserCheckoutService, TokenService) {
 
       TokenService.tokenizeHeader();
 
 
-      UserService.getRepairItems().success( function (data){
+      UserCheckoutService.getRepairItems().success( function (data){
         $scope.repairCheckout = data.repair_items;
       });
 

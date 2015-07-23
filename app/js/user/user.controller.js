@@ -42,6 +42,10 @@
         UserCheckoutService.toLogout();
       };
 
+      $scope.logout = function (){
+        UserCheckoutService.toLogout();
+      };
+
     }
 
   ]);

@@ -8,6 +8,10 @@ a {
 header span {
   margin-left: 20px; }
 
+.admin-logout {
+  float: right;
+  margin-top: 10px; }
+
 .landing {
   width: 100%; }
   .landing #landing-img {

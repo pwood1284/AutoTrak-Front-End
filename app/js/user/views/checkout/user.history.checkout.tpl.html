@@ -1,0 +1,31 @@
+<div class="tech-left md-whiteframe-z3">
+   <table st-table="displayed" class="table table-striped">
+    <thead>
+      <tr>
+        <th st-ratio="20" st-sort="RepairO">Repair Order</th>
+        <th st-ratio="10" st-sort="Part">Part</th>
+        <th st-ratio="30" st-sort="PartNum">Part #</th>
+        <th st-ratio="20" st-sort="stock">On Hand</th>
+        <th st-ratio="20" st-sort="Category">Category</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="h in history">
+        <td st-ratio="20">{{h.repair_order.repair_order_number}}</td>
+        <td st-ratio="10">{{h.inventory_item.part_name}}</td>
+        <td st-ratio="20">{{h.inventory_item.business_part_number}}</td>
+        <td st-ratio="30">{{h.inventory_item.inventory_count}}</td>
+        <td st-ratio="20">{{h.inventory_item.category}}</td>
+      </tr>
+    </tbody>
+
+
+    <tfoot>
+      <tr>
+        <td colspan="5" class="text-center">
+          <div st-items-by-page="20" st-pagination=""></div>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

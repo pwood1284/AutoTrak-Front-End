@@ -226,6 +226,15 @@
              controller: 'CheckoutCtrl'
            }
           }
+        })
+        .state ('userDash.history', {
+          url: '/inventory/history',
+          views: {
+            'content': {
+             templateUrl: 'js/user/views/checkout/user.history.checkout.tpl.html',
+             controller: 'CheckoutCtrl'
+           }
+          }
         });
 
 

@@ -29,7 +29,6 @@
         $cookies.remove('access_token5');
         $cookies.remove('access_token2');
         $state.go('keypad');
-
       };
 
     }

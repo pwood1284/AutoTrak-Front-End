@@ -22,6 +22,15 @@
           });
         };
 
+        this.toLogout = function (){
+        $cookies.remove('access_token5');
+        $cookies.remove('access_token2');
+        $state.go('keypad');
+      };
+
+       $scope.logout = function (){
+        UserHeaderService.toLogout();
+      };
 
     }
 

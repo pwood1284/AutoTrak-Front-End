@@ -26,7 +26,10 @@
       $scope.addQuantity = function (item) {
         console.log(item);
         UserContentService.updateRepairItem(item);
+      };
 
+       $scope.logout = function (){
+        UserContentService.toLogout();
       };
 
     }

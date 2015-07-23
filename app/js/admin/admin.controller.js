@@ -4,13 +4,16 @@
 
   angular.module('AutoTrak')
 
-  .controller('AdminCtrl', ['$scope', '$location', 'AdminService', 'TokenService', '$stateParams', '$state', '$cookies',
+  .controller('AdminCtrl', ['$scope', '$location', 'AdminService', 'TokenService', '$stateParams', '$state', '$cookies', 'EditEmployeeService',
 
-    function ($scope, $location, AdminService, TokenService, $stateParams, $state, $cookies) {
+    function ($scope, $location, AdminService, TokenService, $stateParams, $state, $cookies, EditEmployeeService) {
 
       TokenService.tokenizeHeader();
 
       var id = Number($stateParams.id);
+
+    $scope.editEmp = EditEmployeeService.emp || sessionStorage.getItem('employee');
+      console.log($scope.editEmp);
 
   // employees
   // =========================================                     ****************
@@ -32,7 +35,9 @@
 
       $scope.employeeEdit = function (id){
         AdminService.editEmployee(id).success( function (data){
-        $scope.editEmp = data.employee_user;
+          EditEmployeeService.currentEmp(data.employee_user);
+        // $scope.editEmp = data.employee_user;
+        // console.log($scope.editEmp);
         $state.go('admin.editEmployee');
       });
 
@@ -47,7 +52,6 @@
 
       AdminService.inventoryList().success( function (data) {
         $scope.inventory = data.inv_item;
-        console.log(data);
       });
 
   // customers
@@ -94,7 +98,6 @@
 
      AdminService.repairOrdersBusiness().success (function (data){
       $scope.openRo = data.business_repair_orders;
-      console.log(data.business_repair_orders);
      });
 
      $scope.editRo = function (id) {

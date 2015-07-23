@@ -4,8 +4,8 @@
 
   angular.module('AutoTrak')
 
-  .service('AdminService', ['$http', '$state', 'HEROKU', '$stateParams', '$cookies',
-    function ($http, $state, HEROKU, $stateParams, $cookies) {
+  .service('AdminService', ['$http', '$state', 'HEROKU', '$stateParams', '$cookies', 'EditEmployeeService',
+    function ($http, $state, HEROKU, $stateParams, $cookies, EditEmployeeService) {
 
   // ENDPOINTS
   // ==================================================              ***************

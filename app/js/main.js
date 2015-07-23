@@ -76,6 +76,10 @@
         .state ('admin.editEmployee', {
           url: '/employee/:id',
           views: {
+            'rightNav': {
+              templateUrl: 'js/admin/employee/edit.form.tpl.html',
+              controller: 'AdminCtrl'
+            },
             'content': {
               templateUrl: 'js/admin/employee/edit.employee.tpl.html',
               controller: 'AdminCtrl'

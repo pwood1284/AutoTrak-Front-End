@@ -4,8 +4,8 @@
 
   angular.module('AutoTrak')
 
-  .service('AdminService', ['$http', '$state', 'HEROKU', '$stateParams', '$cookies', 'EditEmployeeService',
-    function ($http, $state, HEROKU, $stateParams, $cookies, EditEmployeeService) {
+  .service('AdminService', ['$http', '$state', 'HEROKU', '$stateParams', '$cookies', 'EditEmployeeService', '$mdSidenav',
+    function ($http, $state, HEROKU, $stateParams, $cookies, EditEmployeeService, $mdSidenav) {
 
   // ENDPOINTS
   // ==================================================              ***************
@@ -54,6 +54,7 @@
             $cookies.put('access_token3', data.client.access_token3);
 
             $state.go('admin.vehicle');
+            $mdSidenav('right').close();
           });
       };
 

@@ -1,8 +1,8 @@
 <div class="admin-login">
-  <md-button ui-sref="adminLogin">Admin Dashboard Login</md-button>
+  <md-button class="md-whiteframe-z2 admin-login" ui-sref="adminLogin">Admin Dashboard Login</md-button>
 </div>
 <div ng-controller="UserCtrl as vm">
-  <div class="userNumPad">
+  <div class="userNumPad md-whiteframe-z1">
     <input class="keypad-display" type="String" ng-model="vm.employee_pin" disabled/>
     <ng-keypad on-key-pressed='vm.onKeyPressed'>
       <ng-key ng-repeat="key in vm.keys" ng-key-data="key">{{key}}</ng-key>

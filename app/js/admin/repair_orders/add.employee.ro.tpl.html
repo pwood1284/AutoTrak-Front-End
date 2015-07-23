@@ -1,32 +1,14 @@
 <h2>Add Employee to Repair Order</h2>
-<div id="create-super" class="md-whiteframe-z4">
-  <form>
- <!--    <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
-      <div>
-        <md-input-container style="width:45%">
-          <label>Employee #</label>
-          <input ng-model="em.employee_user_id" type="number">
-        </md-input-container>
-    </div>
-    <div>
-      <md-button ng-click="empAddRo(em)" class="md-primary">
-        Add Employee to Repair Order
-      </md-button>
-    </div>
-    </md-content>
-  </form> -->
-  <form>
-    <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
-
-      <ul class="md-whiteframe-z1">
-        <li ng-repeat="e in employees" class="md-whiteframe-z2">
-          <p><a href="/#/admin/dashboard/employee/{{ e.id }}">Name: {{ e.employee_first_name }} {{ e.employee_last_name }}</a>
-          <br>Employee #: {{ e.employee_number }}
-          <md-button ng-click="empAddRo(e)" class="md-primary">Add to RO</md-button>
-        </li>
-      </md-content>
+<div class="md-whiteframe-z4 data-list">
+  <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
+    <ul class="md-whiteframe-z1">
+       <li ng-repeat="e in employees" class="md-whiteframe-z2">
+         <p><a href="/#/admin/dashboard/employee/{{ e.id }}">Name: {{ e.employee_first_name }} {{ e.employee_last_name }}</a>
+         <br>Employee #: {{ e.employee_number }}
+         <md-button ng-click="empAddRo(e)" class="md-whiteframe-z3">Add to RO</md-button>
+       </li>
     </ul>
-  </form>
+  </md-content>
 </div>
 
 

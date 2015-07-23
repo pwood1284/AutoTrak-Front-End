@@ -35,10 +35,9 @@ header span {
 /* Number Pad
 =============*/
 .userNumPad {
-  border: 1px solid rgba(0, 0, 0, 0.3);
   width: 479px;
   height: 390px;
-  margin: 10% auto; }
+  margin: 5% auto; }
   .userNumPad .md-button {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
     background-color: #607D8B;
@@ -48,6 +47,10 @@ header span {
   .userNumPad .md-button:hover {
     background-color: #455A64;
     color: black; }
+
+.admin-login {
+  margin-top: 15px;
+  margin-left: 50px; }
 
 /* Admin Dashboard Main View
 ============================ */
@@ -81,6 +84,9 @@ header span {
 .user-logout {
   float: right;
   margin-right: 50px; }
+
+.checkout {
+  margin-left: 50px; }
 
 .tech-header {
   clear: both;

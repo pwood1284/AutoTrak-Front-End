@@ -17,13 +17,19 @@
       this.checkoutRepair = function (data){
         $http.patch(checkoutItems, data, HEROKU.CONFIG)
         .success( function (x){
-          // $cookies.remove('access_token5');
           $state.go('userDash.history');
         });
       };
 
       this.checkoutHistory = function (){
         return $http.get(checkoutHistory, HEROKU.CONFIG);
+      };
+
+      this.toLogout = function (){
+        $cookies.remove('access_token5');
+        $cookies.remove('access_token2');
+        $state.go('keypad');
+
       };
 
     }

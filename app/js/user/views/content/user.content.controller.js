@@ -19,8 +19,8 @@
       });
 
       UserContentService.getRepairItem().success( function (data){
-        $scope.item = data.repair_items;
-        // console.log(data);
+        $scope.items = data.repair_items;
+        console.log(data);
       });
 
       $scope.addQuantity = function (item) {

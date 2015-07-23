@@ -14,14 +14,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="item in parts">
+      <tr ng-repeat="item in items">
         <!-- <td cs-select="row"></td> -->
-        <td st-ratio="20">{{item.part_name}}</td>
-        <td st-ratio="20">{{item.business_part_number}}</td>
-        <td st-ratio="20">{{item.inventory_item_supplier}}</td>
-        <td st-ratio="30">{{item.inventory_item_location}}</td>
-        <td st-ratio="30">{{item.inventory_count}}</td>
-        <td st-ratio="20"><input type="Number" data-id="{{item.id}}">{{item.repair_item_quantity}}</input></td>
+        <td st-ratio="20">{{item.inventory_item.part_name}}</td>
+        <td st-ratio="20">{{item.inventory_item.business_part_number}}</td>
+        <td st-ratio="20">{{item.inventory_item.inventory_item_supplier}}</td>
+        <td st-ratio="30">{{item.inventory_item.inventory_item_location}}</td>
+        <td st-ratio="30">{{item.inventory_item.inventory_count}}</td>
+        <td st-ratio="20"><input type="Number" data-id="{{item.id}}" ng-model="item.repair_item_quantity"></input></td>
         <td st-ratio="20"><md-button ng-click="addQuantity(item)">Add</md-button></td>
       </tr>
     </tbody>

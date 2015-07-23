@@ -11,14 +11,14 @@
     </thead>
     <tbody>
       <tr ng-repeat="r in repairCheckout">
-        <td st-ratio="20">{{r.part_name}}</td>
-        <td st-ratio="20">{{r.business_part_number}}</td>
-        <td st-ratio="10">{{r.inventory_item_supplier}}</td>
-        <td st-ratio="30">{{r.inventory_item_location}}</td>
+        <td st-ratio="20">{{r.inventory_item.part_name}}</td>
+        <td st-ratio="20">{{r.inventory_item.business_part_number}}</td>
+        <td st-ratio="10">{{r.inventory_item.inventory_item_supplier}}</td>
+        <td st-ratio="30">{{r.inventory_item.inventory_item_location}}</td>
         <td st-ratio="20">{{r.repair_item_quantity}}</td>
       </tr>
     </tbody>
-      <md-button ng-click="itemCheckout(r)">Checkout</md-button>
+
 
     <tfoot>
       <tr>
@@ -28,5 +28,6 @@
       </tr>
     </tfoot>
   </table>
+  <md-button ng-click="itemCheckout(r)">Checkout</md-button>
 </div>
 

@@ -8,9 +8,8 @@ a {
 header span {
   margin-left: 20px; }
 
-.admin-logout {
-  float: right;
-  margin-top: 10px; }
+form input {
+  color: black; }
 
 .landing {
   width: 100%; }

@@ -107,6 +107,10 @@
       });
      };
 
+     $scope.logout = function (){
+        AdminService.toLogout();
+      };
+
      // AdminService.repairOrders().success (function (data){
      //  $scope.repairOs = data.repair_orders;
      // });

@@ -11,6 +11,9 @@ header span {
 form input {
   color: black; }
 
+.admin-logout {
+  float: right; }
+
 .landing {
   width: 100%; }
   .landing #landing-img {

@@ -8,6 +8,9 @@ a {
 header span {
   margin-left: 20px; }
 
+form input {
+  color: black; }
+
 .landing {
   width: 100%; }
   .landing #landing-img {

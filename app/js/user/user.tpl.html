@@ -24,7 +24,7 @@
 
 <div ng-controller="UserCtrl as vm">
   <div class="userNumPad md-whiteframe-z1">
-    <input class="keypad-display" type="String" ng-model="vm.employee_pin" disabled/>
+    <input class="keypad-display" type="password" ng-model="vm.employee_pin" placeholder="Enter Pin..." disabled/>
     <ng-keypad on-key-pressed='vm.onKeyPressed'>
       <ng-key class='one' ng-key-data="1">1</ng-key>
       <ng-key class='two' ng-key-data="2">2</ng-key>
@@ -41,6 +41,7 @@
     </ng-keypad>
   </div>
 </div>
+
 
 <!-- <script>
 function addNumber(element){

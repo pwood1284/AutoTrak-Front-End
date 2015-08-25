@@ -1,5 +1,8 @@
 <div class="user-declare">
-  <h3>Checkout Repair Items:</h3>
+  <h3>Repair Item Checkout</h3>
+</div>
+<div class="additem">
+  <md-button class="md-whiteframe-z3" ng-click="riLocation()">Add Repair Item</md-button>
 </div>
 <!-- <div class="user-logout md-whiteframe-z3 md-default">
   <md-button ng-click="logout()">Logout</md-button>
@@ -8,8 +11,8 @@
    <table st-table="displayed" class="table table-striped">
     <thead>
       <tr>
-        <th st-ratio="20" st-sort="Part">Part</th>
         <th st-ratio="20" st-sort="PartNum">Part #</th>
+        <th st-ratio="20" st-sort="Part">Part</th>
         <th st-ratio="10" st-sort="Supplier">Supplier</th>
         <th st-ratio="30" st-sort="Location">Location</th>
         <th st-ratio="20" st-sort="Quantity">Quantity</th>
@@ -17,8 +20,8 @@
     </thead>
     <tbody>
       <tr ng-repeat="r in repairCheckout">
-        <td st-ratio="20">{{r.inventory_item.part_name}}</td>
         <td st-ratio="20">{{r.inventory_item.business_part_number}}</td>
+        <td st-ratio="20">{{r.inventory_item.part_name}}</td>
         <td st-ratio="10">{{r.inventory_item.inventory_item_supplier}}</td>
         <td st-ratio="30">{{r.inventory_item.inventory_item_location}}</td>
         <td st-ratio="20">{{r.repair_item_quantity}}</td>

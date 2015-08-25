@@ -51,6 +51,18 @@
           templateUrl: 'js/home/admin.login.tpl.html',
           controller: 'HomeCtrl'
         })
+        //Location Keypad and Quantity Keypad Routes
+        //======================                                    *************
+        .state ('locationKeypad', {
+          url: '/ri_location',
+          templateUrl: 'js/user/views/location/rilocation.location.tpl.html',
+          controller: 'RiLocationCtrl'
+        })
+        .state ('quantityKeypad', {
+          url: '/sel_quantity',
+          templateUrl: 'js/user/views/quantity/selectqty.quantity.tpl.html',
+          controller: 'QuantityCtrl'
+        })
 
         //Admin Dashboard Routes
         //======================                                    *************
@@ -247,7 +259,3 @@
   ]);
 
 }());
-
-
-
-

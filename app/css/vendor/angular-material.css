@@ -3031,7 +3031,8 @@ md-bottom-sheet {
           user-select: none;
   position: relative;
   outline: none;
-  border: 0;
+  border: 1px solid #607D8B;
+  border-radius: 5px;
   display: inline-table;
   padding: 0 6px;
   margin: 6px 8px;
@@ -3043,7 +3044,7 @@ md-bottom-sheet {
   text-align: center;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 22px;
   font-style: inherit;
   font-variant: inherit;
   font-family: inherit;

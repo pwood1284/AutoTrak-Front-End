@@ -3039,7 +3039,7 @@ md-bottom-sheet {
   min-height: 36px;
   background: transparent;
   white-space: nowrap;
-  min-width: 88px;
+  min-width: 80px;
   text-align: center;
   text-transform: uppercase;
   font-weight: 500;

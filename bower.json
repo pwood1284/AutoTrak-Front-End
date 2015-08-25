@@ -27,7 +27,8 @@
     "angular-cookies": "~1.4.2",
     "cookies-js": "~1.2.1",
     "ngKeypad": "*",
-    "angular-smart-table": "~2.1.1"
+    "angular-smart-table": "~2.1.1",
+    "gulp": "~3.9.0"
   },
   "devDependencies": {
     "mocha": "~2.2.5",

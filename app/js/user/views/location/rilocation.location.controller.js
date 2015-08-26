@@ -30,6 +30,9 @@
         $scope.keypadEnt = function (ri_location){
           RiLocationLocationService.enterLocation(ri_location);
         };
+        $scope.enterLocation = function (ri_location){
+          RiLocationLocationService.enterLocation(ri_location);
+        };
       //   this.toLogout = function (){
       //   $cookies.remove('access_token5');
       //   $cookies.remove('access_token2');

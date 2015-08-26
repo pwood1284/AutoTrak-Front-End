@@ -5,6 +5,7 @@
   angular.module('AutoTrak')
   .service('RiLocationLocationService', ['HEROKU', '$http', '$state', '$cookies',
     function (HEROKU, $http, $state, $cookies) {
+      var technicianRI = HEROKU.URL + '/inventory_item/:id';
 
       this.locationRi = function (){
         $location.path('/ri_location');
@@ -16,9 +17,15 @@
         $state.go('keypad');
       };
 
-      this.enterLocation = function () {
+      this.enterLocation = function (ri_location) {
+        $http.get(technicianRI, ri_location, HEROKU.CONFIG)
+        .success( function (data){
           $state.go('quantityKeypad');
-        };
+          });
+      };
+
+
+
     }]);
 
 }());

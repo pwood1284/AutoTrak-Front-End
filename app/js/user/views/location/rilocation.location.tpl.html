@@ -31,9 +31,10 @@
       <ng-key class='nerd' ng-key-data='"N"'>N</ng-key>
       <ng-key class='oak'ng-key-data='"O"'>O</ng-key>
       <ng-key class='piano'ng-key-data='"P"'>P</ng-key> -->
-      <md-button class='enterbutton' ng-click="keypadEnt(vm)">Enter</md-button>
       <ng-key class='clear2' id="clear2" ng-key-data='"<"'>clear</ng-key>
       <ng-key class='zero' id="zero2" ng-key-data="0">0</ng-key>
+      <md-button  id="backbutton" ng-click="keypadEnt(vm)">Back</md-button>
+      <md-button class='enterbutton' ng-click="enterLocation(vm)">Enter</md-button>
     </ng-keypad>
   </div>
 </div>

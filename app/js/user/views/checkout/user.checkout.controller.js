@@ -20,7 +20,9 @@
         $scope.history = data.repair_items_history;
         console.log(data);
       });
-
+      $scope.riLocation = function (){
+        UserCheckoutService.locationRi();
+      };
       $scope.logout = function (){
         UserCheckoutService.toLogout();
       };
@@ -30,8 +32,3 @@
   ]);
 
 }());
-
-
-
-
-

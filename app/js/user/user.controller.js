@@ -40,9 +40,9 @@
       //   console.log(data);
       // });
 
-      $scope.logout = function (){
-        UserCheckoutService.toLogout();
-      };
+      // $scope.logout = function (){
+      //   UserCheckoutService.toLogout();
+      // };
 
       $scope.logout = function (){
         UserCheckoutService.toLogout();

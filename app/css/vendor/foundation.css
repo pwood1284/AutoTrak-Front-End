@@ -4354,7 +4354,7 @@ table {
     color: #222222;
     font-size: 0.875rem;
     padding: 0.5625rem 0.625rem;
-    text-align: left; }
+    text-align: center; }
   table tr.even, table tr.alt, table tr:nth-of-type(even) {
     background: #F9F9F9; }
   table thead tr th,
@@ -4364,7 +4364,7 @@ table {
   table tbody tr td,
   table tr td {
     display: table-cell;
-    line-height: 1.125rem; }
+    line-height: 20px; }
 
 .tabs {
   margin-bottom: 0 !important;

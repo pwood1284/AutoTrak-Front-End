@@ -14,10 +14,18 @@
         return $http.get(getRepairItems, HEROKU.CONFIG);
       };
 
+      // this.checkoutRepair = function (data){
+      //   $http.patch(checkoutItems, data, HEROKU.CONFIG)
+      //   .success( function (x){
+      //     $state.go('userDash.history');
+      //   });
+      // };
       this.checkoutRepair = function (data){
         $http.patch(checkoutItems, data, HEROKU.CONFIG)
         .success( function (x){
-          $state.go('userDash.history');
+          $cookies.remove('access_token5');
+          $cookies.remove('access_token2');
+          $state.go('keypad');
         });
       };
 
@@ -30,7 +38,9 @@
         $cookies.remove('access_token2');
         $state.go('keypad');
       };
-
+      this.locationRi = function (){
+        $state.go('locationKeypad');
+      };
     }
 
   ]);

@@ -1,0 +1,40 @@
+<div class="user-logout md-whiteframe-z3 md-default">
+  <md-button ng-click="logout()">Logout</md-button>
+</div>
+
+<div ng-controller="RiLocationCtrl as vm">
+  <div class="userNumPad2 md-whiteframe-z1">
+    <input class="keypad-display2" type="string" ng-model="vm.ri_location" placeholder="Enter Location..." disabled/>
+    <ng-keypad on-key-pressed='vm.onKeyPressed'>
+      <ng-key class='apple' id="skey2" ng-key-data='"A"'>A</ng-key>
+      <ng-key class='banana' id="skey2" ng-key-data='"B"'>B</ng-key>
+      <ng-key class='carrot' id="skey2" ng-key-data='"C"'>C</ng-key>
+      <ng-key class='dog' id="skey2" ng-key-data='"D"'>D</ng-key>
+      <ng-key class='one' id="skey2one" ng-key-data="1">1</ng-key>
+      <ng-key class='two' id="skey2" ng-key-data="2">2</ng-key>
+      <ng-key class='three' id="skey2" ng-key-data="3">3</ng-key>
+      <ng-key class='eagle' id="skey2" ng-key-data='"E"'>E</ng-key>
+      <ng-key class='ferret' id="skey2" ng-key-data='"F"'>F</ng-key>
+      <ng-key class='goose' id="skey2" ng-key-data='"G"'>G</ng-key>
+      <ng-key class='horse' id="skey2" ng-key-data='"H"'>H</ng-key>
+      <ng-key class='four' id="skey2one" ng-key-data="4">4</ng-key>
+      <ng-key class='five' id="skey2" ng-key-data="5">5</ng-key>
+      <ng-key class='six' id="skey2" ng-key-data="6">6</ng-key>
+      <ng-key class='island' id="skey2" ng-key-data='"I"'>I</ng-key>
+      <ng-key class='jelly' id="skey2" ng-key-data='"J"'>J</ng-key>
+      <ng-key class='kite' id="skey2" ng-key-data='"K"'>K</ng-key>
+      <ng-key class='light'id="skey2" ng-key-data='"L"'>L</ng-key>
+      <ng-key class='seven' id="skey2one" ng-key-data="7">7</ng-key>
+      <ng-key class='eight' id="skey2" ng-key-data="8">8</ng-key>
+      <ng-key class='nine' id="skey2" ng-key-data="9">9</ng-key>
+      <!-- <ng-key class='moon' ng-key-data='"M"'>M</ng-key>
+      <ng-key class='nerd' ng-key-data='"N"'>N</ng-key>
+      <ng-key class='oak'ng-key-data='"O"'>O</ng-key>
+      <ng-key class='piano'ng-key-data='"P"'>P</ng-key> -->
+      <ng-key class='clear2' id="clear2" ng-key-data='"<"'>clear</ng-key>
+      <ng-key class='zero' id="zero2" ng-key-data="0">0</ng-key>
+      <md-button  id="backbutton" ng-click="keypadEnt(vm)">Back</md-button>
+      <md-button class='enterbutton' ng-click="getInvItem(vm)">Enter</md-button>
+    </ng-keypad>
+  </div>
+</div>

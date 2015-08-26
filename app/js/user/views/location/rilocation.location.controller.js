@@ -27,11 +27,14 @@
               }
           }
 
-        $scope.keypadEnt = function (ri_location){
-          RiLocationLocationService.enterLocation(ri_location);
-        };
-        $scope.enterLocation = function (ri_location){
-          RiLocationLocationService.enterLocation(ri_location);
+        // $scope.keypadEnt = function (ri_location){
+        //   RiLocationLocationService.enterLocation(ri_location);
+        // };
+        // $scope.enterLocation = function (ri_location){
+        //   RiLocationLocationService.enterLocation(ri_location);
+        // };
+        $scope.getInvItem = function (ri_location){
+          RiLocationLocationService.getInventoryItem(ri_location);
         };
       //   this.toLogout = function (){
       //   $cookies.remove('access_token5');

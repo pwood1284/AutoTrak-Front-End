@@ -59,7 +59,7 @@
           controller: 'RiLocationCtrl'
         })
         .state ('quantityKeypad', {
-          url: '/sel_quantity',
+          url: '/repairItem/:id',
           templateUrl: 'js/user/views/quantity/selectqty.quantity.tpl.html',
           controller: 'QuantityCtrl'
         })

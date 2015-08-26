@@ -6,7 +6,7 @@
   .service('UserContentService', ['HEROKU', '$http', '$state', '$cookies',
     function (HEROKU, $http, $state, $cookies) {
 
-
+      var inventoryItem = HEROKU.URL + '/inventory_item/:id'
       var userInventory = HEROKU.URL + '/inventory_items/business_user';
       var addRepairItems = HEROKU.URL + '/repair_item';
       var getRepairItems = HEROKU.URL + '/repair_items';
@@ -15,7 +15,9 @@
       this.getUserInventory = function (){
         return $http.get(userInventory, HEROKU.CONFIG);
       };
-
+      this.getInventoryItem = function (){
+        return $http.get(inventoryItem, HEROKU.CONFIG);
+      };
       this.getRepairItem = function (){
         return $http.get(getRepairItems, HEROKU.CONFIG);
       };
@@ -55,4 +57,3 @@
   ]);
 
 }());
-

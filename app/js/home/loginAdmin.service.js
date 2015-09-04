@@ -8,7 +8,6 @@
     function ($http, HEROKU, $location, $cookies) {
 
       var mainLoginEndpoint = HEROKU.URL + '/business_user/login';
-
       var adminLoginEndpoint = HEROKU.URL + '/employee_user/login';
 
       this.mainLogin = function (user){

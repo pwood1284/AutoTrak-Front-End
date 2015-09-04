@@ -11,9 +11,9 @@
       TokenService.tokenizeHeader();
 
       var id = Number($stateParams.id);
-
-    $scope.editEmp = EditEmployeeService.emp || sessionStorage.getItem('employee');
-      console.log($scope.editEmp);
+      var idLoc = String($stateParams.id);
+      // $scope.editEmp = EditEmployeeService.emp || sessionStorage.getItem('employee');
+      // console.log($scope.editEmp);
 
   // employees
   // =========================================                     ****************
@@ -46,6 +46,7 @@
   // inventory
   // ==========================================                    ****************
 
+
       $scope.inventoryAdd = function (item) {
         AdminService.createInventory(item);
       };
@@ -53,6 +54,13 @@
       AdminService.inventoryList().success( function (data) {
         $scope.inventory = data.inv_item;
       });
+
+      $scope.invItemByLocation = function (id) {
+      AdminService.inventoryItemGet(id).success( function (data){
+        $state.go('inventory.getitem');
+        console.log(data);
+      });
+      };
 
   // customers
   // ===========================================                   ****************
@@ -72,6 +80,7 @@
       });
 
       };
+
 
   // vehicles
   // ============================================                  *****************

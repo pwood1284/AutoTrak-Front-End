@@ -4,7 +4,7 @@
 
 <div ng-controller="RiLocationCtrl as vm">
   <div class="userNumPad2 md-whiteframe-z1">
-    <input class="keypad-display2" type="string" ng-model="vm.ri_location" placeholder="Enter Location..." disabled/>
+    <input class="keypad-display2" type="string" id="riloc" ng-model="vm.ri_location" placeholder="Enter Location..." disabled/>
     <ng-keypad on-key-pressed='vm.onKeyPressed'>
       <ng-key class='apple' id="skey2" ng-key-data='"A"'>A</ng-key>
       <ng-key class='banana' id="skey2" ng-key-data='"B"'>B</ng-key>
@@ -34,7 +34,7 @@
       <ng-key class='clear2' id="clear2" ng-key-data='"<"'>clear</ng-key>
       <ng-key class='zero' id="zero2" ng-key-data="0">0</ng-key>
       <md-button  id="backbutton" ng-click="keypadEnt(vm)">Back</md-button>
-      <md-button class='enterbutton' ng-click="getInvItem(vm)">Enter</md-button>
+      <md-button class='enterbutton' ng-click="getItem(vm)">Enter</md-button>
     </ng-keypad>
   </div>
 </div>

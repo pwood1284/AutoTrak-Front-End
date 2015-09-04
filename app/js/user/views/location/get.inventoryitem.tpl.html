@@ -1,0 +1,42 @@
+<div class="user-declare">
+  <h3>Inventory Items:</h3>
+</div>
+<div class="user-logout md-whiteframe-z3 md-default">
+  <md-button ng-click="logout()">Logout</md-button>
+</div>
+<div class="tech-header md-whiteframe-z3">
+  <!-- <h3>Repair Order # : {{ repair.repair_order_number }}</h3> -->
+   <table st-table="displayed" class="table table-striped">
+    <thead>
+      <tr>
+        <th st-ratio="20" st-sort="part">Part</th>
+        <th st-ratio="20" st-sort="partNum">Part #</th>
+        <th st-ratio="10" st-sort="supplier">Supplier</th>
+        <th st-ratio="30" st-sort="location">Location</th>
+        <th st-ratio="30" st-sort="onHand">On Hand</th>
+        <th st-ratio="20" st-sort="quantity" id="td-quantity">Quantity</th>
+        <!-- <th st-ratio="20" st-sort="button" id="th-button"></th> -->
+        <!-- <th></th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="i in inventory">
+        <!-- <td cs-select="row"></td> -->
+        <td st-ratio="20"><span data-id="{{i.id}}">{{i.part_name}}</span></td>
+        <td st-ratio="20">{{i.business_part_number}}</td>
+        <td st-ratio="20">{{i.inventory_item_supplier}}</td>
+        <td st-ratio="30">{{i.inventory_item_location}}</td>
+        <td st-ratio="30">{{i.inventory_count}}</td>
+        <!-- <td st-ratio="20"><input type="Number" data-id="{{p.id}}">{{p.repair_item_quantity}}</input></td> -->
+        <td st-ratio="20"><md-button ng-click="addCheckout(i)">Add</md-button></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="5" class="text-center">
+          <div  st-items-by-page="20" st-pagination=""></div>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

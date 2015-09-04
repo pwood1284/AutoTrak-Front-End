@@ -1,9 +1,6 @@
 ;(function (){
-
   'use strict';
-
   angular.module('AutoTrak', ['ui.router', 'ngMaterial', 'ngCookies', 'ngAria', 'ngKeypad', 'smart-table'])
-
     .constant ('HEROKU', {
       URL: 'https://rocky-hollows-1826.herokuapp.com',
       CONFIG: {
@@ -15,75 +12,76 @@
           'Access-Token5' : ''
         }
       }
-
     })
 
     .config(['$stateProvider', '$urlRouterProvider', '$mdThemingProvider',
       function ($stateProvider, $urlRouterProvider, $mdThemingProvider){
 
-        $mdThemingProvider.theme('default')
-        .primaryPalette('blue-grey')
-        .accentPalette('blue');
-
+     $mdThemingProvider.theme('default')
+      .primaryPalette('blue-grey')
+      .accentPalette('blue');
 
      $urlRouterProvider.otherwise('/');
+     // Home State and Login Controls
+     //====================================================================
+     $stateProvider
+      .state ('home', {
+        url: '/',
+        templateUrl: 'js/home/home.tpl.html',
+        controller: 'HomeCtrl'
+      })
+      .state ('companyLogin', {
+        url: '/company/login',
+        templateUrl: 'js/home/company.login.tpl.html',
+        controller: 'HomeCtrl'
+      })
+      .state ('keypad', {
+        url: '/main',
+        templateUrl: 'js/user/user.tpl.html',
+        controller: 'UserCtrl'
+      })
+      .state ('adminLogin', {
+        url: '/admin/login',
+        templateUrl: 'js/home/admin.login.tpl.html',
+        controller: 'HomeCtrl'
+      })
+      //Repair Item Location Keypad and Quantity Keypad Routes
+      //======================                                    *************
+      .state ('locationKeypad', {
+        url: '/repair_item_location/',
+        templateUrl: 'js/user/views/location/rilocation.location.tpl.html',
+        controller: 'RiLocationCtrl'
+      })
 
-      $stateProvider
-        // Home State and Login Controls
-        //==============================                            *************
-        .state ('home', {
-          url: '/',
-          templateUrl: 'js/home/home.tpl.html',
-          controller: 'HomeCtrl'
-        })
-        .state ('companyLogin', {
-          url: '/company/login',
-          templateUrl: 'js/home/company.login.tpl.html',
-          controller: 'HomeCtrl'
-        })
-        .state ('keypad', {
-          url: '/main',
-          templateUrl: 'js/user/user.tpl.html',
-          controller: 'UserCtrl'
-        })
-        .state ('adminLogin', {
-          url: '/admin/login',
-          templateUrl: 'js/home/admin.login.tpl.html',
-          controller: 'HomeCtrl'
-        })
-        //Location Keypad and Quantity Keypad Routes
-        //======================                                    *************
-        .state ('locationKeypad', {
-          url: '/ri_location',
-          templateUrl: 'js/user/views/location/rilocation.location.tpl.html',
-          controller: 'RiLocationCtrl'
-        })
-        .state ('quantityKeypad', {
-          url: '/repairItem/:id',
-          templateUrl: 'js/user/views/quantity/selectqty.quantity.tpl.html',
-          controller: 'QuantityCtrl'
-        })
+      .state ('quantityKeypad', {
+        url: '/repairItemQuantity',
+        views: {
+          'content': {
+              templateUrl: 'js/user/views/quantity/selectqty.quantity.tpl.html',
+              controller: 'QuantityCtrl'
+                      }
+               }
+      })
+      //Admin Dashboard Routes
+      //======================                                    *************
 
-        //Admin Dashboard Routes
-        //======================                                    *************
-
-        .state ('admin', {
-          url: '/admin/dashboard',
-          templateUrl: 'js/admin/admin.dashboard.tpl.html',
-          controller: 'AdminCtrl'
-        })
-        .state ('admin.employee', {
-          url: '/employee',
-          views: {
-            'content': {
-              templateUrl: 'js/admin/employee/employee.tpl.html',
-              controller: 'AdminCtrl'
-            },
-            'rightNav': {
-              templateUrl: 'js/admin/employee/new.employee.tpl.html',
-              controller: 'AdminCtrl'
-            }
+      .state ('admin', {
+        url: '/admin/dashboard',
+        templateUrl: 'js/admin/admin.dashboard.tpl.html',
+        controller: 'AdminCtrl'
+      })
+      .state ('admin.employee', {
+        url: '/employee',
+        views: {
+          'content': {
+            templateUrl: 'js/admin/employee/employee.tpl.html',
+            controller: 'AdminCtrl'
+          },
+          'rightNav': {
+            templateUrl: 'js/admin/employee/new.employee.tpl.html',
+            controller: 'AdminCtrl'
           }
+        }
         })
         .state ('admin.editEmployee', {
           url: '/employee/:id',
@@ -110,6 +108,13 @@
             }
           }
         })
+
+        .state ('inventorygetitem', {
+          url: '/inventoryItemByLocation/id',
+          templateUrl: 'js/user/views/location/get.inventoryitem.tpl.html',
+          controller: 'RiLocationCtrl'
+        })
+
         .state ('admin.customer', {
           url: '/customer',
           views: {
@@ -252,10 +257,6 @@
            }
           }
         });
-
-
     }
-
   ]);
-
 }());

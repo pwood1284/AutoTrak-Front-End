@@ -3,8 +3,8 @@
   'use strict';
 
   angular.module('AutoTrak')
-  .service('RiLocationLocationService', ['HEROKU', '$scope','$location', '$http','$q', '$state', '$cookies',
-    function (HEROKU, $scope, $location, $http, $q, $state, $cookies) {
+  .service('RiLocationLocationService', ['HEROKU', '$location', '$http','$q', '$state', '$cookies',
+    function (HEROKU, $location, $http, $q, $state, $cookies) {
 
       var endpoint = HEROKU.URL;
       // var getInventoryItem = HEROKU.URL + '/inventory_item_by_location/{id}';

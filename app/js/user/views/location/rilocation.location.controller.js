@@ -3,14 +3,15 @@
   'use strict';
 
   angular.module('AutoTrak')
-      .controller('RiLocationCtrl', [ 'RiLocationLocationService', '$scope', 'TokenService',
+      .controller('RiLocationCtrl', [ 'RiLocationLocationService', '$state','$http', '$scope', 'TokenService',
 
-        function (RiLocationLocationService, $scope, TokenService) {
+        function (RiLocationLocationService, $state, $http, $scope, TokenService) {
 
           TokenService.tokenizeHeader();
 
-          console.log('Hello from RiLocationCtrl');
 
+
+      console.log('Hello from RiLocationCtrl');
 
         var vm = this;
         // var em = self;
@@ -27,19 +28,46 @@
               }
           }
 
+
+
+          // Get request for the selected RO number.
+            $scope.getItem = function (ri_location){
+              RiLocationLocationService.getInvItem(ri_location);
+            };
+            // $scope.getItem = function (ri_location){
+            //   RiLocationLocationService.getInvItem(ri_location).success (function (data) {
+            //     $state.go('inventory.getitem');
+            //     $scope.vm = data.inv_item.inventory_item_location;
+            //     console.log(ri_location);
+            //   });
+            // };
+
+
         // $scope.keypadEnt = function (ri_location){
         //   RiLocationLocationService.enterLocation(ri_location);
         // };
-        // $scope.enterLocation = function (ri_location){
-        //   RiLocationLocationService.enterLocation(ri_location);
+        // $scope.entLocation = function (item){
+        //   RiLocationLocationService.enterLocation(item);
+        //   console.log(item);
         // };
-        $scope.getInvItem = function (ri_location){
-          RiLocationLocationService.getInventoryItem(ri_location);
-        };
+        // RiLocationLocationService.getInvItem().success( function (data){
+        //   $scope.parts = data.inv_item;
+        //   // console.log(data);
+        // });
+        // $scope.getInvItem = function (id) {
+        //   AdminService.getInventoryItem(id).success( function (data){
+        //     var locationId = $stateParams.id;
+        //     $scope.edit = data;
+        //   });
+        // };
+
       //   this.toLogout = function (){
       //   $cookies.remove('access_token5');
       //   $cookies.remove('access_token2');
       //   $state.go('keypad');
+      // };
+      // $scope.riLocation = function (){
+      //   UserCheckoutService.locationRi()
       // };
 
       $scope.logout = function (){
@@ -51,3 +79,22 @@
   ]);
 
 }());
+
+
+// function somewhere in father-controller.js
+        var makePromiseWithSon = function() {
+            // This service's function returns a promise, but we'll deal with that shortly
+            SonService.getWeather()
+                // then() called when son gets back
+                .then(function(data) {
+                    // promise fulfilled
+                    if (data.forecast==='good') {
+                        prepareFishingTrip();
+                    } else {
+                        prepareSundayRoastDinner();
+                    }
+                }, function(error) {
+                    // promise rejected, could log the error with: console.log('error', error);
+                    prepareSundayRoastDinner();
+                });
+        };

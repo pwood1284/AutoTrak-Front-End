@@ -1,39 +1,27 @@
 ;(function (){
-
   'use strict';
-
   angular.module('AutoTrak')
   .controller('HeaderCtrl', ['UserHeaderService', '$scope', 'TokenService', '$state', '$cookies',
-
     function (UserHeaderService, $scope, TokenService, $state, $cookies) {
-
       TokenService.tokenizeHeader();
-
-       UserHeaderService.getTechRO().success( function (data){
+      console.log('Hello from UserCtrl');
+     // Gets all Repair Orders associated with the currently logged in user.
+        UserHeaderService.getTechRO().success(function (data){
         $scope.job = data.employee_repair_orders;
+        console.log(data);
         });
-
-        $scope.getSingleRepair = function (ro){
-          $cookies.put('access_token5', ro.repair_order.access_token5);
-          UserHeaderService.singleRepair(ro).success (function (data){
-            $state.go('userDash.checkout');
-            $scope.repair = data.repair_order;
-            console.log(data);
-          });
-        };
-
-        this.toLogout = function (){
-        $cookies.remove('access_token5');
-        $cookies.remove('access_token2');
-        $state.go('keypad');
-      };
-
+     // Get request for the selected RO number.
+       $scope.getSelRepairOrder = function (ro){
+         UserHeaderService.getSelRO(ro).success (function (data) {
+           $state.go('userDash.checkout');
+           $scope.job = data.repair_order;
+           console.log(ro);
+         });
+       };
+     // Logout button.
        $scope.logout = function (){
-        UserHeaderService.toLogout();
+         UserHeaderService.toLogout();
       };
-
     }
-
   ]);
-
 }());

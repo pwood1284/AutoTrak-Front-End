@@ -3,14 +3,50 @@
   'use strict';
 
   angular.module('AutoTrak')
-  .service('RiLocationLocationService', ['HEROKU', '$http', '$state', '$cookies',
-    function (HEROKU, $http, $state, $cookies) {
-      var technicianRI = HEROKU.URL + '/inventory_item/:id';
-      var inventoryItem = HEROKU.URL + '/inventory_item/:id';
+  .service('RiLocationLocationService', ['HEROKU', '$scope','$location', '$http','$q', '$state', '$cookies',
+    function (HEROKU, $scope, $location, $http, $q, $state, $cookies) {
 
-      this.locationRi = function (){
-        $location.path('/ri_location');
-      };
+      var endpoint = HEROKU.URL;
+      // var getInventoryItem = HEROKU.URL + '/inventory_item_by_location/{id}';
+      // GET request for the the current repair order.
+        // this.getInvItem = function (id) {
+        //   return $http.get(getInventoryItem, id, HEROKU.CONFIG);
+        //
+        //   // $cookies.put('access_token5', ro.repair_order.access_token5);
+        // };
+
+        this.getInvItem = function (param) {
+          $http.get(endpoint + "/inventory_item_by_location/" + (param.ri_location), HEROKU.CONFIG)
+          .success( function (data){
+                  console.log(data.inv_item);
+                  $state.go('inventorygetitem');
+                  $scope.inventory = data.inv_item;
+                  })
+          .error( function (data){
+                  console.log("error");
+                });
+        };
+
+
+      // var invItem = HEROKU.URL + '/inventory_item_by_location/' + data;
+      // var inventoryItem = HEROKU.URL + '/inventory_item_by_location/';
+
+      // var id = String($stateParams.id);
+
+      // this.enterLocation = function (id){
+      //   $location.path('/repair_item_location');
+      // };
+
+      // this.getInvItem = function (){
+      //   return $http.get(invItem, HEROKU.CONFIG);
+      // };
+
+      // this.enterLocation = function (ri_location) {
+      //   $http.get(invItem, ri_location, HEROKU.CONFIG)
+      //   .success( function (data){
+      //     $state.go('inventory.getItem');
+      //     });
+      // };
 
       this.toLogout = function (){
         $cookies.remove('access_token5');
@@ -18,17 +54,23 @@
         $state.go('keypad');
       };
 
-      this.getInventoryItem = function (id){
-        return $http.get(inventoryItem + id, HEROKU.CONFIG);
-
-          $state.go('quantityKeypad');
-      };
-      // this.enterLocation = function (ri_location) {
-      //   $http.get(technicianRI, ri_location, HEROKU.CONFIG)
-      //   .success( function (data){
-      //     $state.go('quantityKeypad');
-      //     });
+      // this.getInventoryItem = function (id){
+      //   $state.go('inventory.getitem');
+      //   return $http.get(inventoryItem + id, HEROKU.CONFIG);
       // };
+
+
+      // this.editRepair = function (id) {
+      //   $state.go('admin.editRo');
+      //   return $http.get(editRepOr + id, HEROKU.CONFIG);
+      // };
+      // this.locationRi = function (data){
+      //   $http.get(HEROKU.URL + '/repair_order/' + data, SERVER.CONFIG)
+      //     .then( function (response) {
+      //      var ro_num =  _.pluck(response.data, 'id');
+      //   $state.go('locationKeypad');
+      // });
+      // }
 
 
 

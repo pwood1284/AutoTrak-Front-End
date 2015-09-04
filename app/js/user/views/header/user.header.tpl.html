@@ -8,22 +8,22 @@
   <table st-table="displayed" class="table table-striped">
     <thead>
       <tr>
-        <th st-ratio="20" st-sort="repairOrder">Repair Order</th>
-        <th st-ratio="10" st-sort="year">Year</th>
-        <th st-ratio="10" st-sort="vehicle">Vehicle</th>
-        <th st-ratio="30" st-sort="model">Model</th>
-        <th st-ratio="20" st-sort="lastName">Last Name</th>
-        <th st-ratio="20" st-sort="firstName">First Name</th>
+        <th st-sort="repairOrder">Repair Order</th>
+        <th st-sort="year">Year</th>
+        <th st-sort="vehicle">Vehicle</th>
+        <th st-sort="model">Model</th>
+        <th st-sort="lastName">Last Name</th>
+        <th st-sort="firstName">First Name</th>
       </tr>
     </thead>
     <tbody>
       <tr ng-repeat="j in job">
-        <td st-ratio="20"><md-button ng-click="getSingleRepair(j)">{{j.repair_order.repair_order_number}}</md-button></td>
-        <td st-ratio="10">{{j.vehicle.vehicle_year}}</td>
-        <td st-ratio="10">{{j.vehicle.vehicle_type}}</td>
-        <td st-ratio="30">{{j.vehicle.vehicle_model}}</td>
-        <td st-ratio="20">{{j.client.client_last_name}}</td>
-        <td st-ratio="20">{{j.client.client_first_name}}</td>
+        <td><md-button ng-click="getSelRepairOrder(j)">{{j.repair_order.repair_order_number}}</md-button></td>
+        <td>{{j.vehicle.vehicle_year}}</td>
+        <td>{{j.vehicle.vehicle_type}}</td>
+        <td>{{j.vehicle.vehicle_model}}</td>
+        <td>{{j.client.client_last_name}}</td>
+        <td>{{j.client.client_first_name}}</td>
       </tr>
     </tbody>
     <tfoot>

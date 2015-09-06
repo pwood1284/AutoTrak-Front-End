@@ -32,7 +32,12 @@
 
           // Get request for the selected RO number.
             $scope.getItem = function (ri_location){
-              RiLocationLocationService.getInvItem(ri_location);
+              // $state.go('inventorygetitem');
+
+              RiLocationLocationService.getInvItem(ri_location).success(function(data) {
+                $scope.inventoryitem = data.inv_item;
+                console.log(data.inv_item);
+              });
             };
             // $scope.getItem = function (ri_location){
             //   RiLocationLocationService.getInvItem(ri_location).success (function (data) {
@@ -79,22 +84,3 @@
   ]);
 
 }());
-
-
-// function somewhere in father-controller.js
-        var makePromiseWithSon = function() {
-            // This service's function returns a promise, but we'll deal with that shortly
-            SonService.getWeather()
-                // then() called when son gets back
-                .then(function(data) {
-                    // promise fulfilled
-                    if (data.forecast==='good') {
-                        prepareFishingTrip();
-                    } else {
-                        prepareSundayRoastDinner();
-                    }
-                }, function(error) {
-                    // promise rejected, could log the error with: console.log('error', error);
-                    prepareSundayRoastDinner();
-                });
-        };

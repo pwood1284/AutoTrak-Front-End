@@ -3,6 +3,23 @@
 </div>
 
 <div ng-controller="RiLocationCtrl as vm">
+    <div id="displayItem">
+  <tbody>
+
+    <tr ng-model="inventoryitem">
+      <!-- <td cs-select="row"></td> -->
+      <td><span data-id="{{inventoryitem.id}}">Description: {{inventoryitem.part_name}}</span></td><br>
+      <td>ID:      {{inventoryitem.business_part_number}}</td><br>
+      <td>Supplier: {{inventoryitem.inventory_item_supplier}}</td><br>
+      <td>Location: {{inventoryitem.inventory_item_location}}</td><br>
+      <td>On Hand Quantity: {{inventoryitem.inventory_count}}</td><br>
+      <!-- <td st-ratio="20"><input type="Number" data-id="{{p.id}}">{{p.repair_item_quantity}}</input></td> -->
+      <td><md-button ng-click="addCheckout(i)">Add</md-button></td>
+    </tr>
+
+  </tbody>
+</div>
+
   <div class="userNumPad2 md-whiteframe-z1">
     <input class="keypad-display2" type="string" id="riloc" ng-model="vm.ri_location" placeholder="Enter Location..." disabled/>
     <ng-keypad on-key-pressed='vm.onKeyPressed'>

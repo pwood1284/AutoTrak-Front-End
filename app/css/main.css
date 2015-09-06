@@ -113,18 +113,25 @@ form input {
   color: white;
   }
 
+#displayItem {
+  margin-left:40px;
+  margin-top:150px;
+}
   .userNumPad2 {
+    position:relative;
+    bottom:475px;
+
+    float: right;
     width: 850px;
     height: 580px;
-    margin-left: 200px;
-    margin-top: 20px;
+    margin-left: 10px;
+    margin-top: 30px;
+    margin-right:40px;
     padding-left: 70px;
     background: #BFCBD1;
     /*box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);*/
     border: 2px solid #607D8B;
     border-radius: 5px;
-
-
 
     }
 

@@ -119,6 +119,10 @@ form input {
   margin-left:40px;
   margin-top:70px;
 }
+.displayItemData {
+  margin-left: 15px;
+  font-weight: bold;
+}
   .userNumPad2 {
     position:relative;
     bottom:470px;

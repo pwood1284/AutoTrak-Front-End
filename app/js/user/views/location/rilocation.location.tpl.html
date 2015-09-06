@@ -9,11 +9,11 @@
   <tbody>
     <tr ng-model="inventoryitem">
       <!-- <td cs-select="row"></td> -->
-      <h4><td>{{inventoryitem.part_name}}</td><br></h4>
-      <br><td><span data-id="{{inventoryitem.id}}">Location: <br>{{inventoryitem.inventory_item_location}}</span></td><br>
-      <br><td>ID: <br>{{inventoryitem.business_part_number}}</td><br>
-      <br><td>Supplier: <br>{{inventoryitem.inventory_item_supplier}}</td><br>
-      <br><td>On Hand Quantity: <br>{{inventoryitem.inventory_count}}</td><br>
+      <h4><td>{{inventoryitem.part_name}}</td></h4><br>
+      <td><span data-id="{{inventoryitem.id}}">Location: <div class="displayItemData">{{inventoryitem.inventory_item_location}}</div></span></td>
+      <br><td>ID: <div class="displayItemData">{{inventoryitem.business_part_number}}</div></td>
+      <br><td>Supplier: <div class="displayItemData">{{inventoryitem.inventory_item_supplier}}</div></td>
+      <br><td>On Hand Quantity: <div class="displayItemData">{{inventoryitem.inventory_count}}</div></td><br>
       <!-- <td st-ratio="20"><input type="Number" data-id="{{p.id}}">{{p.repair_item_quantity}}</input></td> -->
       <br><td><md-button ng-click="addCheckout(i)">Add</md-button></td>
     </tr>

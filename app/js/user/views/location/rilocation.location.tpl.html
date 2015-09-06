@@ -1,14 +1,16 @@
 <div class="user-logout md-whiteframe-z3 md-default">
   <md-button ng-click="logout()">Logout</md-button>
 </div>
-
+<div class="InvItemHeader">
+<h3>Find Repair Item By Location</h3>
+</div>
 <div ng-controller="RiLocationCtrl as vm">
 <div id="displayItem">
   <tbody>
     <tr ng-model="inventoryitem">
       <!-- <td cs-select="row"></td> -->
-      <td><span data-id="{{inventoryitem.id}}">Location: <br>{{inventoryitem.inventory_item_location}}</span></td><br>
-      <br><td>Description: <br>{{inventoryitem.part_name}}</td><br>
+      <h4><td>{{inventoryitem.part_name}}</td><br></h4>
+      <br><td><span data-id="{{inventoryitem.id}}">Location: <br>{{inventoryitem.inventory_item_location}}</span></td><br>
       <br><td>ID: <br>{{inventoryitem.business_part_number}}</td><br>
       <br><td>Supplier: <br>{{inventoryitem.inventory_item_supplier}}</td><br>
       <br><td>On Hand Quantity: <br>{{inventoryitem.inventory_count}}</td><br>

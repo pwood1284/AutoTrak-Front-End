@@ -13,6 +13,19 @@
         $scope.job = data.employee_repair_orders;
         });
 
+        $scope.addCheckout = function (item){
+          RiLocationLocationService.repairItemAdd(item);
+          // .success(function(vm){
+          //   RilocationLocationService.updateRepairItemQty(vm);
+                  console.log(item);
+          // });
+        };
+
+        $scope.addQuantity = function (ri_location) {
+          RiLocationLocationService.updateRepairItem(ri_location);
+            console.log(item);
+        };
+
         $scope.getSingleRepair = function (ro){
           $cookies.put('access_token5', ro.repair_order.access_token5);
           SelectQtyQuantityService.singleRepair(ro).success (function (data){

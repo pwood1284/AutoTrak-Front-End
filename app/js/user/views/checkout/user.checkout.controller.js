@@ -12,16 +12,17 @@
 
       $scope.itemCheckout = function (data){
         UserCheckoutService.checkoutRepair(data);
+        console.log(data);
       };
 
       $scope.riLocationScreen = function (){
         UserCheckoutService.riLocation();
       };
 
-      UserCheckoutService.checkoutHistory().success (function (data){
-        $scope.history = data.repair_items_history;
-        console.log(data);
-      });
+      // UserCheckoutService.checkoutHistory().success (function (data){
+      //   $scope.history = data.repair_items_history;
+      //   console.log(data);
+      // });
 
       $scope.logout = function (){
         UserCheckoutService.toLogout();

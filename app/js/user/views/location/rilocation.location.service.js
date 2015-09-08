@@ -6,6 +6,8 @@
   .service('RiLocationLocationService', ['HEROKU', '$location', '$http','$q', '$state', '$cookies',
     function (HEROKU, $location, $http, $q, $state, $cookies) {
 
+      var updateQuantity = HEROKU.URL + '/repair_item/quantity';
+      var addRepairItems = HEROKU.URL + '/repair_item';
       var endpoint = HEROKU.URL;
       // var getInventoryItem = HEROKU.URL + '/inventory_item_by_location/{id}';
       // GET request for the the current repair order.
@@ -19,6 +21,16 @@
           return $http.get(endpoint + "/inventory_item_by_location/" + (param.ri_location), HEROKU.CONFIG);
         };
 
+        this.repairItemAdd = function (item){
+          $http.post(addRepairItems, item, HEROKU.CONFIG);
+        };
+
+        // this.updateRepairItemQty = function (item) {
+        //   $http.patch(updateQuantity, item, HEROKU.CONFIG)
+        //   .success( function (){
+        //     console.log(item);
+        //   });
+        // };
 
       // var invItem = HEROKU.URL + '/inventory_item_by_location/' + data;
       // var inventoryItem = HEROKU.URL + '/inventory_item_by_location/';

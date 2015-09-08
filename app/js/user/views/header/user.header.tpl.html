@@ -18,7 +18,7 @@
     </thead>
     <tbody>
       <tr ng-repeat="j in job">
-        <td><md-button ng-click="getSelRepairOrder(j)">{{j.repair_order.repair_order_number}}</md-button></td>
+        <td><md-button ng-click="getRO(j)">{{j.repair_order.repair_order_number}}</md-button></td>
         <td>{{j.vehicle.vehicle_year}}</td>
         <td>{{j.vehicle.vehicle_type}}</td>
         <td>{{j.vehicle.vehicle_model}}</td>

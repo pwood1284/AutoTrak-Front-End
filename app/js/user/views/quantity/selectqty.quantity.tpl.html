@@ -2,9 +2,9 @@
   <md-button class="md-whiteframe-z2 admin-login" ui-sref="adminLogin">Admin Login</md-button>
 </div>
 
-<div ng-controller="UserCtrl as vm">
+<div ng-controller="QuantityCtrl as vm">
   <div class="userNumPad md-whiteframe-z1">
-    <input class="keypad-display" type="password" ng-model="vm.employee_pin" placeholder="Enter Pin..." disabled/>
+    <input class="keypad-display" type="Number" ng-model="vm.quantity" placeholder="Enter Quantity..." disabled/>
     <ng-keypad on-key-pressed='vm.onKeyPressed'>
       <ng-key class='one' ng-key-data="1">1</ng-key>
       <ng-key class='two' ng-key-data="2">2</ng-key>

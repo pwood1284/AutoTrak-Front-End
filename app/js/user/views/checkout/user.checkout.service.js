@@ -8,10 +8,13 @@
 
       var getRepairItems = HEROKU.URL + '/repair_items';
       var checkoutItems = HEROKU.URL + '/repair_items/checkout';
+      var deleteItem = HEROKU.URL + '/repair_item/';
+
       var checkoutHistory = HEROKU.URL + '/repair_items/history';
 
       this.getRepairItems = function (){
         return $http.get(getRepairItems, HEROKU.CONFIG);
+
       };
 
       this.riLocation = function (){
@@ -24,6 +27,14 @@
           $cookies.remove('access_token5');
           $cookies.remove('access_token2');
           $state.go('keypad');
+        });
+      };
+
+      this.repairItemDelete = function(param){
+        $http.delete(deleteItem + param, HEROKU.CONFIG)
+        .success(function(){
+
+          $state.reload('userDash.checkout');
         });
       };
 

@@ -54,13 +54,9 @@
       })
 
       .state ('quantityKeypad', {
-        url: '/repairItemQuantity',
-        views: {
-          'content': {
-              templateUrl: 'js/user/views/quantity/selectqty.quantity.tpl.html',
-              controller: 'QuantityCtrl'
-                      }
-               }
+        url: '/repairItemQuantity/:itemid',
+        templateUrl: 'js/user/views/quantity/selectqty.quantity.tpl.html',
+        controller: 'QuantityCtrl'
       })
       //Admin Dashboard Routes
       //======================                                    *************
@@ -239,15 +235,17 @@
            }
           }
         })
+
         .state ('userDash.checkout', {
           url: '/inventory/checkout',
           views: {
-            'content': {
-             templateUrl: 'js/user/views/checkout/user.inventoryCheckout.tpl.html',
-             controller: 'CheckoutCtrl'
+             'content': {
+              templateUrl: 'js/user/views/checkout/user.inventoryCheckout.tpl.html',
+              controller: 'CheckoutCtrl'
+            }
            }
-          }
         })
+
         .state ('userDash.history', {
           url: '/inventory/history',
           views: {
@@ -255,7 +253,7 @@
              templateUrl: 'js/user/views/checkout/user.history.checkout.tpl.html',
              controller: 'CheckoutCtrl'
            }
-          }
+         }
         });
     }
   ]);

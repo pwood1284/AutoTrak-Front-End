@@ -25,6 +25,8 @@
         <td st-ratio="10">{{r.inventory_item.inventory_item_supplier}}</td>
         <td st-ratio="30">{{r.inventory_item.inventory_item_location}}</td>
         <td st-ratio="20">{{r.repair_item_quantity}}</td>
+        <td st-ratio="20"><md-button ng-click="deleteRepairItem(r.id)">Remove</md-button></td>
+
       </tr>
     </tbody>
 

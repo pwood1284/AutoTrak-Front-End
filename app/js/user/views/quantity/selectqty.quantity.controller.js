@@ -1,52 +1,34 @@
 ;(function (){
-
   'use strict';
-
   angular.module('AutoTrak')
-  .controller('QuantityCtrl', ['SelectQtyQuantityService', '$scope', 'TokenService', '$state', '$cookies',
-
-    function (SelectQtyQuantityService, $scope, TokenService, $state, $cookies) {
-
+  .controller('QuantityCtrl', ['SelectQtyQuantityService', '$scope', 'TokenService', '$state', '$cookies', '$stateParams',
+    function (SelectQtyQuantityService, $scope, TokenService, $state, $cookies, $stateParams) {
       TokenService.tokenizeHeader();
 
-       SelectQtyQuantityService.getTechRO().success( function (data){
-        $scope.job = data.employee_repair_orders;
-        });
+      SelectQtyQuantityService.getRepairItemById($stateParams)
+      .success( function (data){
+        $scope.repairitem = data.repair_item.inventory_item;
+      });
 
-        $scope.addCheckout = function (item){
-          RiLocationLocationService.repairItemAdd(item);
-          // .success(function(vm){
-          //   RilocationLocationService.updateRepairItemQty(vm);
-                  console.log(item);
-          // });
-        };
+        var vm = this;
+          vm.itemQuantity = '';
+          vm.keys = [1,2,3,4,5,6,7,8,9];
+          vm.onKeyPressed = onKeyPressed;
 
-        $scope.addQuantity = function (ri_location) {
-          RiLocationLocationService.updateRepairItem(ri_location);
-            console.log(item);
-        };
+           function onKeyPressed(data) {
+              if (data == '<') {
+                vm.itemQuantity = '';
+              } else {
+                  vm.itemQuantity += data;
+              }
+           }
 
-        $scope.getSingleRepair = function (ro){
-          $cookies.put('access_token5', ro.repair_order.access_token5);
-          SelectQtyQuantityService.singleRepair(ro).success (function (data){
-            $state.go('userDash.checkout');
-            $scope.repair = data.repair_order;
-            console.log(data);
-          });
-        };
-
-        this.toLogout = function (){
-        $cookies.remove('access_token5');
-        $cookies.remove('access_token2');
-        $state.go('keypad');
+      $scope.addQuantity = function (itemQuantity) {
+        SelectQtyQuantityService.updateRepairItemQty($stateParams, itemQuantity);
       };
 
-       $scope.logout = function (){
-        UserHeaderService.toLogout();
+      $scope.logout = function (){
+        SelectQtyQuantityService.toLogout();
       };
-
-    }
-
-  ]);
-
+  }]);
 }());

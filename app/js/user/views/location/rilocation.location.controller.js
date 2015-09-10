@@ -6,7 +6,6 @@
           TokenService.tokenizeHeader();
 
       console.log('Hello from RiLocationCtrl');
-
         var vm = this;
         // var em = self;
           vm.ri_location = '';
@@ -23,28 +22,20 @@
            }
            // Get request for the selected RO number.
             $scope.getItem = function (ri_location){
-              // $state.go('inventorygetitem')
               RiLocationLocationService.getInvItem(ri_location).success(function(data) {
                 $scope.inventoryitem = data.inv_item;
                 console.log(data.inv_item);
               });
             };
 
-            $scope.addCheckout = function (item){
-              RiLocationLocationService.repairItemAdd(item)
-              .success(function(data){
-                $state.go("quantityKeypad");
-                console.log(data);
-              });
-            };
+            $scope.addCheckout = function (inventoryitem){
+              RiLocationLocationService.AddRepairItem(inventoryitem);
 
+            };
 
             $scope.logout = function (){
               RiLocationLocationService.toLogout();
             };
-
     }
-
   ]);
-
 }());

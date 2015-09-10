@@ -1,22 +1,22 @@
 ;(function (){
-
   'use strict';
-
   angular.module('AutoTrak')
-  .service('SelectQtyQuantityService', ['HEROKU', '$http', '$state', '$cookies',
-    function (HEROKU, $http, $state, $cookies) {
+  .service('SelectQtyQuantityService', ['HEROKU', '$http', '$state', '$cookies', '$stateParams',
+    function (HEROKU, $http, $state, $cookies, $stateParams) {
 
+      var getRepairItem = HEROKU.URL + "/repair_item/";
+      var updateQuantity = HEROKU.URL + "/repair_item/update_quantity/";
 
-      // var technicianRO = HEROKU.URL + '/repair_orders/business_user';
-      var technicianRO = HEROKU.URL + '/repair_orders/employee_user';
-      var singleRo = HEROKU.URL + '/repair_order';
-
-      this.getTechRO = function () {
-       return $http.get(technicianRO, HEROKU.CONFIG);
+    // Get last repair item from the logged in technician.
+      this.getRepairItemById = function (param) {
+        return $http.get(getRepairItem + (param.itemid), HEROKU.CONFIG);
       };
 
-      this.singleRepair = function () {
-        return $http.get(singleRo, HEROKU.CONFIG);
+      this.updateRepairItemQty = function (param, quantity) {
+        $http.patch(updateQuantity + (param.itemid), {repair_item_quantity: quantity}, HEROKU.CONFIG)
+        .success (function (responseData){
+          $state.go('userDash.checkout');
+        });
       };
 
       this.toLogout = function (){
@@ -24,9 +24,6 @@
         $cookies.remove('access_token2');
         $state.go('keypad');
       };
-
     }
-
   ]);
-
 }());

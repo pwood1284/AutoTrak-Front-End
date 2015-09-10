@@ -9,14 +9,14 @@
     <div class="innerContainerleft">
       <div id="displayItem">
         <tbody>
-          <tr ng-model="vm.inventoryitem">
+          <tr ng-model="inventoryitem">
             <!-- <td cs-select="row"></td> -->
             <h4><td>{{inventoryitem.part_name}}</td></h4><br>
             <td><span data-id="{{inventoryitem.id}}">Location: <div class="displayItemData">{{inventoryitem.inventory_item_location}}</div></span></td>
             <br><td>ID: <div class="displayItemData">{{inventoryitem.business_part_number}}</div></td>
             <br><td>Supplier: <div class="displayItemData">{{inventoryitem.inventory_item_supplier}}</div></td>
             <br><td>On Hand Quantity: <div class="displayItemData">{{inventoryitem.inventory_count}}</div></td><br>
-            <br><td><md-button ng-click="addCheckout(vm)">Select Quantity</md-button></td>
+            <br><td><md-button ng-click="addCheckout(inventoryitem)">Select Quantity</md-button></td>
           </tr>
         </tbody>
       </div>

@@ -7,7 +7,6 @@
 /* mixin definition ; sets LTR and RTL within the same style call */
 html, body {
   height: 100%;
-  color: rgba(0, 0, 0, 0.87);
   background: white;
   position: relative; }
 
@@ -3022,6 +3021,12 @@ md-bottom-sheet {
 /**
  * Position a FAB button.
  */
+
+#checkoutmdbutton{
+border-radius:100%;
+width: 28px;
+height: 28px;
+}
 .md-button {
   box-sizing: border-box;
   color: currentColor;
@@ -3032,15 +3037,14 @@ md-bottom-sheet {
   position: relative;
   outline: none;
   border: 1px solid #607D8B;
-  border-radius: 5px;
   display: inline-table;
   padding: 0 6px;
   margin: 0px 0px;
   line-height: 36px;
-  min-height: 36px;
+  min-height: 45px;
   background: transparent;
   white-space: nowrap;
-  min-width: 80px;
+  min-width: 45px;
   text-align: center;
   text-transform: uppercase;
   font-weight: 500;

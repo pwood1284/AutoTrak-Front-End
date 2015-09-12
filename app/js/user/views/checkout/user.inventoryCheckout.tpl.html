@@ -1,9 +1,7 @@
 <div class="user-declare">
   <h3>Repair Item Checkout</h3>
 </div>
-<div class="additem">
-  <md-button class="md-whiteframe-z3" ng-click="riLocationScreen()">Add Repair Item</md-button>
-</div>
+
 <!-- <div class="user-logout md-whiteframe-z3 md-default">
   <md-button ng-click="logout()">Logout</md-button>
 </div> -->
@@ -11,21 +9,32 @@
    <table st-table="displayed" class="table table-striped">
     <thead>
       <tr>
-        <th st-ratio="20" st-sort="PartNum">Part #</th>
-        <th st-ratio="20" st-sort="Part">Part</th>
-        <th st-ratio="10" st-sort="Supplier">Supplier</th>
-        <th st-ratio="30" st-sort="Location">Location</th>
-        <th st-ratio="20" st-sort="Quantity">Quantity</th>
+        <th st-ratio="15" st-sort="PartNum">Item #</th>
+        <th st-ratio="20" st-sort="Part">Item</th>
+        <th st-ratio="15" st-sort="Supplier">Supplier</th>
+        <th st-ratio="15" st-sort="Location">Location</th>
+        <th st-ratio="25" st-sort="Quantity">Quantity</th>
+        <th st-ratio="5" st-sort="Location">Edit</th>
+        <th st-ratio="5" st-sort="Quantity">Remove</th>
       </tr>
     </thead>
     <tbody>
       <tr ng-repeat="r in repairCheckout">
-        <td st-ratio="20">{{r.inventory_item.business_part_number}}</td>
-        <td st-ratio="20">{{r.inventory_item.part_name}}</td>
-        <td st-ratio="10">{{r.inventory_item.inventory_item_supplier}}</td>
-        <td st-ratio="30">{{r.inventory_item.inventory_item_location}}</td>
-        <td st-ratio="20">{{r.repair_item_quantity}}</td>
-        <td st-ratio="20"><md-button ng-click="deleteRepairItem(r.id)">Remove</md-button></td>
+        <td id="invInfo" st-ratio="15">{{r.inventory_item.business_part_number}}</td>
+        <td id="invInfo" st-ratio="20">{{r.inventory_item.part_name}}</td>
+        <td id="invInfo" st-ratio="15">{{r.inventory_item.inventory_item_supplier}}</td>
+        <td id="invInfo" st-ratio="15">{{r.inventory_item.inventory_item_location}}</td>
+        <td id="invInfo" st-ratio="25">{{r.repair_item_quantity}}</td>
+        <td st-ratio="5"><md-button id="checkoutmdbutton" ng-click="updateRepairItem(r.id)">
+          <md-icon md-svg-src="../assets/ic_mode_edit_black_24px.svg"></md-icon>
+        </md-button></td>
+        <td st-ratio="5"><md-button id="checkoutmdbutton" ng-click="deleteRepairItem(r.id)"><div class="icon-trash" style="float: left">
+          <div class="trash-lid" style="background-color: #607D8B"></div>
+          <div class="trash-container" style="background-color: #607D8B"></div>
+          <div class="trash-line-1"></div>
+          <div class="trash-line-2"></div>
+          <div class="trash-line-3"></div>
+        </div></md-button></td>
 
       </tr>
     </tbody>
@@ -40,6 +49,16 @@
     </tfoot>
   </table>
 </div>
+<div class="riCheckoutContainer">
+
 <div class="checkout">
   <md-button class="md-whiteframe-z3" ng-click="itemCheckout(r)">Checkout</md-button>
+</div>
+<div class="additem">
+  <md-button class="md-whiteframe-z3" ng-click="riLocationScreen()">Search Repair Item</md-button>
+</div>
+<div class="additem">
+  <md-button class="md-whiteframe-z3" ng-click="riLocationScreen()">Add Repair Item By Location</md-button>
+</div>
+
 </div>

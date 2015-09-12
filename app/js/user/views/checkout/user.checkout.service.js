@@ -6,6 +6,7 @@
   .service('UserCheckoutService', ['HEROKU', '$http', '$state', '$cookies',
     function (HEROKU, $http, $state, $cookies) {
 
+      var endpoint = HEROKU.URL;
       var getRepairItems = HEROKU.URL + '/repair_items';
       var checkoutItems = HEROKU.URL + '/repair_items/checkout';
       var deleteItem = HEROKU.URL + '/repair_item/';
@@ -33,8 +34,14 @@
       this.repairItemDelete = function(param){
         $http.delete(deleteItem + param, HEROKU.CONFIG)
         .success(function(){
-
           $state.reload('userDash.checkout');
+        });
+      };
+
+      this.updateRepairItemQty = function (data) {
+        $http.get(endpoint + "/repair_item/" + (data.repairCheckout), HEROKU.CONFIG)
+        .success(function(data){
+          $state.go("quantityKeypad", {itemid: data.repair_item.id});
         });
       };
 

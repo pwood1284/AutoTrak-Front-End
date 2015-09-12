@@ -19,6 +19,7 @@
   width: 60%;
   padding:0;
 }
+
 a {
   text-decoration: none; }
 
@@ -219,11 +220,11 @@ form input {
 .data-list ul {
   width: 70%;
   padding-left: 0; }
-  .data-list ul li {
-    list-style-type: none;
-    width: 85%;
-    padding: 5px 5px 5px 20px;
-    margin: 10px auto; }
+.data-list ul li {
+  list-style-type: none;
+  width: 85%;
+  padding: 5px 5px 5px 20px;
+  margin: 10px auto; }
 
 .md-sidenav-right {
   width: 1100px;
@@ -235,6 +236,7 @@ form input {
 
 .user-declare {
   margin-left: 50px;
+  margin-bottom:15px;
   float: left; }
 
 .user-logout {
@@ -242,13 +244,24 @@ form input {
   margin-right: 50px; }
 
 .checkout {
-  margin-left: 50px; }
+  float: right;
+  margin-right: 50px;
+}
+.riCheckoutContainer .additem {
+  float: right;
+  margin-right: 50px;
+}
+
+#invInfo {
+padding-top: 20px;
+}
 
 .tech-header {
   clear: both;
   width: 90%;
-  height: 500px;
-  margin: 30px auto 10px auto;
+  height: 450px;
+  margin-top:50px;
+  margin: 30px auto 20px auto;
   overflow: scroll; }
 
 .tech-left {
@@ -296,12 +309,12 @@ form input {
     width: 45px; }
 
 
-
+/*
     body {
       background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/bg-sky.png);
       background-repeat: repeat !important;
       background-attachment: fixed;
-    }
+    }*/
 
     ul.rel-results {
       list-style-type: circle;
@@ -382,4 +395,101 @@ form input {
       .related-results {
         display: none;
       }
+    }
+
+
+    .icon-trash {
+      margin-left:1px;
+      width: 28px;
+      height: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .icon-trash .trash-lid {
+      width: 62%;
+      height: 10%;
+      position: absolute;
+      left: 50%;
+      margin-left: -31%;
+      top: 10.5%;
+      background-color: #000;
+      border-top-left-radius: 80%;
+      border-top-right-radius: 80%;
+      -webkit-transform: rotate(-5deg);
+      -moz-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+      transform: rotate(-5deg);
+    }
+
+    .icon-trash .trash-lid:after {
+      content: "";
+      width: 26%;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -13%;
+      margin-top: -10%;
+      background-color: inherit;
+      border-top-left-radius: 30%;
+      border-top-right-radius: 30%;
+      -webkit-transform: rotate(-1deg);
+      -moz-transform: rotate(-1deg);
+      -ms-transform: rotate(-1deg);
+      transform: rotate(-1deg);
+    }
+
+    .icon-trash .trash-container {
+      width: 56%;
+      height: 65%;
+      position: absolute;
+      left: 50%;
+      margin-left: -28%;
+      bottom: 10%;
+      background-color: #000;
+      border-bottom-left-radius: 15%;
+      border-bottom-right-radius: 15%;
+    }
+
+    .icon-trash .trash-container:after {
+      content: "";
+      width: 110%;
+      height: 12%;
+      position: absolute;
+      left: 50%;
+      margin-left: -55%;
+      top: 0;
+      background-color: inherit;
+      border-bottom-left-radius: 45%;
+      border-bottom-right-radius: 45%;
+    }
+
+    .icon-trash .trash-line-1 {
+      width: 4%;
+      height: 50%;
+      position: absolute;
+      left: 38%;
+      margin-left: -2%;
+      bottom: 17%;
+      background-color: white;
+    }
+
+    .icon-trash .trash-line-2 {
+      width: 4%;
+      height: 50%;
+      position: absolute;
+      left: 50%;
+      margin-left: -2%;
+      bottom: 17%;
+      background-color: white;
+    }
+
+    .icon-trash .trash-line-3 {
+      width: 4%;
+      height: 50%;
+      position: absolute;
+      left: 62%;
+      margin-left: -2%;
+      bottom: 17%;
+      background-color: white;
     }

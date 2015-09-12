@@ -23,6 +23,10 @@
       $scope.deleteRepairItem = function (data){
         UserCheckoutService.repairItemDelete(data);
       };
+
+      $scope.updateRepairItem = function (data) {
+        UserCheckoutService.updateRepairItemQty(data);
+      };
       // UserCheckoutService.checkoutHistory().success (function (data){
       //   $scope.history = data.repair_items_history;
       //   console.log(data);

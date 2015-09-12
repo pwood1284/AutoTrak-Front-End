@@ -58,6 +58,12 @@ form input {
 
 /* Number Pad
 =============*/
+#userNumpadTechMain {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 .userNumPad {
   width: 350px;
   height: 520px;
@@ -206,7 +212,7 @@ form input {
   }
 
 .admin-login {
-  margin-top: 15px;
+  margin-top: 5px;
   margin-left: 50px; }
 
 /* Admin Dashboard Main View

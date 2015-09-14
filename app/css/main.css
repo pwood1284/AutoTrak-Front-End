@@ -5,6 +5,13 @@
   background: -webkit-linear-gradient(left,  #0f182b 0%,#2a3b53 33%,#2a3b53 66%,#0f182b 100%);
 }
 
+.admin-login-btn {
+  position: relative;
+  float: right;
+  display: inline-block;
+  width: 350px;
+}
+
 .innerContainer {
   position: relative;
   bottom: 0px;
@@ -40,6 +47,7 @@
 }
 
 .userNumPad {
+  margin-top: 40px;
   width: 400px;
   height: 520px;
   padding-left: 60px;
@@ -1159,7 +1167,7 @@ padding-top: 20px;
       right:0;
       bottom:0;
       left:0;
-      border-top:1px solid #3E4970;
+      border-top:1px solid #a7ddff;
       border-bottom:1px solid #a7ddff;
       border-radius:100%;
       z-index:3;
@@ -1173,7 +1181,7 @@ padding-top: 20px;
 
     .btn-right::before
     {
-      border-right:1px solid #3E4970;
+      border-right:1px solid #a7ddff;
       border-left:1px solid #a7ddff;
     }
 
@@ -1242,7 +1250,7 @@ padding-top: 20px;
   left:0;
   bottom:0;
   text-align:center;
-  color:#2B344E;
+  color:transparent;
   z-index:6;
 }
 
@@ -1259,13 +1267,14 @@ padding-top: 20px;
 h1{
   position:relative;
   margin:0;
-  width:3.7em;
+  margin-left: 20px;
+  width:4.5em;
   color: transparent;
   font: italic 3em "Helvetica Neue";
   font-weight:lighter;
   text-transform: uppercase;
   float: left;
-  letter-spacing: -6px;
+  letter-spacing: -2px;
   text-shadow:-1px -1px 0 black, 1px 1px 0 black, -1px 0 0 black, 1px 0 0 black, 0 3px 4px rgba(167, 221, 255, 1), 0 -6px 7px rgba(0, 0, 0, 0.5);
 }
 
@@ -1300,9 +1309,9 @@ h1::after{
   position:absolute;
   background:-webkit-radial-gradient(center, rgba(66, 200, 239, 1) 0%, rgba(3, 171, 228, 0) 80%);
   bottom:0;
-  top:85px;
-  left:100px;
-  right:100px;
+  top:55px;
+  left:0px;
+  right:0px;
 }
 
 .menubar::after{

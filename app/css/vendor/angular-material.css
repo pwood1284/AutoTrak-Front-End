@@ -3029,14 +3029,13 @@ height: 28px;
 }
 .md-button {
   box-sizing: border-box;
-  color: currentColor;
+  color: invisible;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   position: relative;
   outline: none;
-  border: 1px solid #607D8B;
   display: inline-table;
   padding: 0 6px;
   margin: 0px 0px;

@@ -6637,9 +6637,11 @@ md-switch {
 
 @media screen and (-ms-high-contrast: active) {
   md-switch.md-default-theme .md-bar {
-    background-color: #666; }
+    background-color: #666;
+  }
   md-switch.md-default-theme.md-checked .md-bar {
-    background-color: #9E9E9E; }
+    background-color: #6897bb;
+  }
   md-switch.md-default-theme .md-thumb {
     background-color: #fff; } }
 
@@ -7027,7 +7029,7 @@ md-toast {
 
 md-toolbar {
   box-sizing: border-box;
-  display: -webkit-flex;
+  background-color: silver;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
@@ -7185,4 +7187,5 @@ md-tooltip {
 
 @media screen and (-ms-high-contrast: active) {
   md-whiteframe {
-    border: 1px solid #fff; } }
+    border: 1px solid #fff;
+    } }

@@ -1,6 +1,4 @@
-<div class="user-declare">
-  <h3>Previous Repair Items:</h3>
-</div>
+<div class="user-declare">Repair Items History for RO#:</div>
 <div class="user-logout md-whiteframe-z3 md-default">
   <md-button ng-click="logout()">Logout</md-button>
 </div>
@@ -8,20 +6,22 @@
    <table st-table="displayed" class="table table-striped">
     <thead>
       <tr>
-        <th st-ratio="20" st-sort="RepairO">Repair Order</th>
+        <th st-ratio="20" st-sort="RepairO">Part#</th>
         <th st-ratio="10" st-sort="Part">Part</th>
-        <th st-ratio="30" st-sort="PartNum">Part #</th>
-        <th st-ratio="20" st-sort="stock">On Hand</th>
-        <th st-ratio="20" st-sort="Category">Category</th>
+        <th st-ratio="30" st-sort="PartNum">Supplier</th>
+        <th st-ratio="20" st-sort="stock">Quantity</th>
+        <th st-ratio="20" st-sort="returnItem">Return Item</th>
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="h in history">
-        <td st-ratio="20">{{h.repair_order.repair_order_number}}</td>
-        <td st-ratio="10">{{h.inventory_item.part_name}}</td>
+      <tr ng-repeat="h in repairItemsHistory">
         <td st-ratio="20">{{h.inventory_item.business_part_number}}</td>
-        <td st-ratio="30">{{h.inventory_item.inventory_count}}</td>
-        <td st-ratio="20">{{h.inventory_item.category}}</td>
+        <td st-ratio="10">{{h.inventory_item.part_name}}</td>
+        <td st-ratio="20">{{h.inventory_item.inventory_item_supplier}}</td>
+        <td st-ratio="30">{{h.repair_item_quantity}}</td>
+        <td st-ratio="5"><md-button id="checkoutmdbutton" ng-click="getRepairItem(h.id)">
+          -
+        </md-button></td>
       </tr>
     </tbody>
 

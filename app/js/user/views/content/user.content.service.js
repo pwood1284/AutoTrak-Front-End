@@ -10,6 +10,7 @@
       var addRepairItems = HEROKU.URL + '/repair_item';
       var getRepairItems = HEROKU.URL + '/repair_items';
       var updateQuantity = HEROKU.URL + '/repair_item/quantity';
+      var endpoint = HEROKU.URL;
 
       this.getUserInventory = function (){
         return $http.get(userInventory, HEROKU.CONFIG);
@@ -41,6 +42,13 @@
         $http.patch(updateQuantity, item, HEROKU.CONFIG)
         .success( function (){
           $state.go('userDash.checkout');
+        });
+      };
+
+      this.AddRepairItem = function (item){
+        $http.post(endpoint + "/repair_item", item, HEROKU.CONFIG)
+        .success(function(data){
+          $state.go("quantityKeypad", {itemid: data.repair_item.id});
         });
       };
 

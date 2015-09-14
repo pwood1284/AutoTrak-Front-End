@@ -1,0 +1,42 @@
+<div class="user-logout md-whiteframe-z3 md-default">
+  <md-button ng-click="logout()">Logout</md-button>
+</div>
+<div class="innerContainer">
+  <div class="InvItemHeader">
+    <h3>Select A Return Quantity</h3>
+  </div>
+  <div ng-controller="ReturnCtrl as vm">
+    <div class="innerContainerleft">
+      <div id="displayItem">
+        <tbody>
+          <tr ng-model="updateRepairItem">
+            <h4><td>{{updateRepairItem.part_name}}</td></h4><br>
+            <td><span data-id="{{updateRepairItem.id}}">Location: <div class="displayItemData">{{updateRepairItem.inventory_item_location}}</div></span></td>
+            <br><td>ID: <div class="displayItemData">{{updateRepairItem.business_part_number}}</div></td>
+            <br><td>Supplier: <div class="displayItemData">{{updateRepairItem.inventory_item_supplier}}</div></td>
+            <br><td>On Hand Quantity: <div class="displayItemData">{{updateRepairItem.inventory_count}}</div></td><br>
+          </tr>
+        </tbody>
+      </div>
+    </div>
+    <div class="innerContainerright">
+      <div class="userNumPad md-whiteframe-z1">
+        <input class="keypad-display" type="Text" ng-model="vm.itemQuantity" placeholder="Enter Quantity..." disabled/>
+        <ng-keypad on-key-pressed='vm.onKeyPressed'>
+          <ng-key class='one' ng-key-data="1">1</ng-key>
+          <ng-key class='two' ng-key-data="2">2</ng-key>
+          <ng-key class='three' ng-key-data="3">3</ng-key>
+          <ng-key class='four' ng-key-data="4">4</ng-key>
+          <ng-key class='five' ng-key-data="5">5</ng-key>
+          <ng-key class='six' ng-key-data="6">6</ng-key>
+          <ng-key class='seven' ng-key-data="7">7</ng-key>
+          <ng-key class='eight' ng-key-data="8">8</ng-key>
+          <ng-key class='nine' ng-key-data="9">9</ng-key>
+          <ng-key class='clear' ng-key-data='"<"'>clear</ng-key>
+          <ng-key class='zero'ng-key-data="0">0</ng-key>
+        <md-button class='enterbutton' ng-click="updateQuantity(vm.itemQuantity)">Enter</md-button>
+        </ng-keypad>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,8 @@
 .container {
   width: 100%;
+  height: 100%;
   padding: 0;
+  background: -webkit-linear-gradient(left,  #0f182b 0%,#2a3b53 33%,#2a3b53 66%,#0f182b 100%);
 }
 
 .innerContainer {
@@ -9,16 +11,778 @@
   width:100%;
   padding:0;
 }
+
 .innerContainerleft {
   float: left;
-  width: 40%;
+  width: 36%;
   padding:0;
 }
+
 .innerContainerright {
   float:left;
-  width: 60%;
+  width: 64%;
+  margin-left:auto;
+  margin-right:auto;
   padding:0;
 }
+
+
+/* Keypad
+=============*/
+#userNumpadTechMain {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#displayItem {
+  margin-left:40px;
+  margin-top:20px;
+}
+
+.userNumPad {
+  width: 400px;
+  height: 520px;
+  padding-left: 60px;
+  border-radius:  10px;
+  border: 1px solid black;
+
+  background: -webkit-linear-gradient(left,  #0f182b 0%,#2a3b53 33%,#2a3b53 66%,#0f182b 100%);
+  /*box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);*/
+}
+
+
+.keypad-display {
+  direction: ltr;
+  font-size: 3em;
+  margin: 35px;
+  margin-left: 11px;
+  padding: 0px -5% 10px 5%;
+  width: 245px;
+  border: 1px black;
+  text-align: center;
+  color: transparent;
+  font: italic 3em "Helvetica Neue";
+  font-weight:light;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+  text-shadow:-1px -1px 0 black, 1px 1px 0 black, -1px 0 0 black, 1px 0 0 black, 0 3px 4px rgba(167, 221, 255, 1), 0 -6px 7px rgba(0, 0, 0, 0.5);
+
+}
+
+.keypad-display:disabled {
+  background:transparent;
+  color: black;
+}
+
+
+/*KeyPad2 -------------------*/
+
+
+.userNumPad2Display {
+  width: 100%;
+}
+
+.innerRIKeypadLeft {
+  float: left;
+  margin-top: 25px;
+  width:365px;
+}
+
+/*--------------------------*/
+.innerRIKeypadRight {
+  float: left;
+  margin-top: 25px;
+  width:275px;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.innerRIKeypadRightZero {
+  float:left;
+  width: 100%;
+}
+
+.executionButtonsContainer {
+  width: 100% auto;
+  display: inline;
+  position: relative;
+  bottom: 40px;
+}
+/*-----------------------------*/
+.keypad-display2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  direction: ltr;
+  font-size: 3em;
+  padding: 0px -5% 10px 5%;
+  text-align: center;
+  border-radius: 5px;
+  width: 325px;
+}
+
+.keypad-display2:disabled {
+  background: white;
+  border: 2px solid #607D8B;
+  color: #607D8B;
+}
+/*------------------------------*/
+.innerContainer .innerContainerright .userNumPad2 {
+  box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);
+  margin-left: 15px;
+  margin-right: 15px;
+  float: left;
+  padding-left:40px;
+  width: 80% auto;
+  height: 100% auto;
+  background: #BFCBD1;
+  border: 2px solid #607D8B;
+  border-radius: 5px;
+}
+
+.executionButtonBack {
+  width: 300px;
+  display: inline;
+  position: relative;
+}
+
+.userNumPad2 #backbutton {
+  margin-bottom: 20px;
+  margin-left:20px;
+  margin-right:20px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
+  font-family: 'Open Sans', sans-serif;
+  background-color: white;
+  border-radius: 100%;
+  color: #607D8B;
+  height: 80px;
+  width: 80px;
+}
+
+.userNumPad2 #backbutton:hover {
+  background-color: #607D8B;
+  color: white;
+}
+
+#backbutton:before {
+  font-family: 'Open Sans', sans-serif;
+  content: 'Back';
+  padding-top: 18px;
+  font-size: 18px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(250, 250, 250);
+  box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left:-2px;
+}
+#backbutton:hover {
+  background-color: #607D8B;
+  color: white;
+}
+
+.executionButtonClear {
+  width: 300px;
+  display: inline;
+  position: relative;
+}
+
+.executionButtonEnter {
+  width: 300px;
+  display: inline;
+  position: relative;
+}
+
+.enterbutton {
+  margin-bottom: 20px;
+  margin-left:20px;
+  margin-right:20px;
+  position: relative;
+  display: inline-block;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
+  font-family: 'Open Sans', sans-serif;
+  background-color: white;
+  border-radius: 100%;
+  color: #607D8B;
+  height: 80px;
+  width: 80px;
+}
+
+.enterbutton:before {
+  font-family: 'Open Sans', sans-serif;
+  content: 'Enter';
+  padding-top: 18px;
+  font-size: 18px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(250, 250, 250);
+  box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: -2px;
+}
+
+.InvItemHeader {
+  margin-left:20px;
+  animation-duration: 1s;
+  animation-name: bounceIn;
+}
+
+.displayItemData {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.innerContainerleft .md-button {
+  margin-left: 165px;
+}
+
+ng-keypad {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+
+ng-keypad ng-key {
+  margin: 0px;
+  float: left;
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  background-color: invisible;
+}
+
+/*#clear2 {
+  margin-left:20px;
+  margin-right:20px;
+  margin-bottom: 20px;
+  display:inline;
+  font-size: 22px;
+  border: 2px;
+  border-color: black;
+  float: left;
+  text-align: center;
+  width: 90px;
+  height: 90px;
+  background: #BFCBD1;
+}*/
+
+ng-keypad #skey2 {
+  margin: 5px;
+  font-size: 22px;
+  border: 2px;
+  border-color: black;
+  float: left;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  background: #BFCBD1;
+}
+
+#skey2zero {
+  margin-left:95px;
+  margin-top: 5px;
+  font-size: 22px;
+  border: 2px;
+  border-color: black;
+  float: left;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  background: #BFCBD1;
+}
+
+ng-keypad #skey2one {
+  margin: 5px;
+  font-size: 22px;
+  border: 2px;
+  border-color: black;
+  float: left;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  background: #BFCBD1;
+}
+
+ng-keypad #zero2 {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 22px;
+  border: 2px;
+  border-color: black;
+  float: left;
+  text-align: center;
+  width: 90px;
+  height: 90px;
+  background: #BFCBD1;
+}
+
+ng-keypad ng-key a {
+  border-radius: 100%;
+  margin-left: -13px;
+  margin-top: -8px;
+
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  display: block;
+  z-index:4;
+}
+
+
+
+.one :before {
+  content: "";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #31698a;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: invisible;
+  /*box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);*/
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.two :before {
+  content: "2";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(250, 250, 250);
+  /*box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);*/
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.three :before {
+  content: "3";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(250, 250, 250);
+  /*box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);*/
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.four :before {
+  content: "4";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(250, 250, 250);
+  /*box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);*/
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.five :before {
+  content: "5";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(250, 250, 250);
+  /*box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);*/
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.six :before {
+  content: "6";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(250, 250, 250);
+  /*box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);*/
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.seven :before {
+  content: "7";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(250, 250, 250);
+  /*box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);*/
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.eight :before {
+  content: "8";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(250, 250, 250);
+  /*box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);*/
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.nine :before {
+  content: "9";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(250, 250, 250);
+  /*box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);*/
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.clear :before {
+  content: "Clear";
+  padding-top: 18px;
+  font-size: 22px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(250, 250, 250);
+  /*box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);*/
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.clear2 :before {
+  content: "Clear";
+  padding-top: 18px;
+  font-size: 22px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(250, 250, 250);
+  box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.zero :before {
+  content: "0";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(250, 250, 250);
+  /*box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);*/
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.apple :before {
+  content: "A";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(255,255,255);
+  box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.banana :before {
+  content: "B";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(255,255,255);
+  box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.carrot :before {
+  content: "C";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(255,255,255);
+  box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.dog :before {
+  content: "D";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(255,255,255);
+  box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.eagle :before {
+  content: "E";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(255,255,255);
+  box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.ferret :before {
+  content: "F";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(255,255,255);
+  box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.goose :before {
+  content: "G";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(255,255,255);
+  box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.horse :before {
+  content: "H";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(255,255,255);
+  box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.island :before {
+  content: "I";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(255,255,255);
+  box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.jelly :before {
+  content: "J";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(255,255,255);
+  box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.kite :before {
+  content: "K";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(255,255,255);
+  box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.light :before {
+  content: "L";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(255,255,255);
+  box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+  .moon :before {
+  content: "M";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(255,255,255);
+  box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+  }
+  .nerd :before {
+  content: "N";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(255,255,255);
+  box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+  }
+  .oak :before {
+  content: "O";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(255,255,255);
+  box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+  }
+  .piano :before {
+  content: "P";
+  padding-top: 8px;
+  font-size: 38px;
+  color: #607D8B;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: rgb(255,255,255);
+  box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);
+  position: absolute;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+  }
+
+/*-------------------------------*/
 
 a {
   text-decoration: none; }
@@ -42,12 +806,12 @@ form input {
 #create-super {
   width: 75%;
   margin: 50px auto; }
-  #create-super .md-button {
-    background-color: #607D8B;
-    color: rgba(0, 0, 0, 0.8); }
-  #create-super .md-button:hover {
-    background-color: #455A64;
-    color: rgba(255, 255, 255, 0.8); }
+#create-super .md-button {
+  background-color: #607D8B;
+  color: rgba(0, 0, 0, 0.8); }
+#create-super .md-button:hover {
+  background-color: #455A64;
+  color: rgba(255, 255, 255, 0.8); }
 
 #newTech {
   width: 75%;
@@ -56,86 +820,7 @@ form input {
 #techList {
   margin-top: 50px; }
 
-/* Number Pad
-=============*/
-#userNumpadTechMain {
-  margin-left: auto;
-  margin-right: auto;
-}
 
-
-.userNumPad {
-  width: 350px;
-  height: 520px;
-  padding-left: 40px;
-  background: #BFCBD1;
-  /*box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);*/
-  border: 2px solid #607D8B;
-  border-radius: 5px;
-  }
-
-.enterbutton {
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
-  font-family: 'Open Sans', sans-serif;
-  background-color: white;
-  border-radius: 100%;
-  color: #607D8B;
-  height: 80px;
-  width: 80px;
-}
-
-  .enterbutton:before {
-  font-family: 'Open Sans', sans-serif;
-  content: 'Enter';
-  padding-top: 18px;
-  font-size: 18px;
-  color: #607D8B;
-  display: block;
-  width: 70px;
-  height: 70px;
-  background: rgb(250, 250, 250);
-  box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);
-  border-radius: 100%;
-  margin-top: 5px;
-  margin-left: -2px;
-
-  }
-  /*#backbutton {
-
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
-    font-family: 'Open Sans', sans-serif;
-    background-color: white;
-    border-radius: 100%;
-    color: #607D8B;
-    height: 80px;
-    width: 80px;
-  }*/
-
-  #backbutton:before {
-    font-family: 'Open Sans', sans-serif;
-    content: 'Back';
-    padding-top: 18px;
-    font-size: 18px;
-    color: #607D8B;
-    display: block;
-    width: 70px;
-    height: 70px;
-    background: rgb(250, 250, 250);
-    box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);
-    border-radius: 100%;
-    margin-top: 5px;
-    margin-left: -2px;
-
-    }
-#backbutton:hover {
-  background-color: #607D8B;
-  color: white;
-  }
-.InvItemHeader {
-  margin-left:20px;
-  animation-duration: 1s;
-  animation-name: bounceIn;
-}
 @keyframes bounceIn {
   0% {
     transform: scale(0.1);
@@ -149,67 +834,8 @@ form input {
     transform: scale(1);
   }
 }
-#displayItem {
-  margin-left:40px;
-  margin-top:20px;
-}
-.displayItemData {
-  margin-left: 10px;
-  font-weight: bold;
-  font-size: 22px;
-}
 
-.innerContainerleft .md-button {
-  margin-left: 165px;
 
-}
-.innerContainer .innerContainerright .userNumPad2 {
-  float: left;
-  width: 100% auto;
-  height: 535px;
-  padding-left: 25px;
-  background: #BFCBD1;
-  border: 2px solid #607D8B;
-  border-radius: 5px;
-}
-
-.userNumPad2 .md-button {
-  position: relative;
-  bottom: 40px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
-  font-family: 'Open Sans', sans-serif;
-  background-color: white;
-  border-radius: 100%;
-  color: #607D8B;
-  margin-top: -25px;
-  height: 80px;
-  width: 80px;
-}
-
-.userNumPad2 #backbutton {
-  position: relative;
-  bottom: 40px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
-  font-family: 'Open Sans', sans-serif;
-  background-color: white;
-  border-radius: 100%;
-  color: #607D8B;
-  margin-top: -25px;
-  margin-right: 520px;
-  margin-left:5px;
-  height: 80px;
-  width: 80px;
-}
-
-.userNumPad2 .md-button:hover {
-  background-color: #607D8B;
-  color: white;
-  }
-
-.userNumPad2 #backbutton:hover {
-  background-color: #607D8B;
-  color: white;
-  }
 
 .admin-login {
   margin-top: 5px;
@@ -361,13 +987,7 @@ padding-top: 20px;
       -webkit-animation-delay: 1.5s;
     }
 
-    .movie-poster {
-      float: left;
-      width: 150px;
-      margin-right: 10px;
-      -moz-animation-delay: 1s;
-      -webkit-animation-delay: 1s;
-    }
+
 
     .span-outer {
       font-size: 20px;
@@ -499,3 +1119,198 @@ padding-top: 20px;
       bottom: 17%;
       background-color: white;
     }
+
+
+
+
+    .btn
+    {
+      font-size:3em;
+      position:relative;
+      margin-left: 10px;
+      margin-top: 10px;
+      float:left;
+      width:80px;
+      height:80px;
+      border-radius:100%;
+      border:1px solid black;
+      background:-webkit-linear-gradient(top,  #2c354e 0%,#576a97 100%);
+      z-index:2;
+    }
+
+
+    .btn-left
+    {
+      box-shadow:-2px -2px 9px rgba(0, 0, 0, 0.7),
+             -4px -4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn-right
+    {
+      box-shadow:2px -2px 9px rgba(0, 0, 0, 0.7),
+             4px -4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn::before
+    {
+      content:"";
+      position: absolute;
+      top:0;
+      right:0;
+      bottom:0;
+      left:0;
+      border-top:1px solid #3E4970;
+      border-bottom:1px solid #a7ddff;
+      border-radius:100%;
+      z-index:3;
+    }
+
+    .btn-left::before
+    {
+      border-left:1px solid #3E4970;
+      border-right:1px solid #a7ddff;
+    }
+
+    .btn-right::before
+    {
+      border-right:1px solid #3E4970;
+      border-left:1px solid #a7ddff;
+    }
+
+    .btn::after
+    {
+      content:"";
+      position:absolute;
+      top:1px;
+      bottom:-1px;
+      border-radius:100%;
+      z-index:1;
+    }
+
+    .btn-left::after
+    {
+      right:-1px;
+      left:1px;
+      box-shadow:1px 1px 5px rgba(171, 255, 255, 0.8);
+    }
+
+    .btn-right::after
+    {
+      right:1px;
+      left:-1px;
+      box-shadow:-1px 1px 5px rgba(171, 255, 255, 0.8);
+    }
+
+    .back {
+  position:relative;
+  top:6px;
+  left:-12px;
+  background:gray;
+  width:33px;
+  height:33px;
+  -webkit-transform:rotate(45deg);
+  background: -webkit-linear-gradient(left top,  #2c354e 0%,#576a97 100%);
+  z-index:4;
+  border-radius: 3px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  box-shadow: -5px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.back::before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  border-bottom:1px solid #7987B4;
+  border-left:1px solid #475380;
+  border-radius:3px;
+}
+.btnword {
+  text-transform: uppercase;
+  font-size: 20px;
+  padding-left:5px;
+  margin-top:-2px;
+}
+.btn i {
+  font-size: 1em;
+  line-height:85px;
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  text-align:center;
+  color:#2B344E;
+  z-index:6;
+}
+
+.btn i {
+  right: 8px;
+  text-shadow: -1px -1px 0px rgba(167, 221, 255, .8),1px 1px 2px black;
+}
+
+.btn i.icon-user {
+  right: 3px;
+  text-shadow: 1px -1px 0px rgba(167, 221, 255, .8),1px 1px 2px black;
+}
+
+h1{
+  position:relative;
+  margin:0;
+  width:3.7em;
+  color: transparent;
+  font: italic 3em "Helvetica Neue";
+  font-weight:lighter;
+  text-transform: uppercase;
+  float: left;
+  letter-spacing: -6px;
+  text-shadow:-1px -1px 0 black, 1px 1px 0 black, -1px 0 0 black, 1px 0 0 black, 0 3px 4px rgba(167, 221, 255, 1), 0 -6px 7px rgba(0, 0, 0, 0.5);
+}
+
+h1::before{
+  content:"AutoTrak";
+  text-transform:uppercase;
+  position:absolute;
+  color:#fff;
+  left:0;
+  right:0;
+}
+
+h1::after{
+  content:"AutoTrak";
+  text-transform:uppercase;
+  position:absolute;
+  color:#525b73;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  left:0;
+  right:0;
+}
+
+.menubar{
+  position:relative;
+  height:75px;
+  padding-top:15px;
+  box-shadow:0 12px 20px rgba(0,0,0,.9);
+  background: -webkit-radial-gradient(center bottom, rgba(160, 201, 215, 0.8) 0%, rgba(160, 201, 215, 0) 70%), -webkit-linear-gradient(top, black 0%,#282F44 6%,#2C3551 52%,#354262 91%,#050C54 100%);
+}
+.menubar::before{
+  content:"";
+  position:absolute;
+  background:-webkit-radial-gradient(center, rgba(66, 200, 239, 1) 0%, rgba(3, 171, 228, 0) 80%);
+  bottom:0;
+  top:85px;
+  left:100px;
+  right:100px;
+}
+
+.menubar::after{
+  content:"";
+  position:absolute;
+  background:-webkit-radial-gradient(center, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+  bottom:5px;
+  top:76px;
+  left:40px;
+  right:40px;
+}

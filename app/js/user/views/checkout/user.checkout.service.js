@@ -3,31 +3,38 @@
   'use strict';
 
   angular.module('AutoTrak')
-  .service('UserCheckoutService', ['HEROKU', '$http', '$state', '$cookies',
-    function (HEROKU, $http, $state, $cookies) {
+  .service('UserCheckoutService', ['HEROKU', '$http', '$state', '$cookies', '$stateParams',
+    function (HEROKU, $http, $state, $cookies, $stateParams) {
 
       var endpoint = HEROKU.URL;
       var getRepairItems = HEROKU.URL + '/repair_items';
+      var getRepairItem = HEROKU.URL + '/repair_item/';
       var checkoutItems = HEROKU.URL + '/repair_items/checkout';
       var deleteItem = HEROKU.URL + '/repair_item/';
 
-      var checkoutHistory = HEROKU.URL + '/repair_items/history';
 
       this.getRepairItems = function (){
         return $http.get(getRepairItems, HEROKU.CONFIG);
-
       };
 
       this.riLocation = function (){
           $state.go('locationKeypad');
       };
 
-      this.checkoutRepair = function (data){
-        $http.patch(checkoutItems, data, HEROKU.CONFIG)
-        .success( function (x){
-          $cookies.remove('access_token5');
-          $cookies.remove('access_token2');
-          $state.go('keypad');
+      this.searchScreen = function (){
+          $state.go('userDash.active');
+      };
+
+      this.getHistory = function(){
+        return $http.get(HEROKU.URL + '/repair_items/history', HEROKU.CONFIG);
+      };
+
+      this.getRepairItemById = function (itemid) {
+        return $http.get(getRepairItem + (itemid), HEROKU.CONFIG)
+        .success(function(data){
+          $state.go("UpdateQuantityKeypad", {itemid: data.repair_item.id});
+          console.log(param.itemid);
+          console.log(data);
         });
       };
 
@@ -38,15 +45,13 @@
         });
       };
 
-      this.updateRepairItemQty = function (data) {
-        $http.get(endpoint + "/repair_item/" + (data.repairCheckout), HEROKU.CONFIG)
-        .success(function(data){
-          $state.go("quantityKeypad", {itemid: data.repair_item.id});
+      this.checkoutRepair = function (data){
+        $http.patch(checkoutItems, data, HEROKU.CONFIG)
+        .success( function (x){
+          $cookies.remove('access_token5');
+          $cookies.remove('access_token2');
+          $state.go('keypad');
         });
-      };
-
-      this.checkoutHistory = function (){
-        return $http.get(checkoutHistory, HEROKU.CONFIG);
       };
 
       this.toLogout = function (){

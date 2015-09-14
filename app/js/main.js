@@ -254,7 +254,17 @@
              controller: 'CheckoutCtrl'
            }
          }
-        });
+        })
+
+        .state ('UpdateQuantityKeypad', {
+          url: '/repairItem/:itemid',
+          views: {
+            'content': {
+             templateUrl: 'js/user/views/return/user.updaterepairItem.tpl.html',
+             controller: 'ReturnCtrl'
+           }
+         }
+       });
     }
   ]);
 }());

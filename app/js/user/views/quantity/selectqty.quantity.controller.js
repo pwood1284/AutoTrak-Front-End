@@ -8,6 +8,7 @@
       SelectQtyQuantityService.getRepairItemById($stateParams)
       .success( function (data){
         $scope.repairitem = data.repair_item.inventory_item;
+        console.log(data);
       });
 
         var vm = this;

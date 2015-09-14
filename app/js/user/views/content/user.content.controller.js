@@ -8,9 +8,8 @@
 
       TokenService.tokenizeHeader();
 
-      $scope.addCheckout = function (item){
-        UserContentService.repairItemAdd(item);
-        console.log(item);
+      $scope.addCheckout = function (parts){
+        UserContentService.AddRepairItem(parts);
       };
 
       UserContentService.getUserInventory().success( function (data){

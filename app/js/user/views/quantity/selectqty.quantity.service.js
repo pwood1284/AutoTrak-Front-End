@@ -7,7 +7,6 @@
       var getRepairItem = HEROKU.URL + "/repair_item/";
       var updateQuantity = HEROKU.URL + "/repair_item/update_quantity/";
 
-    // Get last repair item from the logged in technician.
       this.getRepairItemById = function (param) {
         return $http.get(getRepairItem + (param.itemid), HEROKU.CONFIG);
       };

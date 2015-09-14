@@ -4,6 +4,7 @@
 <div class="user-logout md-whiteframe-z3 md-default">
   <md-button ng-click="logout()">Logout</md-button>
 </div>
+<label>Search: <input ng-model="searchText" placeholder="Favor Name" autofocus></label>
 <div class="tech-header md-whiteframe-z3">
   <!-- <h3>Repair Order # : {{ repair.repair_order_number }}</h3> -->
    <table st-table="displayed" class="table table-striped">
@@ -20,15 +21,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="p in parts">
-        <!-- <td cs-select="row"></td> -->
+      <tr ng-repeat="p in parts | filter:searchText">
         <td st-ratio="20"><span data-id="{{p.id}}">{{p.part_name}}</span></td>
         <td st-ratio="20">{{p.business_part_number}}</td>
         <td st-ratio="20">{{p.inventory_item_supplier}}</td>
         <td st-ratio="30">{{p.inventory_item_location}}</td>
         <td st-ratio="30">{{p.inventory_count}}</td>
-        <!-- <td st-ratio="20"><input type="Number" data-id="{{p.id}}">{{p.repair_item_quantity}}</input></td> -->
-        <td st-ratio="20"><md-button ng-click="addCheckout(p)">Add</md-button></td>
+        <td st-ratio="20"><md-button ng-click="addCheckout(p)">+</md-button></td>
       </tr>
     </tbody>
     <tfoot>

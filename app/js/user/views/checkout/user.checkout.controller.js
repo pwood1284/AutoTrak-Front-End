@@ -1,14 +1,17 @@
 ;(function (){
   'use strict';
   angular.module('AutoTrak')
-  .controller('CheckoutCtrl', ['$scope', 'UserCheckoutService', 'TokenService',
-    function ($scope, UserCheckoutService, TokenService) {
+  .controller('CheckoutCtrl', ['HEROKU', '$scope', '$http', 'UserCheckoutService', 'TokenService', '$state', '$stateParams',
+    function (HEROKU, $scope, $http, UserCheckoutService, TokenService, $state, $stateParams) {
 
       TokenService.tokenizeHeader();
 
       UserCheckoutService.getRepairItems().success( function (data){
         $scope.repairCheckout = data.repair_items;
-        console.log(data);
+      });
+
+      UserCheckoutService.getHistory().success( function (data){
+        $scope.repairItemsHistory = data.repair_items_history;
       });
 
       $scope.riLocationScreen = function (){
@@ -17,20 +20,24 @@
 
       $scope.itemCheckout = function (data){
         UserCheckoutService.checkoutRepair(data);
-        console.log(data);
       };
 
       $scope.deleteRepairItem = function (data){
         UserCheckoutService.repairItemDelete(data);
       };
 
-      $scope.updateRepairItem = function (data) {
-        UserCheckoutService.updateRepairItemQty(data);
+      $scope.getRepairItem = function (itemid) {
+        UserCheckoutService.getRepairItemById(itemid);
+        console.log(itemid);
       };
-      // UserCheckoutService.checkoutHistory().success (function (data){
-      //   $scope.history = data.repair_items_history;
-      //   console.log(data);
-      // });
+
+      $scope.searchScreen = function(){
+        UserCheckoutService.searchScreen();
+      };
+
+      $scope.getHistory = function(){
+          $state.go("userDash.history");
+      };
 
       $scope.logout = function (){
         UserCheckoutService.toLogout();

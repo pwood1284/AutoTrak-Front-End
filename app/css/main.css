@@ -1,9 +1,11 @@
 .container {
   width: 100%;
-  height: 90%;
+  height: 91%;
   padding: 0;
-  background: -webkit-linear-gradient(left,  #0f182b 0%,#2a3b53 33%,#2a3b53 66%,#0f182b 100%);
+  background: -webkit-linear-gradient(left, rgb(33, 33, 34) 0%,#798390 33%,#717B88 66%,#2C2D2F 100%);
+
 }
+
 
 .admin-login-btn {
   margin-top:20px;
@@ -13,7 +15,7 @@
   width: 300px;
   color: transparent;
   font: italic 1.5em "Helvetica Neue";
-  font-weight:light;
+  font-weight:lighter;
   text-transform: uppercase;
   letter-spacing: 0px;
   text-shadow:-1px -1px 0 black, 1px 1px 0 black, -1px 0 0 black, 1px 0 0 black, 0 3px 4px rgba(167, 221, 255, 1), 0 -6px 7px rgba(0, 0, 0, 0.5);
@@ -74,39 +76,39 @@
 }
 
 .userNumPad {
-  margin-top: 40px;
+  margin-top: 110px;
   width: 425px;
   height: 520px;
   padding-left: 60px;
   border-radius:  10px;
   border: 1px solid black;
-
-  background: -webkit-linear-gradient(left,  #0f182b 0%,#2a3b53 33%,#2a3b53 66%,#0f182b 100%);
-  /*box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);*/
+  background: -webkit-linear-gradient(left, grey, white , grey); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right,  grey, white , grey); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right,  grey, white , grey); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, black, #969696 , black); /* Standard syntax (must be last) */  /*box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);*/
 }
 
 
 .keypad-display {
   direction: ltr;
-  font-size: 3em;
   margin: 35px;
-  margin-left: 11px;
+  margin-left: 28px;
   padding: 0px -5% 10px 5%;
   width: 245px;
   border: 1px black;
   text-align: center;
   color: transparent;
-  font: italic 3em "Helvetica Neue";
+  font: italic 2em "Helvetica Neue";
   font-weight:light;
   text-transform: uppercase;
-  letter-spacing: -3px;
+  letter-spacing: 1px;
   text-shadow:-1px -1px 0 black, 1px 1px 0 black, -1px 0 0 black, 1px 0 0 black, 0 3px 4px rgba(167, 221, 255, 1), 0 -6px 7px rgba(0, 0, 0, 0.5);
 
 }
 
 .keypad-display:disabled {
   background:transparent;
-  color: black;
+  color: silver;
 }
 
 
@@ -824,6 +826,13 @@ a {
 header span {
   margin-left: 20px; }
 
+
+  form {
+    input {
+      color: black;
+    }
+  }
+
 form input {
   color: black; }
 
@@ -837,6 +846,8 @@ form input {
     margin: 50px;
     margin-left: 17%; }
 
+
+
 #create-super {
   width: 75%;
   margin: 50px auto; }
@@ -846,6 +857,8 @@ form input {
 #create-super .md-button:hover {
   background-color: #455A64;
   color: rgba(255, 255, 255, 0.8); }
+
+
 
 #newTech {
   width: 75%;
@@ -880,8 +893,10 @@ form input {
 .dashboard-admin {
   padding: 15px; }
 
+
 .md-sidenav-left {
   height: 100vh; }
+
 
 .data-list ul {
   width: 70%;
@@ -910,12 +925,16 @@ form input {
   margin-right: 50px; }
 
 .checkout {
-  float: right;
-  margin-right: 50px;
+  float: left;
 }
-.riCheckoutContainer .additem {
-  float: right;
-  margin-right: 50px;
+.riCheckoutContainer {
+  float: left;
+  width: 100%;
+  height:130px;
+  background: -webkit-linear-gradient(black, grey, black); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(black, grey, black); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(black, grey, black); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(black, grey, black); /* Standard syntax (must be last) */
 }
 
 #invInfo {
@@ -923,17 +942,29 @@ padding-top: 20px;
 }
 
 .tech-header {
+  border:1px solid black;
+  background: -webkit-linear-gradient(grey, black); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(grey, black); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(grey, black); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(grey, #414141); /* Standard syntax (must be last) */
+  border-radius: 0px;
   clear: both;
-  width: 90%;
-  height: 450px;
-  margin-top:50px;
-  margin: 30px auto 20px auto;
-  overflow: scroll; }
+  width: 100%;
+  height: 600px;
+  margin-top:0px;
+  /*margin: 30px auto 20px auto;*/
+  overflow: scroll;
+  }
+
+
+
+
 
 .tech-left {
   height: 500px;
   margin: 30px auto 10px auto;
-  overflow: scroll; }
+  overflow: scroll;
+}
   .tech-left table {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -973,7 +1004,9 @@ padding-top: 20px;
     width: 75px; }
   .tech-left #td-button {
     width: 45px; }
-
+    #td-button {
+      width: 45px;
+    }
 
 /*
     body {
@@ -1021,8 +1054,6 @@ padding-top: 20px;
       -webkit-animation-delay: 1.5s;
     }
 
-
-
     .span-outer {
       font-size: 20px;
     }
@@ -1059,9 +1090,10 @@ padding-top: 20px;
 
 
     .icon-trash {
-      margin-left:1px;
-      width: 28px;
-      height: 28px;
+
+      margin-left: 32px;
+      width: 40%;
+      height: 80%;
       position: relative;
       overflow: hidden;
     }
@@ -1131,7 +1163,7 @@ padding-top: 20px;
       left: 38%;
       margin-left: -2%;
       bottom: 17%;
-      background-color: white;
+      background:-webkit-linear-gradient(top, #020202 0%,#5E5E5E 100%);
     }
 
     .icon-trash .trash-line-2 {
@@ -1141,7 +1173,7 @@ padding-top: 20px;
       left: 50%;
       margin-left: -2%;
       bottom: 17%;
-      background-color: white;
+      background:-webkit-linear-gradient(top, #020202 0%,#5E5E5E 100%);
     }
 
     .icon-trash .trash-line-3 {
@@ -1151,8 +1183,120 @@ padding-top: 20px;
       left: 62%;
       margin-left: -2%;
       bottom: 17%;
-      background-color: white;
+      background:-webkit-linear-gradient(top, #020202 0%,#5E5E5E 100%);
     }
+
+
+
+tbody .squarebtn {
+  margin-top: 0px;
+  font-weight:lighter;
+  font-size:3em;
+  position:relative;
+  width:125px;
+  height:55px;
+  border-radius:10px;
+  border:1px solid black;
+  background:-webkit-linear-gradient(top, #020202 0%,#5E5E5E 100%);
+  z-index:2;
+}
+
+.squarebtn {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-weight:lighter;
+  font-size:3em;
+  position:relative;
+  width:17.9%;
+  height:65%;
+  border-radius:10px;
+  border:1px solid black;
+  background:-webkit-linear-gradient(top, #020202 0%,#5E5E5E 100%);
+  z-index:2;
+}
+
+.squarebtn-left {
+  box-shadow:-2px -2px 9px rgba(0, 0, 0, 0.7),
+         -4px -4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.squarebtn-right {
+  box-shadow:2px -2px 9px rgba(0, 0, 0, 0.7),
+         4px -4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.squarebtn::before {
+  content:"";
+  position: absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  border-top:1px solid #a7ddff;
+  border-bottom:1px solid #a7ddff;
+  border-radius:10px;
+  z-index:3;
+}
+
+.squarebtn-left::before {
+  border-left:1px solid #3E4970;
+  border-right:1px solid #a7ddff;
+}
+
+.squarebtn-right::before {
+  border-right:1px solid #a7ddff;
+  border-left:1px solid #a7ddff;
+}
+
+.squarebtn::after {
+  content:"";
+  position:absolute;
+  top:1px;
+  bottom:-1px;
+  border-radius:10px;
+  z-index:1;
+}
+
+.squarebtn::after {
+  content:"";
+  position:absolute;
+  top:1px;
+  bottom:-1px;
+  border-radius:10px;
+  z-index:1;
+}
+
+.squarebtn-left::after {
+  right:-1px;
+  left:1px;
+  box-shadow:1px 1px 5px rgba(171, 255, 255, 0.8);
+}
+
+.squarebtn-right::after {
+  right:1px;
+  left:-1px;
+  box-shadow:-1px 1px 5px rgba(171, 255, 255, 0.8);
+}
+
+.squarebtn i {
+  font-size: 0.4em;
+  line-height:45px;
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  margin-left: 3px;
+  color:silver;
+  z-index:6;
+  right: 8px;
+  /*text-shadow: -1px -1px 0px rgba(167, 221, 255, .8),1px 1px 2px black;*/
+}
+
+.squarebtn i.icon-user {
+  right: 3px;
+  text-shadow: 1px -1px 0px rgba(167, 221, 255, .8),1px 1px 2px black;
+}
+
 
 
 
@@ -1169,7 +1313,7 @@ padding-top: 20px;
       height:80px;
       border-radius:100%;
       border:1px solid black;
-      background:-webkit-linear-gradient(top,  #2c354e 0%,#576a97 100%);
+      background:-webkit-linear-gradient(top, #020202 0%,#5E5E5E 100%);
       z-index:2;
     }
 
@@ -1210,6 +1354,16 @@ padding-top: 20px;
     {
       border-right:1px solid #a7ddff;
       border-left:1px solid #a7ddff;
+    }
+
+    .btn::after
+    {
+      content:"";
+      position:absolute;
+      top:1px;
+      bottom:-1px;
+      border-radius:100%;
+      z-index:1;
     }
 
     .btn::after
@@ -1276,8 +1430,8 @@ padding-top: 20px;
   top:0;
   left:0;
   bottom:0;
-  text-align:center;
-  color:transparent;
+  margin-left: 3px;
+  color:silver;
   z-index:6;
 }
 
@@ -1294,7 +1448,7 @@ padding-top: 20px;
 h1{
   position:relative;
   margin:0;
-  margin-left: 20px;
+  margin-left: 30px;
   width:4.5em;
   color: transparent;
   font: italic 3em "Helvetica Neue";
@@ -1329,12 +1483,12 @@ h1::after{
   height:75px;
   padding-top:15px;
   box-shadow:0 12px 20px rgba(0,0,0,.9);
-  background: -webkit-radial-gradient(center bottom, rgba(160, 201, 215, 0.8) 0%, rgba(160, 201, 215, 0) 70%), -webkit-linear-gradient(top, black 0%,#282F44 6%,#2C3551 52%,#354262 91%,#050C54 100%);
+  background: -webkit-radial-gradient(center bottom, rgba(192,192,192,0.8) 0%, rgba(192,192,192,0.0) 70%), -webkit-linear-gradient(top, black 0%,#282F44 6%,#2C3551 52%,#354262 91%,#050C54 100%);
 }
 .menubar::before{
   content:"";
   position:absolute;
-  background:-webkit-radial-gradient(center, rgba(66, 200, 239, 1) 0%, rgba(3, 171, 228, 0) 80%);
+  background:-webkit-radial-gradient(center, rgba(192,192,192,0.8) 0%, rgba(3, 171, 228, 0) 80%);
   bottom:0;
   top:55px;
   left:0px;
@@ -1349,4 +1503,8 @@ h1::after{
   top:76px;
   left:40px;
   right:40px;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: transparent;
 }

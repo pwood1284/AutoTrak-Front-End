@@ -1,30 +1,30 @@
+<div class="innerContainer">
+<div class="innerContainerleft">
 <div class="user-declare">
   <h3>Select An Open Repair Order</h3>
 </div>
-<div class="user-logout md-whiteframe-z3 md-default">
-  <md-button ng-click="logout()">Logout</md-button>
+
 </div>
-<div class="tech-header md-whiteframe-z2">
+<div class="innerContainerright">
+<div class="tech-header">
   <table st-table="displayed" class="table table-striped">
     <thead>
       <tr>
-        <th st-sort="repairOrder">Repair Order</th>
-        <th st-sort="year">Year</th>
-        <th st-sort="vehicle">Vehicle</th>
-        <th st-sort="model">Model</th>
-        <th st-sort="lastName">Last Name</th>
-        <th st-sort="firstName">First Name</th>
+        <th class="text-center" st-ratio="20" st-sort="year">Year</th>
+        <th class="text-center" st-ratio="20" st-sort="vehicle">Vehicle</th>
+        <th class="text-center" st-ratio="20" st-sort="model">Model</th>
+        <th class="text-center" st-ratio="20" st-sort="lastName">Client</th>
+        <th class="text-center" st-ratio="20" st-sort="repairOrder">Repair Order</th>
       </tr>
     </thead>
     <tbody>
       <tr ng-repeat="j in job">
-        <td><md-button ng-click="getRO(j)">{{j.repair_order.repair_order_number}}</md-button></td>
-        <td>{{j.vehicle.vehicle_year}}</td>
-        <td>{{j.vehicle.vehicle_type}}</td>
-        <td>{{j.vehicle.vehicle_model}}</td>
-        <td>{{j.client.client_last_name}}</td>
-        <td>{{j.client.client_first_name}}</td>
-      </tr>
+        <td style="vertical-align:middle" st-ratio="20">{{j.vehicle.vehicle_year}}</td>
+        <td style="vertical-align:middle" st-ratio="20">{{j.vehicle.vehicle_type}}</td>
+        <td style="vertical-align:middle" st-ratio="20">{{j.vehicle.vehicle_model}}</td>
+        <td style="vertical-align:middle" st-ratio="20">{{j.client.client_last_name}}</td>
+        <td st-ratio="20"><md-button class='squarebtn squarebtn-right' ng-click="getRO(j)"><i>{{j.repair_order.repair_order_number}}</i></md-button></td>
+      </tr></div>
     </tbody>
     <tfoot>
       <tr>
@@ -34,4 +34,9 @@
       </tr>
     </tfoot>
   </table>
+</div>
+</div>
+<div class="riCheckoutContainer">
+    <md-button class="squarebtn squarebtn-right" ng-click="logout()"><i>Logout</i></md-button>
+</div>
 </div>

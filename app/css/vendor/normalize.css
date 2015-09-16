@@ -12,23 +12,9 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
-/**
- * Remove default margin.
- */
-
 body {
   margin: 0;
 }
-
-/* HTML5 display definitions
-   ========================================================================== */
-
-/**
- * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11
- * and Firefox.
- * Correct `block` display not defined for `main` in IE 11.
- */
 
 article,
 aside,
@@ -89,11 +75,6 @@ template {
 a {
   background-color: transparent;
 }
-
-/**
- * Improve readability of focused elements when they are also in an
- * active/hover state.
- */
 
 a:active,
 a:hover {
@@ -415,10 +396,31 @@ optgroup {
 
 table {
   border-collapse: collapse;
-  border-spacing: 0;
 }
 
-td,
 th {
-  padding: 0;
+  margin: 0;
+  color: white;
+  text-align: center;
+  font-size: 100%;
+  background: -webkit-linear-gradient(black, #696969, black); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(black, #696969, black); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(black, #696969, black); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(black, #696969, black); /* Standard syntax (must be last) */
+}
+
+td {
+  @media only screen and (max-width: 320px) {
+
+     body { font-size: 2em; }
+
+  }
+  font-size: 100%;
+  color: white;
+  text-align: center;
+  background-color: transparent;
+}
+
+td i {
+  margin-top: 3px;
 }

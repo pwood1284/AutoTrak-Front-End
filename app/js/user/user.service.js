@@ -24,11 +24,9 @@
       this.getUserInventory = function (){
         return $http.get(userInventory, HEROKU.CONFIG);
       };
-    // Logout button.
-      this.toLogout = function (){
-        $cookies.remove('access_token5');
-        $cookies.remove('access_token2');
-        $state.go('keypad');
+    // AdminLogin button.
+      this.toAdminLogin = function (){
+        $state.go('adminLogin');
       };
     }
   ]);

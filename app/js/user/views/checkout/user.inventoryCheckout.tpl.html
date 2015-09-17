@@ -37,7 +37,7 @@
         </tbody>
         <tfoot>
           <tr>
-            <td colspan="5" class="text-center">
+            <td colspan="6" class="text-center">
               <div st-items-by-page="20" st-pagination=""></div>
             </td>
           </tr>
@@ -46,10 +46,10 @@
     </div>
   </div>
   <div class="riCheckoutContainer">
-    <md-button class="squarebtn squarebtn-right" ng-click="logout()"><i>Logout</i></md-button>
-    <md-button class="squarebtn squarebtn-right" ng-click="riLocationScreen()"><i>Add Repair Item By Location</i></md-button>
-    <md-button class="squarebtn squarebtn-right" ng-click="searchScreen()"><i>Search Repair Item</i></md-button>
-    <md-button class="squarebtn squarebtn-right" ng-click="getHistory()"><i>Repair Item History</i></md-button>
-    <md-button class="squarebtn squarebtn-right" ng-click="itemCheckout(r)"><i>Checkout</i></md-button>
+    <md-button id="mainButtons" class="squarebtn squarebtn-right" ng-click="logout()"><i class="material-icons md-48">time_to_leave</i></md-button>
+    <md-button id="mainButtons" class="squarebtn squarebtn-right" ng-click="riLocationScreen()"><i class="material-icons md-48">add_shopping_cart</i></md-button>
+    <md-button id="mainButtons" class="squarebtn squarebtn-right" ng-click="searchScreen()"><i class="material-icons md-48">search</i></md-button>
+    <md-button id="mainButtons" class="squarebtn squarebtn-right" ng-click="getHistory()"><i class="material-icons md-48">folder</i></md-button>
+    <md-button id="mainButtons" class="squarebtn squarebtn-right" ng-click="itemCheckout(r)"><i class="material-icons md-48">check</i></md-button>
   </div>
 </div>

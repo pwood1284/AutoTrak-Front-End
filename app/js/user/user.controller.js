@@ -27,8 +27,8 @@
         UserService.loginTech(employee_pin);
       };
     // Logout button
-      $scope.logout = function (){
-        UserCheckoutService.toLogout();
+      $scope.adminLogin = function (){
+        UserService.toAdminLogin();
       };
     }
   ]);

@@ -12,7 +12,7 @@
 
       this.getRepairItemById = function (param) {
         return $http.get(getRepairItem + (param.itemid), HEROKU.CONFIG);
-        console.log(param.itemid);
+        // console.log(param.itemid);
       };
 
       this.checkoutRepair = function (data){

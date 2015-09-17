@@ -1,41 +1,54 @@
-<div class="user-declare">
-  <h3>Inventory Items:</h3>
-</div>
-<div class="user-logout md-whiteframe-z3 md-default">
-  <md-button ng-click="logout()">Logout</md-button>
-</div>
-<label>Search: <input ng-model="searchText" placeholder="Favor Name" autofocus></label>
-<div class="tech-header md-whiteframe-z3">
-  <!-- <h3>Repair Order # : {{ repair.repair_order_number }}</h3> -->
-   <table st-table="displayed" class="table table-striped">
-    <thead>
-      <tr>
-        <th st-ratio="20" st-sort="part">Part</th>
-        <th st-ratio="20" st-sort="partNum">Part #</th>
-        <th st-ratio="10" st-sort="supplier">Supplier</th>
-        <th st-ratio="30" st-sort="location">Location</th>
-        <th st-ratio="30" st-sort="onHand">On Hand</th>
-        <th st-ratio="20" st-sort="quantity" id="td-quantity">Quantity</th>
-        <!-- <th st-ratio="20" st-sort="button" id="th-button"></th> -->
-        <!-- <th></th> -->
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="p in parts | filter:searchText">
-        <td st-ratio="20"><span data-id="{{p.id}}">{{p.part_name}}</span></td>
-        <td st-ratio="20">{{p.business_part_number}}</td>
-        <td st-ratio="20">{{p.inventory_item_supplier}}</td>
-        <td st-ratio="30">{{p.inventory_item_location}}</td>
-        <td st-ratio="30">{{p.inventory_count}}</td>
-        <td st-ratio="20"><md-button ng-click="addCheckout(p)">+</md-button></td>
-      </tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td colspan="5" class="text-center">
-          <div  st-items-by-page="20" st-pagination=""></div>
-        </td>
-      </tr>
-    </tfoot>
-  </table>
+
+<div class="container">
+  <div class="innerContainerleft">
+    <div class="user-declare">
+      <h3>Inventory Items</h3>
+      <label>Search: <input ng-model="searchText" placeholder="Favor Name" autofocus></label>
+    </div>
+  </div>
+  <div class=innerContainerright>
+    <div class="tech-header md-whiteframe-z3">
+      <table st-table="displayed" class="table table-striped">
+       <thead>
+         <tr>
+           <th class="text-center" st-ratio="20" st-sort="RepairO">Part#</th>
+           <th class="text-center" st-ratio="10" st-sort="Part">Part</th>
+           <th class="text-center" st-ratio="30" st-sort="PartNum">Supplier</th>
+           <th class="text-center" st-ratio="30" st-sort="Location">Location</th>
+           <th class="text-center" st-ratio="20" st-sort="stock">Quantity On Hand</th>
+           <th class="text-center" st-ratio="20" st-sort="addItem">Add Item</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr ng-repeat="p in parts | filter:searchText">
+           <td style="vertical-align:middle" st-ratio="20"><span data-id="{{p.id}}">{{p.part_name}}</span></td>
+           <td style="vertical-align:middle" st-ratio="20">{{p.business_part_number}}</td>
+           <td style="vertical-align:middle" st-ratio="20">{{p.inventory_item_supplier}}</td>
+           <td style="vertical-align:middle" st-ratio="30">{{p.inventory_item_location}}</td>
+           <td style="vertical-align:middle" st-ratio="30">{{p.inventory_count}}</td>
+           <td style="vertical-align:middle" st-ratio="5">
+             <md-button class='squarebtn squarebtn-right' ng-click="addCheckout(p)">
+               <i class="material-icons md-48">add_circle</i>
+             </md-button></td>
+         </tr>
+       </tbody>
+
+
+       <tfoot>
+         <tr>
+           <td colspan="6" class="text-center">
+             <div st-items-by-page="20" st-pagination=""></div>
+           </td>
+         </tr>
+       </tfoot>
+     </table>
+    </div>
+  </div>
+  <div class="riCheckoutContainer">
+    <md-button id="mainButtons" class="squarebtn squarebtn-right" ng-click="logout()"><i class="material-icons md-48">time_to_leave</i></md-button>
+    <md-button id="mainButtons" class="squarebtn squarebtn-right" ng-click="riLocationScreen()"><i class="material-icons md-48">add_shopping_cart</i></md-button>
+    <md-button id="mainButtonsDisabled" class="squarebtnDisabled squarebtn-right" disabled><i class="material-icons md-48">search</i></md-button>
+    <md-button id="mainButtons" class="squarebtn squarebtn-right" ng-click="getHistory()"><i class="material-icons md-48">folder</i></md-button>
+    <md-button id="mainButtonsDisabled" class="squarebtnDisabled squarebtn-right" disabled><i class="material-icons md-48">check</i></md-button>
+  </div>
 </div>

@@ -27,6 +27,9 @@
         UserContentService.updateRepairItem(item);
       };
 
+      $scope.getHistory = function () {
+        UserContentService.getItemsHistory();
+      };
        $scope.logout = function (){
         UserContentService.toLogout();
       };

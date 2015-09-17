@@ -14,7 +14,7 @@
   display: inline-block;
   width: 300px;
   color: transparent;
-  font: italic 1.5em "Helvetica Neue";
+  font:  1.5em "Helvetica Neue";
   font-weight:lighter;
   text-transform: uppercase;
   letter-spacing: 0px;
@@ -42,6 +42,7 @@
   right:0;
 }
 .innerContainer {
+  z-index: 0;
   position: relative;
   bottom: 0px;
   width:100%;
@@ -49,12 +50,15 @@
 }
 
 .innerContainerleft {
+  color: white;
   float: left;
   width: 36%;
   padding:0;
 }
 
 .innerContainerright {
+  z-index: 0;
+  position:relative;
   float:left;
   width: 64%;
   margin-left:auto;
@@ -98,7 +102,7 @@
   border: 1px black;
   text-align: center;
   color: transparent;
-  font: italic 2em "Helvetica Neue";
+  font: 2em "Helvetica Neue";
   font-weight:light;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -110,7 +114,28 @@
   background:transparent;
   color: silver;
 }
+.keypad-display3 {
+  direction: ltr;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 75px;
+  margin-bottom: 45px;
+  width: 300px;
+  border: 1px black;
+  text-align: center;
+  color: transparent;
+  font: 2em "Helvetica Neue";
+  font-weight:light;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow:-1px -1px 0 black, 1px 1px 0 black, -1px 0 0 black, 1px 0 0 black, 0 3px 4px rgba(167, 221, 255, 1), 0 -6px 7px rgba(0, 0, 0, 0.5);
 
+}
+
+.keypad-display3:disabled {
+  background:transparent;
+  color: silver;
+}
 
 /*KeyPad2 -------------------*/
 
@@ -119,18 +144,26 @@
   width: 100%;
 }
 
+.numpad3 {
+  width: 350px;
+  height:500;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 25px;
+}
 .innerRIKeypadLeft {
   float: left;
-  margin-top: 25px;
+  padding-left: 60px;
+  margin-top: 55px;
   width:365px;
 }
 
 /*--------------------------*/
 .innerRIKeypadRight {
   float: left;
-  margin-top: 25px;
-  width:275px;
-  margin-left: 45px;
+  margin-top: 55px;
+  width:285px;
+  margin-left: 85px;
   margin-right: 45px;
 }
 .innerRIKeypadRightZero {
@@ -145,35 +178,36 @@
   bottom: 40px;
 }
 /*-----------------------------*/
+
 .keypad-display2 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   direction: ltr;
-  font-size: 3em;
+  margin-top: 45px;
   padding: 0px -5% 10px 5%;
+  border: 1px black;
   text-align: center;
-  border-radius: 5px;
-  width: 325px;
+  color: transparent;
+  font: 65px "Helvetica Neue";
+  font-weight:light;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow:-1px -1px 0 black, 1px 1px 0 black, -1px 0 0 black, 1px 0 0 black, 0 3px 4px rgba(167, 221, 255, 1), 0 -6px 7px rgba(0, 0, 0, 0.5);
+  width: 100%;
 }
 
 .keypad-display2:disabled {
-  background: white;
-  border: 2px solid #607D8B;
-  color: #607D8B;
+  background:transparent;
+  color: silver;
 }
 /*------------------------------*/
 .innerContainer .innerContainerright .userNumPad2 {
-  box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);
-  margin-left: 15px;
-  margin-right: 15px;
   float: left;
-  padding-left:40px;
-  width: 80% auto;
-  height: 100% auto;
-  background: #BFCBD1;
-  border: 2px solid #607D8B;
-  border-radius: 5px;
+  width: 100% auto;
+  height: 91% auto;
+  background: -webkit-linear-gradient(left, grey, white , grey); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right,  grey, white , grey); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right,  grey, white , grey); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, black, #969696 , black); /* Standard syntax (must be last) */  /*box-shadow: inset 0px -1px 4px 1px rgba(0,0,0,0.4), inset 0px 2px 15px 3px rgba(255,255,255, 1.0), 2px 2px 1px rgba(0,0,0,0.1);*/
+  border: 1px solid black;
 }
 
 .executionButtonBack {
@@ -1186,7 +1220,9 @@ padding-top: 20px;
       background:-webkit-linear-gradient(top, #020202 0%,#5E5E5E 100%);
     }
 
+#imgLogout {
 
+}
 
 tbody .squarebtn {
   margin-top: 0px;
@@ -1200,6 +1236,32 @@ tbody .squarebtn {
   background:-webkit-linear-gradient(top, #020202 0%,#5E5E5E 100%);
   z-index:2;
 }
+#mainButtons i{
+  font-size: 1.4em;
+  line-height:80px;
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  margin-left: 3px;
+  color:silver;
+  z-index:6;
+  right: 8px;
+}
+#mainButtonsDisabled i{
+  font-size: 1.4em;
+  line-height:80px;
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  margin-left: 3px;
+  color:grey;
+  z-index:6;
+  right: 8px;
+}
+
+
 
 .squarebtn {
   margin-top: 20px;
@@ -1215,6 +1277,20 @@ tbody .squarebtn {
   z-index:2;
 }
 
+.squarebtnDisabled {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-weight:lighter;
+  font-size:3em;
+  position:relative;
+  width:17.9%;
+  height:65%;
+  border-radius:10px;
+  border:1px solid grey;
+  background:-webkit-linear-gradient(top, #020202 0%,grey 100%);
+  z-index:2;
+}
+
 .squarebtn-left {
   box-shadow:-2px -2px 9px rgba(0, 0, 0, 0.7),
          -4px -4px 20px rgba(0, 0, 0, 0.4);
@@ -1223,6 +1299,15 @@ tbody .squarebtn {
 .squarebtn-right {
   box-shadow:2px -2px 9px rgba(0, 0, 0, 0.7),
          4px -4px 20px rgba(0, 0, 0, 0.4);
+
+}
+.squarebtn-login {
+  box-shadow:2px -2px 9px rgba(0, 0, 0, 0.7),
+         4px -4px 20px rgba(0, 0, 0, 0.4);
+  float: right;
+  margin-right:170px;
+  height: 45px;
+  width: 95px;
 }
 
 .squarebtn::before {
@@ -1244,6 +1329,10 @@ tbody .squarebtn {
 }
 
 .squarebtn-right::before {
+  border-right:1px solid #a7ddff;
+  border-left:1px solid #a7ddff;
+}
+.squarebtn-login::before {
   border-right:1px solid #a7ddff;
   border-left:1px solid #a7ddff;
 }
@@ -1273,6 +1362,11 @@ tbody .squarebtn {
 }
 
 .squarebtn-right::after {
+  right:1px;
+  left:-1px;
+  box-shadow:-1px 1px 5px rgba(171, 255, 255, 0.8);
+}
+.squarebtn-login::after {
   right:1px;
   left:-1px;
   box-shadow:-1px 1px 5px rgba(171, 255, 255, 0.8);
@@ -1433,9 +1527,34 @@ tbody .squarebtn {
   margin-left: 3px;
   color:silver;
   z-index:6;
+  right: 8px;
+  text-shadow: -1px -1px 0px rgba(167, 221, 255, .8),1px 1px 2px black;
 }
 
-.btn i {
+.btn i .enter{
+  font-size: .65em;
+  line-height:80px;
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  margin-left: 3px;
+  color:silver;
+  z-index:6;
+  right: 8px;
+  text-shadow: -1px -1px 0px rgba(167, 221, 255, .8),1px 1px 2px black;
+}
+
+.btn i .clear{
+  font-size: .65em;
+  line-height:80px;
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  margin-left: 3px;
+  color:silver;
+  z-index:6;
   right: 8px;
   text-shadow: -1px -1px 0px rgba(167, 221, 255, .8),1px 1px 2px black;
 }
@@ -1449,7 +1568,7 @@ h1{
   position:relative;
   margin:0;
   margin-left: 30px;
-  width:4.5em;
+  width:5.0em;
   color: transparent;
   font: italic 3em "Helvetica Neue";
   font-weight:lighter;
@@ -1479,11 +1598,12 @@ h1::after{
 }
 
 .menubar{
+  z-index: 7;
   position:relative;
   height:75px;
   padding-top:15px;
   box-shadow:0 12px 20px rgba(0,0,0,.9);
-  background: -webkit-radial-gradient(center bottom, rgba(192,192,192,0.8) 0%, rgba(192,192,192,0.0) 70%), -webkit-linear-gradient(top, black 0%,#282F44 6%,#2C3551 52%,#354262 91%,#050C54 100%);
+  background: -webkit-radial-gradient(center bottom, rgba(192,192,192,0.8) 0%, rgba(192,192,192,0.0) 70%), -webkit-linear-gradient(top, black 0%,#282F44 6%,#B8B8B8 52%,#354262 91%,#050C54 100%);
 }
 .menubar::before{
   content:"";
@@ -1507,4 +1627,104 @@ h1::after{
 
 .table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
     background-color: transparent;
+}
+// Rules for sizing the icon.
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+// Rules for using icons as black on a light background.
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+// Rules for using icons as white on a dark background.
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+tech-header-login{
+border:1px solid black;
+background: -webkit-linear-gradient(grey, black); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(grey, black); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(grey, black); /* For Firefox 3.6 to 15 */
+background: linear-gradient(grey, #414141); /* Standard syntax (must be last) */
+border-radius: 0px;
+clear: both;
+/*margin: 30px auto 20px auto;*/
+overflow: scroll;
+}
+
+.adminLoginContainer {
+  width: 800px;
+  height: 500px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: auto;
+  padding-right: auto;
+  border: 1px solid black;
+  background: -webkit-linear-gradient(black, grey); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(black, grey); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(black, grey); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(black, grey); /* Standard syntax (must be last) */
+}
+
+.innerLoginFields {
+  padding-left: 150px;
+  padding-top: 175px;
+}
+.emailLbl, .passwordLoginLbl {
+  margin-top: 10px;
+  font-size: 18px;
+  color: grey;
+}
+.emailInput input {
+  padding-left: 10px;
+  font-size: 22px;
+  font-family: sans-serif;
+  height: 45px;
+  width:485px;
+  border-radius: 2px;
+  border: 1px solid black;
+  text-shadow: 1px -1px 0px rgba(167, 221, 255, .8),1px 1px 2px black;
+  background: -webkit-linear-gradient(black, grey); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(black, grey); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(black, grey); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(grey, #414141); /* Standard syntax (must be last) */
+}
+.passwordLoginFld input{
+  font-size: 22px;
+  padding-left: 10px;
+  font-family: sans-serif;
+  height: 45px;
+  width:485px;
+  border-radius: 2px;
+  border: 1px solid black;
+  text-shadow: 1px -1px 0px rgba(167, 221, 255, .8),1px 1px 2px black;
+
+  background: -webkit-linear-gradient(black, grey); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(black, grey); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(black, grey); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(grey, #414141); /* Standard syntax (must be last) */
+}
+
+.appTitle {
+  position: relative;
+  margin-left:150px;
+  margin-top: 50px;
+  font-size: 30px;
+
+}
+.appTitleLocation::after {
+  margin-top: 0px;
+}
+.appTitleLocation {
+  position: relative;
+  float: left;
+}
+.appsubTitle{
+  position: relative;
+  float: left;
+  margin-left: 450px;
+  color: grey;
 }

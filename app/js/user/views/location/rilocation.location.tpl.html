@@ -1,73 +1,68 @@
-<div class="user-logout md-whiteframe-z3 md-default">
-  <md-button ng-click="logout()">Logout</md-button>
-</div>
+
 <div class="innerContainer">
-  <div class="InvItemHeader">
-    <h3>Find Repair Item By Location</h3>
-  </div>
+
   <div ng-controller="RiLocationCtrl as vm">
     <div class="innerContainerleft">
+      <div class="InvItemHeader">
+        <h3>Find Repair Item By Location</h3>
+      </div>
       <div id="displayItem">
         <tbody>
           <tr ng-model="inventoryitem">
-            <!-- <td cs-select="row"></td> -->
             <h4><td>{{inventoryitem.part_name}}</td></h4><br>
             <td><span data-id="{{inventoryitem.id}}">Location: <div class="displayItemData">{{inventoryitem.inventory_item_location}}</div></span></td>
             <br><td>ID: <div class="displayItemData">{{inventoryitem.business_part_number}}</div></td>
             <br><td>Supplier: <div class="displayItemData">{{inventoryitem.inventory_item_supplier}}</div></td>
             <br><td>On Hand Quantity: <div class="displayItemData">{{inventoryitem.inventory_count}}</div></td><br>
-            <br><td><md-button ng-click="addCheckout(inventoryitem)">Select Quantity</md-button></td>
+
           </tr>
         </tbody>
       </div>
     </div>
     <div class="innerContainerright">
-      <div class="userNumPad2 md-whiteframe-z1">
+      <div class="tech-header md-whiteframe-z3">
           <div class="userNumPad2Display">
             <input class="keypad-display2" type="string" ng-model="vm.ri_location" placeholder="Enter Location..." disabled/>
           </div>
         <ng-keypad on-key-pressed='vm.onKeyPressed'>
           <div class="innerRIKeypadLeft">
-            <ng-key class='apple' id="skey2" ng-key-data='"A"'>A</ng-key>
-            <ng-key class='banana' id="skey2" ng-key-data='"B"'>B</ng-key>
-            <ng-key class='carrot' id="skey2" ng-key-data='"C"'>C</ng-key>
-            <ng-key class='dog' id="skey2" ng-key-data='"D"'>D</ng-key>
-            <ng-key class='eagle' id="skey2" ng-key-data='"E"'>E</ng-key>
-            <ng-key class='ferret' id="skey2" ng-key-data='"F"'>F</ng-key>
-            <ng-key class='goose' id="skey2" ng-key-data='"G"'>G</ng-key>
-            <ng-key class='horse' id="skey2" ng-key-data='"H"'>H</ng-key>
-            <ng-key class='island' id="skey2" ng-key-data='"I"'>I</ng-key>
-            <ng-key class='jelly' id="skey2" ng-key-data='"J"'>J</ng-key>
-            <ng-key class='kite' id="skey2" ng-key-data='"K"'>K</ng-key>
-            <ng-key class='light'id="skey2" ng-key-data='"L"'>L</ng-key>
+            <ng-key class='btn btn-right' ng-key-data='"A"'><i>A<i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data='"B"'><i>B<i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data='"C"'><i>C<i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data='"D"'><i>D<i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data='"E"'><i>E<i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data='"F"'><i>F<i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data='"G"'><i>G<i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data='"H"'><i>H<i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data='"I"'><i>I<i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data='"J"'><i>J<i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data='"K"'><i>K<i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data='"L"'><i>L<i></ng-key>
           </div>
           <div class="innerRIKeypadRight">
-            <ng-key class='one' id="skey2one" ng-key-data="1">1</ng-key>
-            <ng-key class='two' id="skey2" ng-key-data="2">2</ng-key>
-            <ng-key class='three' id="skey2" ng-key-data="3">3</ng-key>
-            <ng-key class='four' id="skey2one" ng-key-data="4">4</ng-key>
-            <ng-key class='five' id="skey2" ng-key-data="5">5</ng-key>
-            <ng-key class='six' id="skey2" ng-key-data="6">6</ng-key>
-            <ng-key class='seven' id="skey2one" ng-key-data="7">7</ng-key>
-            <ng-key class='eight' id="skey2" ng-key-data="8">8</ng-key>
-            <ng-key class='nine' id="skey2" ng-key-data="9">9</ng-key>
-            <div class="innerRIKeypadRightZero">
-              <ng-key class='zero' id="skey2zero" ng-key-data="0">0</ng-key>
-            </div>
-          </div>
-          <div class=executionButtonsContainer>
-            <div class="executionButtonBack">
-              <md-button  id="backbutton" ng-click="keypadEnt(vm)">Back</md-button>
-            </div>
-            <div class="executionButtonClear">
-              <ng-key class='clear2' id="clear2" ng-key-data='"<"'>clear</ng-key>
-            </div>
-            <div class="executionButtonEnter">
-              <md-button class='enterbutton' ng-click="getItem(vm)">Enter</md-button>
-            </div>
+            <ng-key class='btn btn-right' ng-key-data="1"><i>1</i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data="2"><i>2</i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data="3"><i>3</i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data="4"><i>4</i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data="5"><i>5</i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data="6"><i>6</i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data="7"><i>7</i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data="8"><i>8</i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data="9"><i>9</i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data='"<"'><i><div class="clear">Clear</div></i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data="0"><i>0</i></ng-key>
+            <md-button class='btn btn-right' ng-click="getItem(vm)"><i><div class="enter">Enter</div></i></md-button>
           </div>
         </ng-keypad>
       </div>
     </div>
+
+  <div class="riCheckoutContainer">
+    <md-button id="mainButtons" class="squarebtn squarebtn-right" ng-click="logout()"><i class="material-icons md-48">time_to_leave</i></md-button>
+    <md-button id="mainButtons" class="squarebtn squarebtn-right" ng-click="riLocationScreen()"><i class="material-icons md-48">add_shopping_cart</i></md-button>
+    <md-button id="mainButtons" class="squarebtn squarebtn-right" ng-click="searchScreen()"><i class="material-icons md-48">search</i></md-button>
+    <md-button id="mainButtons" class="squarebtn squarebtn-right" ng-click="getHistory()"><i class="material-icons md-48">folder</i></md-button>
+    <md-button id="mainButtons" class="squarebtn squarebtn-right" ng-click="addCheckout(inventoryitem)"><i class="material-icons md-48">check</i></md-button>
+  </div>
   </div>
 </div>

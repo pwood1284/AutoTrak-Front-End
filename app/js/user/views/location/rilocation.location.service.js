@@ -18,6 +18,10 @@
             $state.go("quantityKeypad", {itemid: data.repair_item.id});
           });
         };
+        
+        this.getHistoryItems = function() {
+          $state.go("userDash.history");
+        };
 
         this.toLogout = function (){
           $cookies.remove('access_token5');

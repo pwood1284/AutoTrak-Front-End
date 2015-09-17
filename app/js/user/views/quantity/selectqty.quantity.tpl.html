@@ -1,12 +1,11 @@
-<div class="user-logout md-whiteframe-z3 md-default">
-  <md-button ng-click="logout()">Logout</md-button>
-</div>
+
 <div class="innerContainer">
-  <div class="InvItemHeader">
-    <h3>Select A Repair Item Quantity</h3>
-  </div>
+
   <div ng-controller="QuantityCtrl as vm">
     <div class="innerContainerleft">
+      <div class="InvItemHeader">
+        <h3>Select A Repair Item Quantity</h3>
+      </div>
       <div id="displayItem">
         <tbody>
           <tr ng-model="repairitem">
@@ -20,23 +19,31 @@
       </div>
     </div>
     <div class="innerContainerright">
-      <div class="userNumPad md-whiteframe-z1">
-        <input class="keypad-display" type="Text" ng-model="vm.itemQuantity" placeholder="Enter Quantity..." disabled/>
+      <div class="tech-header md-whiteframe-z3">
+        <div class="numpad3">
+        <input class="keypad-display3" type="Text" ng-model="vm.itemQuantity" placeholder="Enter Quantity..." disabled/>
         <ng-keypad on-key-pressed='vm.onKeyPressed'>
-          <ng-key class='one' ng-key-data="1">1</ng-key>
-          <ng-key class='two' ng-key-data="2">2</ng-key>
-          <ng-key class='three' ng-key-data="3">3</ng-key>
-          <ng-key class='four' ng-key-data="4">4</ng-key>
-          <ng-key class='five' ng-key-data="5">5</ng-key>
-          <ng-key class='six' ng-key-data="6">6</ng-key>
-          <ng-key class='seven' ng-key-data="7">7</ng-key>
-          <ng-key class='eight' ng-key-data="8">8</ng-key>
-          <ng-key class='nine' ng-key-data="9">9</ng-key>
-          <ng-key class='clear' ng-key-data='"<"'>clear</ng-key>
-          <ng-key class='zero'ng-key-data="0">0</ng-key>
-        <md-button class='enterbutton' ng-click="addQuantity(vm.itemQuantity)">Enter</md-button>
+          <ng-key class='btn btn-right' ng-key-data="1"><i>1</i></ng-key>
+          <ng-key class='btn btn-right' ng-key-data="2"><i>2</i></ng-key>
+          <ng-key class='btn btn-right' ng-key-data="3"><i>3</i></ng-key>
+          <ng-key class='btn btn-right' ng-key-data="4"><i>4</i></ng-key>
+          <ng-key class='btn btn-right' ng-key-data="5"><i>5</i></ng-key>
+          <ng-key class='btn btn-right' ng-key-data="6"><i>6</i></ng-key>
+          <ng-key class='btn btn-right' ng-key-data="7"><i>7</i></ng-key>
+          <ng-key class='btn btn-right' ng-key-data="8"><i>8</i></ng-key>
+          <ng-key class='btn btn-right' ng-key-data="9"><i>9</i></ng-key>
+          <ng-key class='btn btn-right' ng-key-data='"<"'><i><div class="clear">Clear</div></i></ng-key>
+          <ng-key class='btn btn-right' ng-key-data="0"><i>0</i></ng-key>
         </ng-keypad>
       </div>
+    </div>
+    </div>
+    <div class="riCheckoutContainer">
+      <md-button id="mainButtons" class="squarebtn squarebtn-right" ng-click="logout()"><i class="material-icons md-48">time_to_leave</i></md-button>
+      <md-button id="mainButtons" class="squarebtn squarebtn-right" ng-click="riLocationScreen()"><i class="material-icons md-48">add_shopping_cart</i></md-button>
+      <md-button id="mainButtonsDisabled" class="squarebtnDisabled squarebtn-right" disabled><i class="material-icons md-48">search</i></md-button>
+      <md-button id="mainButtonsDisabled" class="squarebtnDisabled squarebtn-right" disabled><i class="material-icons md-48">folder</i></md-button>
+      <md-button id="mainButtons" class="squarebtn squarebtn-right" ng-click="addQuantity(vm.itemQuantity)"><i class="material-icons md-48">check</i></md-button>
     </div>
   </div>
 </div>

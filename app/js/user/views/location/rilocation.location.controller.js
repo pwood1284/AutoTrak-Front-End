@@ -33,6 +33,10 @@
 
             };
 
+            $scope.getHistory = function () {
+              RiLocationLocationService.getHistoryItems();
+            };
+
             $scope.logout = function (){
               RiLocationLocationService.toLogout();
             };

@@ -1,21 +1,32 @@
-<div id="create-super" class="md-whiteframe-z4">
-  <form>
-    <div>
-      <md-content md-theme="default" layout-padding layout="row" layout-sm="column">
-        <md-input-container style="width:45%">
-          <label>Please Enter Company User Name</label>
-          <input ng-model="user.business_username" type="text">
-        </md-input-container>
-        <md-input-container style="width:45%">
-          <label> Please Enter Password</label>
-          <input ng-model="user.business_user_password" type="password">
-        </md-input-container>
+
+<div class=adminLoginContainer>
+  <div class="tech-header-login md-whiteframe-z3">
+    <form>
+      <div class="appTitle">
+        <h1 class="appTitleLocation">Autotrak</h1>
       </div>
-      <div>
-        <md-button ng-click="loginMain(user)" class="md-primary">
-        Login
-        </md-button>
+      <div class="appsubTitle">
+        <label>Company Login</label>
       </div>
-    </md-content>
-  </form>
+      <div class="innerLoginFields">
+          <div class="emailLbl">
+            <label>Company Username</label>
+          </div>
+          <div class="emailInput">
+            <input ng-model="user.business_username" type="text"/>
+          </div>
+          <div class="passwordLoginLbl">
+            <label>Password</label>
+          </div>
+          <div class="passwordLoginFld">
+            <input ng-model="user.business_user_password" type="password">
+          </div>
+          <md-button class="squarebtn squarebtn-login" ng-click="loginMain(user)"><i>Login</i></md-button>
+      </div>
+    </form>
+  </div>
+<div>
+  <div class="backBtn">
+    <md-button class="squarebtn squarebtn-login" ng-click="home()"><i class="material-icons md-48">home</i></md-button>
+  </div>
 </div>

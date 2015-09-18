@@ -20,6 +20,10 @@
        $scope.toKeypad = function(){
          LoginService.techLogin();
        };
+
+       $scope.home = function(){
+         LoginService.toHome();
+       };
     }
 
   ]);

@@ -28,6 +28,10 @@
         SelectQtyQuantityService.updateRepairItemQty($stateParams, itemQuantity);
       };
 
+      $scope.checkoutScreen = function(){
+        SelectQtyQuantityService.toCheckoutScreen();
+      };
+      
       $scope.logout = function (){
         SelectQtyQuantityService.toLogout();
       };

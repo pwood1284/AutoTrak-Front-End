@@ -4,14 +4,14 @@
   <div ng-controller="UserCtrl as vm">
     <div class="innerContainerleft">
       <div class="InvItemHeader">
-        <h3>Welcome to AutoTrak</h3>
+        <h3>Welcome! Please provide your pin # for access to your Repair Orders.</h3>
       </div>
 
     </div>
     <div class="innerContainerright">
       <div class="tech-header md-whiteframe-z3">
         <div class="numpad3">
-          <input class="keypad-display3" type="password" ng-model="vm.employee_pin" placeholder="Enter PIN..." disabled/>
+          <input class="keypad-display3" type="password" ng-model="vm.employee_pin" placeholder="" disabled/>
         <ng-keypad on-key-pressed='vm.onKeyPressed'>
           <ng-key class='btn btn-right' ng-key-data="1"><i>1</i></ng-key>
           <ng-key class='btn btn-right' ng-key-data="2"><i>2</i></ng-key>
@@ -22,7 +22,7 @@
           <ng-key class='btn btn-right' ng-key-data="7"><i>7</i></ng-key>
           <ng-key class='btn btn-right' ng-key-data="8"><i>8</i></ng-key>
           <ng-key class='btn btn-right' ng-key-data="9"><i>9</i></ng-key>
-          <ng-key class='btn btn-right' ng-key-data='"<"'><i><div class="clear">Clear</div></i></ng-key>
+          <ng-key class='btn btn-right' ng-key-data='"<"'><i class="material-icons md-48">backspace</i></ng-key>
           <ng-key class='btn btn-right' ng-key-data="0"><i>0</i></ng-key>
         </ng-keypad>
       </div>

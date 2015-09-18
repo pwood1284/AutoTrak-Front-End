@@ -51,9 +51,17 @@
           $state.go("quantityKeypad", {itemid: data.repair_item.id});
         });
       };
-      
+
       this.getItemsHistory = function(){
         $state.go("userDash.history");
+      };
+
+      this.toRiLocation = function() {
+        $state.go('locationKeypad');
+      };
+      
+      this.toCheckoutScreen = function(){
+        $state.go('userDash.checkout');
       };
 
       this.toLogout = function (){

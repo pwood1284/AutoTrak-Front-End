@@ -19,8 +19,15 @@
           });
         };
         
+        this.toCheckoutScreen = function() {
+          $state.go("userDash.checkout");
+        };
+
         this.getHistoryItems = function() {
           $state.go("userDash.history");
+        };
+        this.searchItems = function() {
+          $state.go("userDash.active");
         };
 
         this.toLogout = function (){

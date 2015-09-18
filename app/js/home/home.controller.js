@@ -17,6 +17,9 @@
        $scope.loginAdmin = function (user) {
         LoginService.adminLogin(user);
        };
+       $scope.toKeypad = function(){
+         LoginService.techLogin();
+       };
     }
 
   ]);

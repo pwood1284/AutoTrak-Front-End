@@ -30,8 +30,16 @@
       $scope.getHistory = function () {
         UserContentService.getItemsHistory();
       };
+      
+      $scope.checkoutScreen = function(){
+        UserContentService.toCheckoutScreen();
+      };
+
        $scope.logout = function (){
         UserContentService.toLogout();
+      };
+      $scope.riLocationScreen = function() {
+        UserContentService.toRiLocation();
       };
 
     }

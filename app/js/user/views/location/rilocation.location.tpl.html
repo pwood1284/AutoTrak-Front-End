@@ -4,7 +4,7 @@
   <div ng-controller="RiLocationCtrl as vm">
     <div class="innerContainerleft">
       <div class="InvItemHeader">
-        <h3>Find Repair Item By Location</h3>
+        <h3>Enter the location of the repair item you would like to checkout, and then hit enter.  When ready to proceed, hit the check button to continue.</h3>
       </div>
       <div id="displayItem">
         <tbody>
@@ -22,7 +22,7 @@
     <div class="innerContainerright">
       <div class="tech-header md-whiteframe-z3">
           <div class="userNumPad2Display">
-            <input class="keypad-display2" type="string" ng-model="vm.ri_location" placeholder="Enter Location..." disabled/>
+            <input class="keypad-display2" type="string" ng-model="vm.ri_location" placeholder="" disabled/>
           </div>
         <ng-keypad on-key-pressed='vm.onKeyPressed'>
           <div class="innerRIKeypadLeft">
@@ -49,7 +49,7 @@
             <ng-key class='btn btn-right' ng-key-data="7"><i>7</i></ng-key>
             <ng-key class='btn btn-right' ng-key-data="8"><i>8</i></ng-key>
             <ng-key class='btn btn-right' ng-key-data="9"><i>9</i></ng-key>
-            <ng-key class='btn btn-right' ng-key-data='"<"'><i><div class="clear">Clear</div></i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data='"<"'><i class="material-icons md-48">backspace</i></ng-key>
             <ng-key class='btn btn-right' ng-key-data="0"><i>0</i></ng-key>
             <md-button class='btn btn-right' ng-click="getItem(vm)"><i><div class="enter">Enter</div></i></md-button>
           </div>

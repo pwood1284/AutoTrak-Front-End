@@ -50,10 +50,11 @@
 }
 
 .innerContainerleft {
+  padding-top: 20px;
   color: white;
   float: left;
   width: 36%;
-  padding:0;
+  padding-right:22px;
 }
 
 .innerContainerright {
@@ -102,7 +103,7 @@
   border: 1px black;
   text-align: center;
   color: transparent;
-  font: 2em "Helvetica Neue";
+  font: 65px "Helvetica Neue";
   font-weight:light;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -118,13 +119,13 @@
   direction: ltr;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 75px;
+  margin-top: 45px;
   margin-bottom: 45px;
   width: 300px;
   border: 1px black;
   text-align: center;
   color: transparent;
-  font: 2em "Helvetica Neue";
+  font: 65px "Helvetica Neue";
   font-weight:light;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1618,7 +1619,7 @@ h1::after{
   height:75px;
   padding-top:15px;
   box-shadow:0 12px 20px rgba(0,0,0,.9);
-  background: -webkit-radial-gradient(center bottom, rgba(192,192,192,0.8) 0%, rgba(192,192,192,0.0) 70%), -webkit-linear-gradient(top, black 0%,#282F44 6%,#B8B8B8 52%,#354262 91%,#050C54 100%);
+  background: -webkit-radial-gradient(center bottom, rgba(192,192,192,0.8) 0%, rgba(192,192,192,0.0) 70%), -webkit-linear-gradient(top, black 0%,#1A1A1A 6%,#B8B8B8 52%,#354262 91%,#000000 100%);
 }
 .menubar::before{
   content:"";
@@ -1700,6 +1701,7 @@ overflow: scroll;
   height: 45px;
   width:485px;
   border-radius: 2px;
+  color: silver;
   border: 1px solid black;
   text-shadow: 1px -1px 0px rgba(167, 221, 255, .8),1px 1px 2px black;
   background: -webkit-linear-gradient(black, grey); /* For Safari 5.1 to 6.0 */
@@ -1742,4 +1744,8 @@ overflow: scroll;
   float: left;
   margin-left: 450px;
   color: grey;
+}
+
+.buttonMargin {
+  /*padding-left: 5px;*/
 }

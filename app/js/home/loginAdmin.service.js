@@ -4,8 +4,8 @@
 
   angular.module('AutoTrak')
 
-  .service('LoginService', ['$http', 'HEROKU', '$location', '$cookies',
-    function ($http, HEROKU, $location, $cookies) {
+  .service('LoginService', ['$http', '$state', 'HEROKU', '$location', '$cookies',
+    function ($http, $state, HEROKU, $location, $cookies) {
 
       var mainLoginEndpoint = HEROKU.URL + '/business_user/login';
       var adminLoginEndpoint = HEROKU.URL + '/employee_user/login';
@@ -43,6 +43,9 @@
         $state.go('keypad');
       };
 
+      this.toHome = function(){
+        $state.go('home');
+      };
     }
 
   ]);

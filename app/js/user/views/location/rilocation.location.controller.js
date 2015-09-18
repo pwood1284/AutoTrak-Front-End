@@ -32,11 +32,16 @@
               RiLocationLocationService.AddRepairItem(inventoryitem);
 
             };
+            $scope.checkoutScreen = function(){
+              RiLocationLocationService.toCheckoutScreen();
+            };
 
             $scope.getHistory = function () {
               RiLocationLocationService.getHistoryItems();
             };
-
+            $scope.searchRepairItems = function () {
+              RiLocationLocationService.searchItems();
+            };
             $scope.logout = function (){
               RiLocationLocationService.toLogout();
             };

@@ -54,6 +54,10 @@
         });
       };
 
+      this.toCheckoutScreen = function(){
+        $state.go('userDash.checkout');
+      };
+      
       this.toLogout = function (){
         $cookies.remove('access_token5');
         $state.go('userDash.list');

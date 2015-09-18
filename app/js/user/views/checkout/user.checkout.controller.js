@@ -39,6 +39,10 @@
           $state.go("userDash.history");
       };
 
+      $scope.checkoutScreen = function(){
+        UserCheckoutService.toCheckoutScreen();
+      };
+      
       $scope.logout = function (){
         UserCheckoutService.toLogout();
       };

@@ -39,6 +39,10 @@
 
       };
 
+      this.techLogin = function(){
+        $state.go('keypad');
+      };
+
     }
 
   ]);

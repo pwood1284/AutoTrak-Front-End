@@ -1310,6 +1310,14 @@ tbody .squarebtn {
   width: 95px;
 }
 
+.backBtn .squarebtn-login {
+  box-shadow:2px -2px 9px rgba(0, 0, 0, 0.7),
+         4px -4px 20px rgba(0, 0, 0, 0.4);
+  float: right;
+  margin-right:265px;
+  height: 45px;
+  width: 95px;
+}
 .squarebtn::before {
   content:"";
   position: absolute;
@@ -1336,7 +1344,10 @@ tbody .squarebtn {
   border-right:1px solid #a7ddff;
   border-left:1px solid #a7ddff;
 }
-
+.squarebtn-back::before {
+  border-right:1px solid #a7ddff;
+  border-left:1px solid #a7ddff;
+}
 .squarebtn::after {
   content:"";
   position:absolute;
@@ -1371,7 +1382,11 @@ tbody .squarebtn {
   left:-1px;
   box-shadow:-1px 1px 5px rgba(171, 255, 255, 0.8);
 }
-
+.squarebtn-back::after {
+  right:1px;
+  left:-1px;
+  box-shadow:-1px 1px 5px rgba(171, 255, 255, 0.8);
+}
 .squarebtn i {
   font-size: 0.4em;
   line-height:45px;

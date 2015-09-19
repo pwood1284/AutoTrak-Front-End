@@ -1,16 +1,26 @@
-
+<header class="md-whiteframe-z3">
+  <div class="menubar">
+      <div ng-controller="HomeCtrl" class="container">
+        <h1>Autotrak</h1>
+        <md-button class="home" ng-click="home()"></md-button>
+      </div>
+    </div>
+</header>
 <div class="innerContainer">
-
   <div ng-controller="UserCtrl as vm">
     <div class="innerContainerleft">
       <div class="InvItemHeader">
         <h3>Welcome! Please provide your pin # for access to your Repair Orders.</h3>
+        <h3>To continue, hit the <i class="material-icons md-24">check</i> button.</h3>
+        <h3>For access to the Administrative features of this program, hit the <i class="material-icons md-24">group</i> button.</h3>
       </div>
-
     </div>
     <div class="innerContainerright">
       <div class="tech-header md-whiteframe-z3">
         <div class="numpad3">
+          <div class="keypadLabels">
+            <label class="techKeypadLabel">Technician Login</label>
+          </div>
           <input class="keypad-display3" type="password" ng-model="vm.employee_pin" placeholder="" disabled/>
         <ng-keypad on-key-pressed='vm.onKeyPressed'>
           <ng-key class='btn btn-right' ng-key-data="1"><i>1</i></ng-key>

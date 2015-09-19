@@ -44,6 +44,9 @@
       };
 
       this.toHome = function(){
+        $cookies.remove('access_token');
+        $cookies.remove('access_token2');
+        $cookies.remove('access_token5');
         $state.go('home');
       };
     }

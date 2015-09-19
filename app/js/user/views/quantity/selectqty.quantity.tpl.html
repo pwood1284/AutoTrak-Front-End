@@ -1,4 +1,11 @@
-
+<header class="md-whiteframe-z3">
+  <div class="menubar">
+      <div ng-controller="HomeCtrl" class="container">
+        <h1>Autotrak</h1>
+        <md-button class="home" ng-click="home()"></md-button>
+      </div>
+    </div>
+</header>
 <div class="innerContainer">
 
   <div ng-controller="QuantityCtrl as vm">
@@ -9,18 +16,23 @@
       <div id="displayItem">
         <tbody>
           <tr ng-model="repairitem">
-            <h4><td>{{repairitem.part_name}}</td></h4><br>
-            <td><span data-id="{{repairitem.id}}">Location: <div class="displayItemData">{{repairitem.inventory_item_location}}</div></span></td>
-            <br><td>ID: <div class="displayItemData">{{repairitem.business_part_number}}</div></td>
-            <br><td>Supplier: <div class="displayItemData">{{repairitem.inventory_item_supplier}}</div></td>
-            <br><td>On Hand Quantity: <div class="displayItemData">{{repairitem.inventory_count}}</div></td><br>
+            <h4><td><i class="material-icons md-24">build</i> &nbsp{{repairitem.part_name}}</td></h4>
+            <td><span data-id="{{inventoryitem.id}}"><div class="displayItemData">Location:  &nbsp&nbsp {{repairitem.inventory_item_location}}</div></span></td>
+            <td><div class="displayItemData">Item ID: &nbsp&nbsp{{repairitem.business_part_number}}</div></td>
+            <td><div class="displayItemData">Supplier: &nbsp&nbsp{{repairitem.inventory_item_supplier}}</div></td>
+            <td><div class="displayItemData">Quantity On Hand: &nbsp&nbsp{{repairitem.inventory_count}}</div></td>
+
           </tr>
         </tbody>
       </div>
+
     </div>
     <div class="innerContainerright">
       <div class="tech-header md-whiteframe-z3">
         <div class="numpad3">
+          <div class="keypadLabels">
+            <label class=quantitykeypadLabel>Checkout Quantity</label>
+          </div>
         <input class="keypad-display3" type="Text" ng-model="vm.itemQuantity" placeholder="" disabled/>
         <ng-keypad on-key-pressed='vm.onKeyPressed'>
           <ng-key class='btn btn-right' ng-key-data="1"><i>1</i></ng-key>

@@ -27,7 +27,7 @@
     // AdminLogin button.
       this.toAdminLogin = function (){
         $state.go('adminLogin');
-      };
+      };  
     }
   ]);
 }());

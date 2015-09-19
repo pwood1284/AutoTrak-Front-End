@@ -1,7 +1,20 @@
+<header class="md-whiteframe-z3">
+  <div class="menubar">
+      <div ng-controller="HomeCtrl" class="container">
+        <h1>Autotrak</h1>
+        <md-button class="home" ng-click="home()"></md-button>
+      </div>
+    </div>
+</header>
 <div class="container">
   <div class="innerContainerleft">
-    <div class="user-declare">
-      <h3>This is your Checkout screen. Here, you can view, edit, or remove the list of pending repair items for checkout.  Once your list is complete, hit the check button to commit repair items and logout.</h3>
+    <div class="InvItemHeader">
+      <h3>This is a list of all items pending for checkout.</h3>
+      <h3> To checkout a repair item by location, hit <i class="material-icons md-24">add_shopping_cart</i>.</h3>
+      <h3>To search for a repair item, hit <i class="material-icons md-24">search</i>.</h3>
+      <h3>To return item(s) back to inventory you can view the history of all items checked out by hitting <i class="material-icons md-24">folder</i>.</h3>
+      <h3>To check out the items listed and logout, hit <i class="material-icons md-24">check</i>.</h3>
+      <h3>To go back to open repair orders, hit <i class="material-icons md-24">time_to_leave</i>.</h3>
     </div>
   </div>
   <div class=innerContainerright>

@@ -96,6 +96,18 @@
   opacity: .3;
 
 }
+#displayItem3 {
+  margin-top: 158px;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-bottom: 22px;
+  width: 100%;
+  padding-top: 42px;
+  height: 270px;
+  background-color: black;
+  opacity: .3;;
+
+}
 .userNumPad {
   margin-top: 110px;
   width: 425px;
@@ -150,7 +162,7 @@
 
 .keypad-display3:disabled {
   background:transparent;
-  color: silver;
+  color: black;
 }
 
 /*KeyPad2 -------------------*/
@@ -212,7 +224,7 @@
 
 .keypad-display2:disabled {
   background:transparent;
-  color: silver;
+  color: black;
 }
 /*------------------------------*/
 .innerContainer .innerContainerright .userNumPad2 {
@@ -1571,7 +1583,7 @@ tbody .squarebtn {
   top:0;
   left:0;
   bottom:0;
-  margin-left: 3px;
+  margin-left: 10px;
   color:silver;
   z-index:6;
   right: 8px;
@@ -1666,6 +1678,7 @@ h1::after{
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
+.material-icons.md-96 { font-size: 96px; }
 
 // Rules for using icons as black on a light background.
 .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
@@ -1839,4 +1852,17 @@ h3 {
 }
 h4 {
   font-size: 24px;
+}
+
+#bckgrndIcn {
+  position: absolute;
+  top: 300px;
+  left: 365px;
+  opacity: .3;
+}
+#bckgrndIcnk {
+  position: absolute;
+  top: 70px;
+  left: 365px;
+  opacity: .3;
 }

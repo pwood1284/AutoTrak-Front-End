@@ -13,7 +13,7 @@
       <div class="InvItemHeader">
         <h3>How many of this repair item will you be taking from inventory? Select the quantity and hit the check button to return to checkout.</h3>
       </div>
-      <div id="displayItem">
+      <div id="displayItem3">
         <tbody>
           <tr ng-model="repairitem">
             <h4><td><i class="material-icons md-24">build</i> &nbsp{{repairitem.part_name}}</td></h4>
@@ -21,7 +21,6 @@
             <td><div class="displayItemData">Item ID: &nbsp&nbsp{{repairitem.business_part_number}}</div></td>
             <td><div class="displayItemData">Supplier: &nbsp&nbsp{{repairitem.inventory_item_supplier}}</div></td>
             <td><div class="displayItemData">Quantity On Hand: &nbsp&nbsp{{repairitem.inventory_count}}</div></td>
-
           </tr>
         </tbody>
       </div>
@@ -33,6 +32,7 @@
           <div class="keypadLabels">
             <label class=quantitykeypadLabel>Checkout Quantity</label>
           </div>
+        <i id="bckgrndIcnk" class="material-icons md-96">add_shopping_cart</i>
         <input class="keypad-display3" type="Text" ng-model="vm.itemQuantity" placeholder="" disabled/>
         <ng-keypad on-key-pressed='vm.onKeyPressed'>
           <ng-key class='btn btn-right' ng-key-data="1"><i>1</i></ng-key>

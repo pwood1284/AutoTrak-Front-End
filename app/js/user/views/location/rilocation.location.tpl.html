@@ -34,6 +34,7 @@
             <div class="keypadLabels">
               <label class="rilocationKeypadLabel">Repair Item Location</label>
             </div>
+            <i id="bckgrndIcnk" class="material-icons md-96">add_shopping_cart</i>
             <input class="keypad-display2" type="string" ng-model="vm.ri_location" placeholder="" disabled/>
           </div>
         <ng-keypad on-key-pressed='vm.onKeyPressed'>
@@ -63,7 +64,7 @@
             <ng-key class='btn btn-right' ng-key-data="9"><i>9</i></ng-key>
             <ng-key class='btn btn-right' ng-key-data='"<"'><i class="material-icons md-48">backspace</i></ng-key>
             <ng-key class='btn btn-right' ng-key-data="0"><i>0</i></ng-key>
-            <md-button class='btn btn-right' ng-click="getItem(vm)"><i><div class="enter">Enter</div></i></md-button>
+            <md-button class='btn btn-right' ng-click="getItem(vm)"><i><div class="enter"><i class="material-icons md-48">search</i></div></i></md-button>
           </div>
         </ng-keypad>
       </div>

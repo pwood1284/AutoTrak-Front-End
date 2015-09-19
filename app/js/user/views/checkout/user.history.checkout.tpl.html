@@ -1,9 +1,19 @@
-
+<header class="md-whiteframe-z3">
+  <div class="menubar">
+      <div ng-controller="HomeCtrl" class="container">
+        <h1>Autotrak</h1>
+        <md-button class="home" ng-click="home()"></md-button>
+      </div>
+    </div>
+</header>
 <div class="container">
   <div class="innerContainerleft">
 
-    <div class="user-declare">
-      <h3>This is a list of all repair items that have been checked out for this repair order.  Here, you have the option to return item(s) back to inventory, or you may checkout additional item(s) if necessary.</h3>
+    <div class="InvItemHeader">
+      <h3>This is a list of all repair items that have been checked out for this repair order.</h3>
+      <h3>You have the option to return item(s) back to inventory, or you may checkout additional item(s) if necessary.</h3>
+      <h3>To go back to checkout, hit <i class="material-icons md-24">shopping_cart</i>.</h3>
+
     </div>
   </div>
   <div class=innerContainerright>

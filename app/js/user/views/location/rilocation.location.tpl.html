@@ -1,19 +1,28 @@
-
+<header class="md-whiteframe-z3">
+  <div class="menubar">
+      <div ng-controller="HomeCtrl" class="container">
+        <h1>Autotrak</h1>
+        <md-button class="home" ng-click="home()"></md-button>
+      </div>
+    </div>
+</header>
 <div class="innerContainer">
 
   <div ng-controller="RiLocationCtrl as vm">
     <div class="innerContainerleft">
       <div class="InvItemHeader">
-        <h3>Enter the location of the repair item you would like to checkout, and then hit enter.  When ready to proceed, hit the check button to continue.</h3>
+        <h3>Enter the location of the repair item you would like to checkout, and hit enter.</h3><h3>When ready to proceed, hit the <i class="material-icons md-28">check</i> button.</h3>
+        <h3>To go back to checkout, hit <i class="material-icons md-28">shopping_cart</i>.</h3>
+
       </div>
       <div id="displayItem">
         <tbody>
           <tr ng-model="inventoryitem">
-            <h4><td>{{inventoryitem.part_name}}</td></h4><br>
-            <td><span data-id="{{inventoryitem.id}}">Location: <div class="displayItemData">{{inventoryitem.inventory_item_location}}</div></span></td>
-            <br><td>ID: <div class="displayItemData">{{inventoryitem.business_part_number}}</div></td>
-            <br><td>Supplier: <div class="displayItemData">{{inventoryitem.inventory_item_supplier}}</div></td>
-            <br><td>On Hand Quantity: <div class="displayItemData">{{inventoryitem.inventory_count}}</div></td><br>
+            <h4><td><i class="material-icons md-24">build</i> &nbsp{{inventoryitem.part_name}}</td></h4>
+            <td><span data-id="{{inventoryitem.id}}"><div class="displayItemData">Location:  &nbsp&nbsp {{inventoryitem.inventory_item_location}}</div></span></td>
+            <td><div class="displayItemData">Item ID: &nbsp&nbsp{{inventoryitem.business_part_number}}</div></td>
+            <td><div class="displayItemData">Supplier: &nbsp&nbsp{{inventoryitem.inventory_item_supplier}}</div></td>
+            <td><div class="displayItemData">Quantity On Hand: &nbsp&nbsp{{inventoryitem.inventory_count}}</div></td>
 
           </tr>
         </tbody>
@@ -22,6 +31,9 @@
     <div class="innerContainerright">
       <div class="tech-header md-whiteframe-z3">
           <div class="userNumPad2Display">
+            <div class="keypadLabels">
+              <label class="rilocationKeypadLabel">Repair Item Location</label>
+            </div>
             <input class="keypad-display2" type="string" ng-model="vm.ri_location" placeholder="" disabled/>
           </div>
         <ng-keypad on-key-pressed='vm.onKeyPressed'>

@@ -1,72 +1,57 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>AutoTrak</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/vendor/normalize.css">
-   <link data-require="bootstrap-css@3.2.0" data-semver="3.2.0" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
-  <!-- <link rel="stylesheet" href="css/vendor/foundation.css"> -->
-  <link rel="stylesheet" href="css/vendor/angular-material.css">
-  <link rel="stylesheet" href="css/vendor/ng-keypad.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
-</head>
-<body ng-app="AutoTrak">
-  <header class="md-whiteframe-z3">
-    <div class="menubar">
-        <div class="container">
-          <h1>Autotrak</h1>
-        </div>
-      </div>
-  </header>
+  <head>
+    <title>AutoTrak</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/vendor/normalize.css">
+     <link data-require="bootstrap-css@3.2.0" data-semver="3.2.0" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="css/vendor/foundation.css"> -->
+    <link rel="stylesheet" href="css/vendor/angular-material.css">
+    <link rel="stylesheet" href="css/vendor/ng-keypad.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body ng-app="AutoTrak">
 
-  <div class="container" ui-view>
+    <div class="container" ui-view>
 
-  </div>
+    </div>
+    <!-- VENDOR -->
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/underscore.js"></script>
+    <script src="js/vendor/angular.js"></script>
+    <script src="js/vendor/angular-cookies.js"></script>
+    <script src="js/vendor/cookies.js"></script>
+    <script src="js/vendor/angular-ui-router.js"></script>
+    <script src="js/vendor/angular-animate.js"></script>
+    <script src="js/vendor/angular-aria.js"></script>
+    <script src="js/vendor/angular-material.js"></script>
+    <script src="js/vendor/ng-keypad.js"></script>
+    <script src="js/vendor/smart-table.js"></script>
 
-  <!-- VENDOR -->
-  <script src="js/vendor/jquery.js"></script>
-  <script src="js/vendor/underscore.js"></script>
-  <script src="js/vendor/angular.js"></script>
-  <script src="js/vendor/angular-cookies.js"></script>
-  <script src="js/vendor/cookies.js"></script>
-  <script src="js/vendor/angular-ui-router.js"></script>
-  <script src="js/vendor/angular-animate.js"></script>
-  <script src="js/vendor/angular-aria.js"></script>
-  <script src="js/vendor/angular-material.js"></script>
-  <script src="js/vendor/ng-keypad.js"></script>
-  <script src="js/vendor/smart-table.js"></script>
-
-  <!-- MAIN -->
-  <script src="js/main.js"></script>
-  <script src="js/home/home.controller.js"></script>
-  <script src="js/superUser/superUser.controller.js"></script>
-  <script src="js/superUser/superUser.service.js"></script>
-  <script src="js/home/loginAdmin.service.js"></script>
-  <script src="js/token.service.js"></script>
-  <script src="js/user/user.controller.js"></script>
-  <script src="js/user/views/header/user.header.controller.js"></script>
-  <script src="js/user/views/header/user.header.service.js"></script>
-  <script src="js/user/views/content/user.content.controller.js"></script>
-  <script src="js/user/views/content/user.content.service.js"></script>
-  <script src="js/user/views/checkout/user.checkout.controller.js"></script>
-  <script src="js/user/views/checkout/user.checkout.service.js"></script>
-  <script src="js/user/user.service.js"></script>
-  <script src="js/admin/admin.controller.js"></script>
-  <script src="js/admin/admin.service.js"></script>
-  <script src="js/admin/employee/edit.emp.service.js"></script>
-  <script src="js/app.controller.js"></script>
-  <script src="js/user/views/location/rilocation.location.controller.js"></script>
-  <script src="js/user/views/location/rilocation.location.service.js"></script>
-  <script src="js/user/views/quantity/selectqty.quantity.controller.js"></script>
-  <script src="js/user/views/quantity/selectqty.quantity.service.js"></script>
-
-
-
-
-
-
-
-</body>
+    <!-- MAIN -->
+    <script src="js/main.js"></script>
+    <script src="js/home/home.controller.js"></script>
+    <script src="js/superUser/superUser.controller.js"></script>
+    <script src="js/superUser/superUser.service.js"></script>
+    <script src="js/home/loginAdmin.service.js"></script>
+    <script src="js/token.service.js"></script>
+    <script src="js/user/user.controller.js"></script>
+    <script src="js/user/views/header/user.header.controller.js"></script>
+    <script src="js/user/views/header/user.header.service.js"></script>
+    <script src="js/user/views/content/user.content.controller.js"></script>
+    <script src="js/user/views/content/user.content.service.js"></script>
+    <script src="js/user/views/checkout/user.checkout.controller.js"></script>
+    <script src="js/user/views/checkout/user.checkout.service.js"></script>
+    <script src="js/user/user.service.js"></script>
+    <script src="js/admin/admin.controller.js"></script>
+    <script src="js/admin/admin.service.js"></script>
+    <script src="js/admin/employee/edit.emp.service.js"></script>
+    <script src="js/app.controller.js"></script>
+    <script src="js/user/views/location/rilocation.location.controller.js"></script>
+    <script src="js/user/views/location/rilocation.location.service.js"></script>
+    <script src="js/user/views/quantity/selectqty.quantity.controller.js"></script>
+    <script src="js/user/views/quantity/selectqty.quantity.service.js"></script>
+  </body>
 </html>

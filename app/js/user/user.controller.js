@@ -30,6 +30,7 @@
       $scope.adminLogin = function (){
         UserService.toAdminLogin();
       };
+  
     }
   ]);
 }());

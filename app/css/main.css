@@ -1,6 +1,5 @@
 .container {
   width: 100%;
-  height: 100%;
   padding: 0;
   background: -webkit-linear-gradient(left, rgb(33, 33, 34) 0%,#798390 33%,#717B88 66%,#2C2D2F 100%);
 }
@@ -49,16 +48,21 @@
 }
 
 .innerContainerleft {
+  height: 400px;
   color: white;
   float: left;
-  width: 36%;
+  width: 448px;
+  min-width: 320px;
+  overflow: scroll;
 }
 
 .innerContainerright {
   z-index: 0;
   position:relative;
   float:left;
-  width: 64%;
+  width: 100%;
+  min-width: 320px;
+  max-width: 832px;
   height: 600px;
   padding:0;
 }
@@ -999,7 +1003,6 @@ form input {
 .riCheckoutContainer {
   float: left;
   width: 100%;
-  height:130px;
   background: -webkit-linear-gradient(black, grey, black); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(black, grey, black); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(black, grey, black); /* For Firefox 3.6 to 15 */
@@ -1019,7 +1022,7 @@ padding-top: 20px;
   border-radius: 0px;
   clear: both;
   width: 100%;
-  height: 600px;
+  height: 100%;
   margin-top:0px;
   /*margin: 30px auto 20px auto;*/
   overflow: scroll;
@@ -1290,7 +1293,7 @@ tbody .squarebtn {
   top:0;
   left:0;
   bottom:0;
-  margin-left: 3px;
+  margin-left: 7px;
   color:silver;
   z-index:6;
   right: 8px;
@@ -1302,7 +1305,7 @@ tbody .squarebtn {
   top:0;
   left:0;
   bottom:0;
-  margin-left: 3px;
+  margin-left: 7px;
   color:grey;
   z-index:6;
   right: 8px;
@@ -1312,12 +1315,14 @@ tbody .squarebtn {
 
 .squarebtn {
   margin-top: 20px;
+  margin-bottom: 20px;
   margin-left: 20px;
   font-weight:lighter;
   font-size:3em;
   position:relative;
-  width:17.9%;
-  height:65%;
+  width:17.35%;
+  min-width: 96px;
+  height:82.5px;
   border-radius:10px;
   border:1px solid black;
   background:-webkit-linear-gradient(top, #020202 0%,#5E5E5E 100%);
@@ -1326,12 +1331,14 @@ tbody .squarebtn {
 
 .squarebtnDisabled {
   margin-top: 20px;
+  margin-bottom: 20px;
   margin-left: 20px;
   font-weight:lighter;
   font-size:3em;
   position:relative;
-  width:17.9%;
-  height:65%;
+  width:17.35%;
+  min-width: 96px;
+  height:82.5px;
   border-radius:10px;
   border:1px solid grey;
   background:-webkit-linear-gradient(top, #020202 0%,grey 100%);
@@ -1836,6 +1843,7 @@ h3 {
   opacity: .7;
   padding-right:22px;
   padding-left: 22px;
+  word-wrap: break-word;
 
 }
 

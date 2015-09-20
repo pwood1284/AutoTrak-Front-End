@@ -86,7 +86,7 @@
 }
 #displayItem2 {
   margin-top: 85px;
-  padding-left: 72px;
+  padding-left: 22px;
   padding-right: 22px;
   padding-bottom: 22px;
   width: 100%;
@@ -1734,10 +1734,12 @@ overflow: scroll;
   color: silver;
   border: 1px solid black;
   text-shadow: 1px -1px 0px rgba(167, 221, 255, .8),1px 1px 2px black;
-  background: -webkit-linear-gradient(black, grey); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(black, grey); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(black, grey); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(grey, #414141); /* Standard syntax (must be last) */
+  background-color: black;
+  opacity: .2;
+  /*background: -webkit-linear-gradient(black, grey); /* For Safari 5.1 to 6.0 */
+  /*background: -o-linear-gradient(black, grey); /* For Opera 11.1 to 12.0 */
+  /*background: -moz-linear-gradient(black, grey); /* For Firefox 3.6 to 15 */
+  /*background: linear-gradient(grey, #414141); /* Standard syntax (must be last) */
 }
 .passwordLoginFld input{
   font-size: 22px;
@@ -1748,11 +1750,12 @@ overflow: scroll;
   border-radius: 2px;
   border: 1px solid black;
   text-shadow: 1px -1px 0px rgba(167, 221, 255, .8),1px 1px 2px black;
-
-  background: -webkit-linear-gradient(black, grey); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(black, grey); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(black, grey); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(grey, #414141); /* Standard syntax (must be last) */
+  background-color: black;
+  opacity: .2;
+  /*background: -webkit-linear-gradient(black, grey); /* For Safari 5.1 to 6.0 */
+  /*background: -o-linear-gradient(black, grey); /* For Opera 11.1 to 12.0 */*/
+  /*background: -moz-linear-gradient(black, grey); /* For Firefox 3.6 to 15 */*/
+  /*background: linear-gradient(grey, #414141); /* Standard syntax (must be last) */
 }
 
 .appTitle {
@@ -1860,9 +1863,10 @@ h4 {
   left: 365px;
   opacity: .3;
 }
+
 #bckgrndIcnk {
   position: absolute;
   top: 70px;
   left: 365px;
-  opacity: .3;
+  opacity: .1;
 }

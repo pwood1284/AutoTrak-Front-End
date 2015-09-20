@@ -1,6 +1,6 @@
 {
   "name": "autotrak-1",
-  "root": "./",
-  "clean_urls": false,
+  "root": "app",
+  "clean_urls": true,
   "error_page": "error.html"
 }

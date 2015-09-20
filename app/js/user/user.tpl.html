@@ -16,29 +16,28 @@
       </div>
     </div>
     <div class="innerContainerright">
-      <div class="tech-header md-whiteframe-z3">
+      <div class="tech-headerk md-whiteframe-z3">
         <div class="numpad3">
           <div class="keypadLabels">
             <label class="techKeypadLabel">Technician Login</label>
           </div>
-          <i id="bckgrndIcnk" class="material-icons md-96">person_pin</i>
-
-          <input class="keypad-display3" type="password" ng-model="vm.employee_pin" placeholder="" disabled/>
-        <ng-keypad on-key-pressed='vm.onKeyPressed'>
-          <ng-key class='btn btn-right' ng-key-data="1"><i>1</i></ng-key>
-          <ng-key class='btn btn-right' ng-key-data="2"><i>2</i></ng-key>
-          <ng-key class='btn btn-right' ng-key-data="3"><i>3</i></ng-key>
-          <ng-key class='btn btn-right' ng-key-data="4"><i>4</i></ng-key>
-          <ng-key class='btn btn-right' ng-key-data="5"><i>5</i></ng-key>
-          <ng-key class='btn btn-right' ng-key-data="6"><i>6</i></ng-key>
-          <ng-key class='btn btn-right' ng-key-data="7"><i>7</i></ng-key>
-          <ng-key class='btn btn-right' ng-key-data="8"><i>8</i></ng-key>
-          <ng-key class='btn btn-right' ng-key-data="9"><i>9</i></ng-key>
-          <ng-key class='btn btn-right' ng-key-data='"<"'><i class="material-icons md-48">backspace</i></ng-key>
-          <ng-key class='btn btn-right' ng-key-data="0"><i>0</i></ng-key>
-        </ng-keypad>
+            <i id="bckgrndIcnk" class="material-icons md-96">person_pin</i>
+            <input class="keypad-display3" type="password" ng-model="vm.employee_pin" placeholder="" disabled/>
+          <ng-keypad class="ngKeyPad" on-key-pressed='vm.onKeyPressed'>
+            <ng-key class='btn btn-right' ng-key-data="1"><i>1</i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data="2"><i>2</i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data="3"><i>3</i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data="4"><i>4</i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data="5"><i>5</i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data="6"><i>6</i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data="7"><i>7</i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data="8"><i>8</i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data="9"><i>9</i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data='"<"'><i class="material-icons md-48">backspace</i></ng-key>
+            <ng-key class='btn btn-right' ng-key-data="0"><i>0</i></ng-key>
+          </ng-keypad>
+        </div>
       </div>
-    </div>
     </div>
     <div class="riCheckoutContainer">
       <md-button id="mainButtons" class="squarebtn squarebtn-right" ng-click="adminLogin()"><i class="material-icons md-48">group</i></md-button>

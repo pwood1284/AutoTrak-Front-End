@@ -1818,6 +1818,7 @@ overflow: scroll;
 
 }
 .createAcct {
+  border: 2px solid black;
   position: relative;
   float: right;
   width: 200px;
@@ -1825,6 +1826,7 @@ overflow: scroll;
 
 }
 .companyLogin {
+  border: 2px solid black;
   position: relative;
   float: right;
   width: 200px;

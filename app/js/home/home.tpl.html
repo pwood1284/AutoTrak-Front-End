@@ -1,22 +1,24 @@
-<header class="md-whiteframe-z3">
-  <div class="menubar">
-      <div ng-controller="HomeCtrl" class="container">
-        <h1>Autotrak</h1>
+
+      <div ng-controller="HomeCtrl" class="mainLOGO">
+        <h1 class="HomeLogo">AutoTrak</h1>
         <md-button class="home" ng-click="home()"></md-button>
       </div>
+
+<div class="hero parallax-effect">
+    <img class="materialboxed" width="100%" src="../assets/lambo.jpg">
+
+    <div class= "navBtns">
+      <div class="companyLogin">
+        <md-button style="vertical-align:middle" class="loginAcctBtn" href="#/company/login">
+          Company Login
+        </md-button>
+      </div>
+      <div class="createAcct">
+        <md-button style="vertical-align:middle" class="createAcctBtn" href="#/create/account">
+          Register
+        </md-button>
+      </div>
     </div>
-</header>
-<div class="containerHomePage">
-  <div class="containerImageHome">
-    <img id="landing-img" src="../assets/lambo.jpg" alt="engine diagram">
-    <div class="createAcct">
-      <md-button class="createAcctBtn" href="#/create/account">
-        Register
-      </md-button>
-    </div>
-    <div class="companyLogin">
-      <md-button class="loginAcctBtn" href="#/company/login">
-        Company Login
-      </md-button>
-    </div>
+
+
 </div>

@@ -48,11 +48,10 @@
 }
 
 .innerContainerleft {
-  height: 400px;
+  display: flex;
   color: white;
   float: left;
   width: 448px;
-  min-width: 440px;
   overflow: scroll;
 }
 
@@ -1001,6 +1000,8 @@ form input {
   float: left;
 }
 .riCheckoutContainer {
+  display: flex;
+  flex-wrap: wrap;
   float: left;
   width: 100%;
   background: -webkit-linear-gradient(black, grey, black); /* For Safari 5.1 to 6.0 */
@@ -1321,7 +1322,7 @@ tbody .squarebtn {
   font-size:3em;
   position:relative;
   width:17.35%;
-  min-width: 96px;
+  /*min-width: 96px;*/
   height:82.5px;
   border-radius:10px;
   border:1px solid black;
@@ -1644,7 +1645,7 @@ h1{
   text-transform: uppercase;
   float: left;
   letter-spacing: -2px;
-  text-shadow:-1px -1px 0 black, 1px 1px 0 black, -1px 0 0 black, 1px 0 0 black, 0 3px 4px rgba(167, 221, 255, 1), 0 -6px 7px rgba(0, 0, 0, 0.5);
+  /*text-shadow:-1px -1px 0 black, 1px 1px 0 black, -1px 0 0 black, 1px 0 0 black, 0 3px 4px rgba(167, 221, 255, 1), 0 -6px 7px rgba(0, 0, 0, 0.5);*/
 }
 
 h1::before{
@@ -1899,4 +1900,83 @@ h4 {
   float: left;
   position: relative;
   bottom: 100px;
+}
+
+.navBtns {
+  position: relative;
+  bottom: 720px;
+  height: 55px;
+  width: 100%;
+}
+/*//medium+ screen sizes*/
+@media (min-width:992px) {
+    .desktop-only {
+        display:block !important;
+    }
+}
+
+/*//small screen sizes*/
+@media (max-width: 991px) {
+    .mobile-only {
+        display:block !important;
+    }
+
+    .desktop-only {
+        display:none !important;
+    }
+}
+
+
+
+
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	tr { border: 1px solid #ccc; }
+
+	td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+
+	td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: ""; }
+	td:nth-of-type(2):before { content: ""; }
+	td:nth-of-type(3):before { content: ""; }
+	td:nth-of-type(4):before { content: ""; }
+	td:nth-of-type(5):before { content: ""; }
+	td:nth-of-type(6):before { content: ""; }
+	td:nth-of-type(7):before { content: ""; }
+	td:nth-of-type(8):before { content: ""; }
+	td:nth-of-type(9):before { content: ""; }
+	td:nth-of-type(10):before { content: ""; }
 }

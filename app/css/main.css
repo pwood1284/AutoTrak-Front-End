@@ -1,10 +1,21 @@
 .container {
   width: 100%;
+
   padding: 0;
   background: -webkit-linear-gradient(left, rgb(33, 33, 34) 0%,#798390 33%,#717B88 66%,#2C2D2F 100%);
 }
 
-
+.containerHeaderTheme {
+  width: auto;
+  height: auto;
+  background: -webkit-linear-gradient(left, rgb(33, 33, 34) 0%,#798390 33%,#717B88 66%,#2C2D2F 100%);
+}
+.containerBodyTheme {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
 .admin-login-btn {
   margin-top:20px;
   position: relative;
@@ -1004,6 +1015,7 @@ form input {
   flex-wrap: wrap;
   float: left;
   width: 100%;
+  border-bottom: 5px solid black;
   background: -webkit-linear-gradient(black, grey, black); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(black, grey, black); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(black, grey, black); /* For Firefox 3.6 to 15 */
@@ -1818,18 +1830,23 @@ overflow: scroll;
 
 }
 .createAcct {
-  border: 2px solid black;
+  border: 2px solid white;
   position: relative;
   float: right;
-  width: 200px;
+  margin: 5px;
+  width: 170px;
   height: 50px;
 
 }
+.createAcctBtn {
+
+}
 .companyLogin {
-  border: 2px solid black;
+  border: 2px solid white;
   position: relative;
   float: right;
-  width: 200px;
+  margin: 5px;
+  width: 170px;
   height: 50px;
 
 }
@@ -1903,10 +1920,12 @@ h4 {
   position: relative;
   bottom: 100px;
 }
+.materialboxed {
 
+}
 .navBtns {
   position: relative;
-  bottom: 720px;
+
   height: 55px;
   width: 100%;
 }
@@ -1981,4 +2000,14 @@ only screen and (max-width: 760px),
 	td:nth-of-type(8):before { content: ""; }
 	td:nth-of-type(9):before { content: ""; }
 	td:nth-of-type(10):before { content: ""; }
+}
+
+.paddingtop30px {
+  height: 30px;
+  width: 100%;
+}
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
 }

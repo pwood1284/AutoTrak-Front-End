@@ -37,15 +37,9 @@
             <td style="vertical-align:middle" st-ratio="15">{{r.inventory_item.inventory_item_location}}</td>
             <td style="vertical-align:middle" st-ratio="25">{{r.repair_item_quantity}}</td>
             <td st-ratio="5"><md-button class='squarebtn squarebtn-right' ng-click="updateRepairItem(r.id)">
-              <md-icon md-svg-src="../assets/ic_mode_edit_black_24px.svg"></md-icon>
+              <i class="material-icons md-42">edit</i>
             </md-button></td>
-            <td st-ratio="5"><md-button class='squarebtn squarebtn-right' ng-click="deleteRepairItem(r.id)"><div class="icon-trash" style="float: left">
-              <div class="trash-lid" style="background-color: #607D8B"></div>
-              <div class="trash-container" style="background-color: #607D8B"></div>
-              <div class="trash-line-1"></div>
-              <div class="trash-line-2"></div>
-              <div class="trash-line-3"></div>
-            </div></md-button></td>
+            <td st-ratio="5"><md-button class='squarebtn squarebtn-right' ng-click="deleteRepairItem(r.id)"><i class="material-icons md-42">highlight_remove</i></md-button></td>
           </tr>
         </tbody>
         <tfoot>

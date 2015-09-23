@@ -2030,3 +2030,11 @@ only screen and (max-width: 760px),
 .navContentBody {
   font-size: 18px;
 }
+
+.loginFooter {
+  position: relative;
+
+  height: 150px;
+  width: 100%;
+
+}

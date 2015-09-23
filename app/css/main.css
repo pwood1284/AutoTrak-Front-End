@@ -1730,6 +1730,7 @@ h1::after{
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
 .material-icons.md-96 { font-size: 96px; }
+.material-icons.md-42 { font-size: 42px; margin-top: 4px; color:#607D8B  }
 
 // Rules for using icons as black on a light background.
 .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
@@ -1945,78 +1946,6 @@ h4 {
 
   height: 55px;
   width: 100%;
-}
-/*//medium+ screen sizes*/
-@media (min-width:992px) {
-    .desktop-only {
-        display:block !important;
-    }
-}
-
-/*//small screen sizes*/
-@media (max-width: 991px) {
-    .mobile-only {
-        display:block !important;
-    }
-
-    .desktop-only {
-        display:none !important;
-    }
-}
-
-
-
-
-@media
-only screen and (max-width: 760px),
-(min-device-width: 768px) and (max-device-width: 1024px)  {
-
-	/* Force table to not be like tables anymore */
-	table, thead, tbody, th, td, tr {
-		display: block;
-	}
-
-	/* Hide table headers (but not display: none;, for accessibility) */
-	thead tr {
-		position: absolute;
-		top: -9999px;
-		left: -9999px;
-	}
-
-	tr { border: 1px solid #ccc; }
-
-	td {
-		/* Behave  like a "row" */
-		border: none;
-		border-bottom: 1px solid #eee;
-		position: relative;
-		padding-left: 50%;
-	}
-
-	td:before {
-		/* Now like a table header */
-		position: absolute;
-		/* Top/left values mimic padding */
-		top: 6px;
-		left: 6px;
-		width: 45%;
-		padding-right: 10px;
-		white-space: nowrap;
-	}
-
-	/*
-	Label the data
-	*/
-	td:nth-of-type(1):before { content: ""; }
-	td:nth-of-type(2):before { content: ""; }
-	td:nth-of-type(3):before { content: ""; }
-	td:nth-of-type(4):before { content: ""; }
-	td:nth-of-type(5):before { content: ""; }
-	td:nth-of-type(6):before { content: ""; }
-	td:nth-of-type(7):before { content: ""; }
-	td:nth-of-type(8):before { content: ""; }
-	td:nth-of-type(9):before { content: ""; }
-	td:nth-of-type(10):before { content: ""; }
 }
 
 .paddingtop30px {

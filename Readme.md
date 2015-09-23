@@ -2,7 +2,7 @@
 
 This project utilizes Angular Ui Router, Foundation and Angular Material.
 
-
+View site: http://development.autotrak-1.divshot.io/#/
 ## Usage
 
 This template contains some simple `gulp` tasks. They are as follows:

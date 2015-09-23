@@ -59,11 +59,11 @@
 }
 
 .innerContainerleft {
-  display: flex;
   color: white;
   float: left;
   width: 448px;
-  overflow: scroll;
+  min-width: 320px;
+
 }
 
 .innerContainerright {
@@ -86,13 +86,16 @@
 }
 
 #displayItem {
-  margin-top: 52px;
+  margin-top: 22px;
   padding-left: 22px;
   padding-right: 22px;
-  padding-bottom: 22px;
-  width: 100%;
+  padding-bottom: 100px;
+  position: relative;
+  float: left;
+  width: 448px;
+  min-width: 320px;
   padding-top: 42px;
-  height: 270px;
+
   background-color: black;
   opacity: .3;
 
@@ -110,15 +113,18 @@
 
 }
 #displayItem3 {
-  margin-top: 158px;
+  margin-top: 22px;
   padding-left: 22px;
   padding-right: 22px;
-  padding-bottom: 22px;
-  width: 100%;
+  padding-bottom: 100px;
+  position: relative;
+  float: left;
+  width: 448px;
+  min-width: 320px;
   padding-top: 42px;
-  height: 270px;
+
   background-color: black;
-  opacity: .3;;
+  opacity: .3;
 
 }
 .userNumPad {
@@ -196,18 +202,19 @@
 }
 .innerRIKeypadLeft {
   float: left;
-  padding-left: 60px;
+  margin-left: 55px;
+  margin-right: 55px;
   margin-top: 35px;
-  width:365px;
+  width:300px;
 }
 
 /*--------------------------*/
 .innerRIKeypadRight {
   float: left;
   margin-top: 35px;
-  width:285px;
-  margin-left: 85px;
-  margin-right: 45px;
+  width:300px;
+  margin-left: 55px;
+  margin-right: 55px;
 }
 .innerRIKeypadRightZero {
   float:left;
@@ -224,6 +231,8 @@
 
 .keypad-display2 {
   direction: ltr;
+  position: relative;
+  bottom: 100px;
   margin-top: 5px;
   padding: 0px -5% 10px 5%;
   border: 1px black;
@@ -245,7 +254,7 @@
 .innerContainer .innerContainerright .userNumPad2 {
   float: left;
   width: 100% auto;
-  height: 91% auto;
+  /*height: 91% auto;*/
   background: -webkit-linear-gradient(left, grey, white , grey); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(right,  grey, white , grey); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(right,  grey, white , grey); /* For Firefox 3.6 to 15 */
@@ -341,8 +350,13 @@
 }
 
 .InvItemHeader {
+  position: relative;
+  float:left;
   padding-top: 20px;
   opacity: .7;
+  width: 448px;
+  min-width: 320px;
+  height: 289px;
 
 }
 
@@ -1800,15 +1814,17 @@ overflow: scroll;
   margin-left:150px;
   margin-top: 50px;
   font-size: 30px;
-
 }
+
 .appTitleLocation::after {
   margin-top: 0px;
 }
+
 .appTitleLocation {
   position: relative;
   float: left;
 }
+
 .appsubTitle{
   position: relative;
   float: left;
@@ -1894,7 +1910,8 @@ h3 {
 
 }
 .rilocationKeypadLabel {
-  margin-left: 240px;
+margin-top: 15px;
+
 }
 .quantitykeypadLabel {
 }
@@ -2015,12 +2032,15 @@ only screen and (max-width: 760px),
 
 }
 .navContent {
+
   width: 33.33%;
-  height: 100%;
+  min-width: 320px;
+  height:220px;
   position: relative;
   float: left;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 15px;
   color: silver;
 }
 
@@ -2037,3 +2057,8 @@ only screen and (max-width: 760px),
   width: 100%;
 
 }
+/*.ng-hide:not(.ng-hide-animate) {
+     display: inline  !important;
+     margin-left: -40px !important;
+
+}*/

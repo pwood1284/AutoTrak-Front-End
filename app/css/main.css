@@ -1830,7 +1830,7 @@ overflow: scroll;
 
 }
 .createAcct {
-  border: 2px solid white;
+  color: silver;
   position: relative;
   float: right;
   margin: 5px;
@@ -1842,7 +1842,7 @@ overflow: scroll;
 
 }
 .companyLogin {
-  border: 2px solid white;
+  color: silver;
   position: relative;
   float: right;
   margin: 5px;
@@ -2006,8 +2006,27 @@ only screen and (max-width: 760px),
   height: 30px;
   width: 100%;
 }
-#owl-demo .item img{
-    display: block;
-    width: 100%;
-    height: auto;
+
+.navContentContainer {
+  width: 100%;
+  height: 400px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+}
+.navContent {
+  width: 33.33%;
+  height: 100%;
+  position: relative;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: silver;
+}
+
+.navContentHead {
+  font-size: 32px;
+}
+.navContentBody {
+  font-size: 18px;
 }
